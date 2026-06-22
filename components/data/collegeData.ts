@@ -1,4 +1,5 @@
 // Configurable College Data for Ratnaparkkhi Institute of Engineering & Management
+// Updated with the official institute profile data
 
 export const tagline = "Learn & Earn";
 export const establishedYear = "Since 2008";
@@ -6,65 +7,66 @@ export const officialPhone = "+91 9923313437";
 export const officialEmail = "ratnaparkkhiinstitute@gmail.com";
 
 export const placementStats = {
-  highestPackage: "45.0 LPA",
-  averagePackage: "6.8 LPA",
-  placementRate: "95.2%",
-  companiesVisited: "160+",
-  totalOffers: "520+",
-  internshipOffers: "380+",
+  highestPackage: "8,000+ Placed",
+  averagePackage: "100% Success",
+  placementRate: "100%",
+  companiesVisited: "23,000+ Passed",
+  totalOffers: "8,000+ Placed",
+  internshipOffers: "NAPS/NSDC Approved",
 };
 
 export const recruiters = [
-  { name: "TATA Consultancy Services (TCS)", logoText: "TCS" },
-  { name: "Infosys", logoText: "Infosys" },
-  { name: "Capgemini", logoText: "Capgemini" },
-  { name: "Wipro", logoText: "Wipro" },
-  { name: "Cognizant", logoText: "Cognizant" },
-  { name: "Tech Mahindra", logoText: "TechM" },
-  { name: "Amazon", logoText: "Amazon" },
-  { name: "L&T Infotech (LTIMindtree)", logoText: "LTI" },
-  { name: "Accenture", logoText: "Accenture" },
-  { name: "HCL Technologies", logoText: "HCL" }
+  { name: "National Skill Development Corporation", logoText: "NSDC" },
+  { name: "Skill India", logoText: "Skill India" },
+  { name: "National Apprenticeship Promotion Scheme", logoText: "NAPS" },
+  { name: "Board of Practical Training", logoText: "BTP" },
+  { name: "BOSS Board", logoText: "BOSS Board" },
+  { name: "Yashwantrao Chavan Maharashtra Open University", logoText: "YCMOU" },
+  { name: "Tilak Maharashtra Vidyapeeth", logoText: "TMV" },
+  { name: "Mumbai Hindi Vidyapeeth", logoText: "MHV" },
+  { name: "Maharashtra State Board of Skill Development", logoText: "MSBSVET ITI" },
+  { name: "D.Y. Patil University", logoText: "DY Patil Univ" },
+  { name: "Mangalayatan University", logoText: "Mangalayatan" },
+  { name: "ISBM University", logoText: "ISBM Univ" },
+  { name: "Dr. C.V. Raman University", logoText: "CV Raman Univ" }
 ];
 
 export const achievements = [
-  { title: "Smart India Hackathon", value: "3 National Wins", desc: "Ratnaparkkhi Institute of Engineering & Management students secured 1st prize in Ministry challenges" },
-  { title: "Patents Published", value: "15+ Patents", desc: "Filed by faculty and students in AI, Robotics, and IoT" },
-  { title: "Research Publications", value: "110+ Papers", desc: "Published in high-impact Scopus & IEEE indexed journals" },
-  { title: "Industry Certifications", value: "1,200+", desc: "AWS, RedHat, Cisco, and Google certifications completed" },
-  { title: "Sports & Cultural", value: "45+ Trophies", desc: "Won in inter-university championships" }
+  { title: "Passed Students", value: "23,000+ Students", desc: "Successfully completed secondary, higher secondary, graduation, and post-graduation certifications." },
+  { title: "Academic Success", value: "100% Success Rate", desc: "Maintained complete academic support and guidance ensuring graduation success." },
+  { title: "Job Placements", value: "8,000+ Placed", desc: "Students placed in private enterprises and government organizations." },
+  { title: "Geographical Reach", value: "Maharashtra Coverage", desc: "Students enrolled from all 36 districts of Maharashtra." },
+  { title: "Career Sectors", value: "Govt & Private", desc: "Alumni working in various departments, public sectors, and top private sectors." }
 ];
 
 export const whyParentsTrust = [
   {
-    title: "Uncompromising Campus Safety",
-    desc: "24/7 CCTV surveillance, strictly gated campus, professional security guards, and dedicated in-campus hostel wardens for absolute peace of mind."
+    title: "Learn & Earn Scheme Model",
+    desc: "Earn monthly stipends while acquiring skill certifications and university degrees. Perfect alignment of industry-oriented learning."
   },
   {
-    title: "Proven Placement Track Record",
-    desc: "A robust placement cell that actively trains students from 2nd year onwards in soft skills, coding, and mock interviews, leading to consistent placements."
+    title: "100% Academic Success Support",
+    desc: "Comprehensive counseling, course materials, and guidance to ensure every student successfully clears their exams."
   },
   {
-    title: "1:15 Mentorship & Care",
-    desc: "Each student is assigned a dedicated faculty mentor who monitors academic progress, attendance, mental well-being, and career guidance."
+    title: "Flexible Online & Distance Learning",
+    desc: "Designed specifically for working professionals, school dropouts, and individuals who could not complete their education."
   },
   {
-    title: "Industry-Aligned Curriculum",
-    desc: "Regular workshops, guest lectures from industry veterans, and labs equipped with cutting-edge software ensure students learn practical, real-world skills."
+    title: "National Skill Council Certifications",
+    desc: "Approved NSDC, Skill India, NAPS, and BTP programs providing official corporate apprenticeships and vocational validations."
   },
   {
-    title: "Affordable Excellence & Scholarships",
-    desc: "Offering top-tier engineering and management education at government-regulated fees, with complete facilitation of state & merit scholarships."
+    title: "Affordable Fees & Installments",
+    desc: "Highly accessible education with installment options, bringing top university degrees within reach of everyone."
   }
 ];
 
 export const campusGallery = [
-  { title: "State-of-the-Art Computer Center", category: "Infrastructure", desc: "Equipped with high-speed 1Gbps internet and latest Xeon-processor systems." },
-  { title: "Main Academic Building", category: "Campus", desc: "Modern, spacious classrooms designed for interactive smart learning." },
-  { title: "Central Library", category: "Infrastructure", desc: "Home to over 50,000 volumes, e-journals, and comfortable reading halls." },
-  { title: "Robotics and IoT Lab", category: "Innovation", desc: "Hands-on research workspace for advanced hardware prototyping." },
-  { title: "Annual Cultural Fest - Tarang", category: "Student Life", desc: "A vibrant showcase of student talents in music, dance, and arts." },
-  { title: "Ratnaparkkhi Institute of Engineering & Management Sports Complex", category: "Campus", desc: "Indoor and outdoor facilities for cricket, football, basketball, and table tennis." }
+  { title: "Admissions Counselling Center", category: "Infrastructure", desc: "Authorized desk for DY Patil, Mangalayatan, and ISBM universities." },
+  { title: "Skill India Training Room", category: "Skill Development", desc: "Hands-on vocational labs for technical and professional development." },
+  { title: "Distance Study Library", category: "Resources", desc: "Home to distance syllabus guides, books, and digital materials." },
+  { title: "ITI Practical Workspace", category: "ITI trades", desc: "Industrial tools and technical equipment setups for state board certification trades." }
 ];
 
 export const facultyHighlights = [
@@ -73,200 +75,226 @@ export const facultyHighlights = [
     designation: "Founder & Chairman",
     qualification: "Ph.D. in Educational Management",
     imagePlaceholder: "RR",
-    bio: "A visionary academician with over 30 years of experience shaping higher education in the region."
+    bio: "A visionary academician with over 18 years of experience shaping flexible learning and skill development initiatives."
   },
   {
     name: "Dr. S. K. Deshmukh",
-    designation: "Principal / Director",
-    qualification: "Ph.D. in Computer Science & Engineering (IIT Bombay)",
+    designation: "Principal / Academic Director",
+    qualification: "Ph.D. in Distance Education",
     imagePlaceholder: "SD",
-    bio: "Passionate researcher and former corporate consultant with 20+ publications in AI and Neural Networks."
+    bio: "Passionate expert dedicated to delivering quality online and distance education models for working professionals."
   },
   {
     name: "Prof. Anjali Kulkarni",
-    designation: "Head, Placement Cell",
-    qualification: "MBA in HR & Public Relations",
+    designation: "Head, Counseling & Admissions",
+    qualification: "MBA in Career Guidance",
     imagePlaceholder: "AK",
-    bio: "Dedicated specialist connecting Ratnaparkkhi Institute of Engineering & Management with over 200 corporate partners. Ensures 100% internship placement."
+    bio: "Helps students choose the right university pathway and coordinates government scholarship benefits."
   },
   {
     name: "Dr. Vinay Joshi",
-    designation: "Dean of Research & Development",
-    qualification: "Ph.D. in Mechanical Engineering",
+    designation: "Dean of Skill Development & NAPS",
+    qualification: "Ph.D. in Vocational Systems",
     imagePlaceholder: "VJ",
-    bio: "Spearheads industry-sponsored projects and coordinates patents filing and publication drives."
+    bio: "Spearheads industry apprenticeships (NAPS/NATS) and NSDC corporate alliances for Learn & Earn placements."
   }
 ];
 
 export const coursesOffered = [
   {
-    name: "B.Tech Computer Science & Engineering",
-    duration: "4 Years",
-    eligibility: "10+2 with Physics, Mathematics & Chemistry (Min 50%) + JEE Main / State CET",
-    fees: "₹95,000 / Year",
+    name: "10th (Secondary School - NIOS / MHV)",
+    duration: "1 Year",
+    eligibility: "School dropouts or anyone seeking secondary certification",
+    fees: "Contact Counsel Desk",
+    seats: 300,
+    highlights: "National Institute of Open Schooling / Mumbai Hindi Vidyapeeth board patterns. Flexible learning and exams."
+  },
+  {
+    name: "12th (Senior Secondary - NIOS)",
+    duration: "1 Year",
+    eligibility: "10th Passed from any recognized board",
+    fees: "Contact Counsel Desk",
+    seats: 300,
+    highlights: "Flexible subject choices. Direct admission to Senior Secondary certifications. Study materials provided."
+  },
+  {
+    name: "ITI Programs (MSBSVET Trades)",
+    duration: "1 - 2 Years",
+    eligibility: "10th Passed / Fail (depending on the chosen trade)",
+    fees: "Contact Counsel Desk",
     seats: 120,
-    highlights: "Focus on AI, Cloud Computing, and Software Engineering. Includes 6 months mandatory internship."
+    highlights: "Approved vocational trades (Electrician, Fitter, Welder). Hands-on practice with NAPS apprenticeship connections."
   },
   {
-    name: "B.Tech Electronics & Telecommunication",
-    duration: "4 Years",
-    eligibility: "10+2 with Physics, Mathematics & Chemistry (Min 50%) + JEE Main / State CET",
-    fees: "₹90,000 / Year",
-    seats: 60,
-    highlights: "Focus on VLSI design, IoT, Embedded Systems, and 5G communication protocols."
+    name: "Bachelor of Arts (B.A.)",
+    duration: "3 Years",
+    eligibility: "12th Passed from any stream",
+    fees: "Contact Counsel Desk",
+    seats: 200,
+    highlights: "Online and Distance degree. Choice of subjects (English, History, Sociology). Affiliated university counseling."
   },
   {
-    name: "B.Tech Mechanical Engineering",
-    duration: "4 Years",
-    eligibility: "10+2 with Physics, Mathematics & Chemistry (Min 50%) + JEE Main / State CET",
-    fees: "₹85,000 / Year",
-    seats: 60,
-    highlights: "Focus on CAD/CAM, Robotics, Electric Vehicles, and Industrial Automation."
+    name: "Bachelor of Commerce (B.Com.)",
+    duration: "3 Years",
+    eligibility: "12th Passed from any stream",
+    fees: "Contact Counsel Desk",
+    seats: 200,
+    highlights: "Focus on corporate accounting, business economics, and taxation. Highly flexible for working professionals."
   },
   {
-    name: "B.Tech Civil Engineering",
-    duration: "4 Years",
-    eligibility: "10+2 with Physics, Mathematics & Chemistry (Min 50%) + JEE Main / State CET",
-    fees: "₹85,000 / Year",
-    seats: 60,
-    highlights: "Focus on Structural Engineering, Smart Cities planning, and GIS applications."
-  },
-  {
-    name: "Master of Business Administration (MBA)",
-    duration: "2 Years",
-    eligibility: "Bachelor's Degree in any discipline (Min 50%) + CAT / MAT / CMAT / CET",
-    fees: "₹75,000 / Year",
+    name: "Bachelor of Science (B.Sc.)",
+    duration: "3 Years",
+    eligibility: "12th Passed in Science stream",
+    fees: "Contact Counsel Desk",
     seats: 120,
-    highlights: "Specializations in Marketing, Finance, HR, Operations, and Business Analytics."
-  },
-  {
-    name: "Master of Computer Applications (MCA)",
-    duration: "2 Years",
-    eligibility: "BCA / B.Sc in Computer Science / IT (Min 50% with Math in 10+2 or Graduation)",
-    fees: "₹80,000 / Year",
-    seats: 60,
-    highlights: "Advanced software development, mobile application design, and cybersecurity focus."
+    highlights: "Distance mode science education. Flexible lab schedules and comprehensive study support."
   },
   {
     name: "Bachelor of Business Administration (BBA)",
     duration: "3 Years",
-    eligibility: "10+2 with English (Min 45% for open category, 40% for reserved category)",
-    fees: "₹55,000 / Year",
+    eligibility: "12th Passed in any stream",
+    fees: "Contact Counsel Desk",
     seats: 120,
-    highlights: "Focus on entrepreneurship, human resources, marketing, and business analytics."
+    highlights: "Core marketing, finance, and human resource management. Direct Learn & Earn scheme alignment."
   },
   {
     name: "Bachelor of Computer Applications (BCA)",
     duration: "3 Years",
-    eligibility: "10+2 in any stream with English & Mathematics/Statistics (Min 45%)",
-    fees: "₹60,000 / Year",
+    eligibility: "12th Passed in any stream",
+    fees: "Contact Counsel Desk",
     seats: 120,
-    highlights: "Focus on cloud computing, web application design, database structures, and python coding."
+    highlights: "Core programming languages, web development, and database administration via distance learning."
+  },
+  {
+    name: "Master of Business Administration (MBA)",
+    duration: "2 Years",
+    eligibility: "Bachelor's Degree in any discipline",
+    fees: "Contact Counsel Desk",
+    seats: 120,
+    highlights: "Specializations in HR, Marketing, Operations, and IT. Perfect for career transitions in corporate sectors."
+  },
+  {
+    name: "Master of Computer Applications (MCA)",
+    duration: "2 Years",
+    eligibility: "Graduation with Mathematics at 10+2 or degree level",
+    fees: "Contact Counsel Desk",
+    seats: 60,
+    highlights: "Advanced software system design, computer architectures, and software engineering methodologies."
+  },
+  {
+    name: "Master of Commerce (M.Com.)",
+    duration: "2 Years",
+    eligibility: "B.Com / BBA or equivalent graduation degree",
+    fees: "Contact Counsel Desk",
+    seats: 100,
+    highlights: "Advanced business analysis, financial management, and corporate auditing modules."
+  },
+  {
+    name: "Master of Arts (M.A.)",
+    duration: "2 Years",
+    eligibility: "Graduation in any discipline",
+    fees: "Contact Counsel Desk",
+    seats: 100,
+    highlights: "Advanced studies in Literature, History, or Social Sciences via flexible online learning."
+  },
+  {
+    name: "Skill Development Programs",
+    duration: "3 - 6 Months",
+    eligibility: "10th / 12th passed or working professionals",
+    fees: "Contact Counsel Desk",
+    seats: 500,
+    highlights: "NSDC / Skill India certified job-oriented vocational modules with NAPS internship assistance."
   }
 ];
 
 export const successStories = [
   {
     name: "Aditya Sharma",
-    branch: "CSE (Batch of 2024)",
-    company: "Amazon",
-    designation: "Software Development Engineer (SDE-1)",
-    package: "45.0 LPA",
+    branch: "BBA (Batch of 2024)",
+    company: "ICICI Bank",
+    designation: "Assistant Manager",
+    package: "Learn & Earn Graduate",
     imagePlaceholder: "AS",
-    quote: "Ratnaparkkhi Institute of Engineering & Management's placement cell provided me with rigorous mock coding interviews which helped me clear Amazon's technical rounds on the very first attempt."
+    quote: "Thanks to the flexible Distance BBA at Ratnaparkkhi Institute, I was able to manage my work while completing my degree, which immediately led to a corporate promotion."
   },
   {
     name: "Pooja Patil",
-    branch: "ENTC (Batch of 2023)",
-    company: "Tata Motors",
-    designation: "Embedded Systems Engineer",
-    package: "12.5 LPA",
+    branch: "ITI Electrician (Batch of 2023)",
+    company: "Mahadiscom",
+    designation: "Junior Technical Apprentice",
+    package: "NAPS Placed",
     imagePlaceholder: "PP",
-    quote: "The hands-on learning at Ratnaparkkhi Institute of Engineering & Management's IoT labs gave me an edge during my technical interviews. The faculty support was exceptional."
+    quote: "The practical trades program and NAPS apprenticeship coordinates at Ratnaparkkhi Institute prepared me directly for government energy sector placements."
   },
   {
     name: "Rahul Deshpande",
     branch: "MBA (Batch of 2024)",
-    company: "Deloitte",
-    designation: "Business Analyst",
-    package: "14.2 LPA",
+    company: "TATA Motors",
+    designation: "Operations Executive",
+    package: "Distance Learning Success",
     imagePlaceholder: "RD",
-    quote: "Case-based learning and regular industrial visits organized by Ratnaparkkhi Institute of Engineering & Management's MBA department completely transformed my analytical and managerial skills."
+    quote: "Completing my MBA online through Ratnaparkkhi Institute's authorized university counseling gave me the credentials needed to take on management roles."
   },
   {
     name: "Sneha Nair",
-    branch: "CSE (Batch of 2023)",
-    company: "Microsoft",
-    designation: "Cloud Consultant",
-    package: "32.0 LPA",
+    branch: "BCA (Batch of 2023)",
+    company: "Infosys BPM",
+    designation: "Process Associate",
+    package: "Skill India Placed",
     imagePlaceholder: "SN",
-    quote: "The internship program at Ratnaparkkhi Institute of Engineering & Management is a game-changer. I worked on live projects during my 7th semester which directly converted to a PPO."
+    quote: "Combining the BCA degree with the NSDC Skill Development program gave me an exceptional edge in clearing placement interviews."
   }
 ];
 
 export const scholarshipsList = [
   {
-    name: "Dr. Ramesh Ratnaparkkhi Merit Scholarship",
-    benefit: "100% Tuition Fee Waiver for 1st Year",
-    eligibility: "Students scoring >95% in Board Exams or <5000 rank in State CET."
+    name: "Distance Education Merit Waiver",
+    benefit: "Partial Fee Concession",
+    eligibility: "For students with outstanding academic records in 10th or 12th board exams."
   },
   {
-    name: "Social Welfare Scheme (Govt. of Maharashtra / India)",
-    benefit: "50% to 100% Tuition Fee Reimbursement",
-    eligibility: "Eligible SC, ST, OBC, VJNT, and SBC students as per government rules (MAHADBT)."
+    name: "Working Professionals Assistance",
+    benefit: "Flexible Payment Installments",
+    eligibility: "For currently employed professionals seeking graduation/post-graduation degrees."
   },
   {
-    name: "EBC (Economically Backward Class) Concession",
-    benefit: "50% Tuition Fee Waiver",
-    eligibility: "Open category students with family income less than ₹8 Lakh per annum."
+    name: "Social Welfare Scholarship Support",
+    benefit: "Fee Reimbursement Coordination",
+    eligibility: "Full guidance and assistance in submitting state scholarship forms for eligible candidates."
   },
   {
-    name: "Ratnaparkkhi Institute of Engineering & Management Sports Scholarship",
-    benefit: "25% to 50% Tuition Fee Concession",
-    eligibility: "Represented State or National level in recognized sports tournaments."
-  },
-  {
-    name: "Alumni-Sponsored Financial Aid",
-    benefit: "Up to ₹30,000 Assistive Scholarship",
-    eligibility: "Deserving students from financially weak background (based on interview)."
+    name: "Skill Development Sponsorship",
+    benefit: "Sponsorship for NSDC Trades",
+    eligibility: "Reserved for students from economically weaker sections showing merit in vocational tests."
   }
 ];
 
 export const blogPosts = [
   {
-    slug: "cracking-it-interviews-tips",
-    title: "How to Crack Top IT Product Company Interviews in 2026",
-    excerpt: "Preparation strategies, critical data structures, and mock interview tips compiled by our expert placement team.",
+    slug: "benefits-of-distance-learning",
+    title: "Why Distance & Online Education is the Future for Professionals",
+    excerpt: "Discover how distance learning is enabling working professionals to gain degrees without resigning from their jobs.",
     date: "June 15, 2026",
-    author: "Prof. Anjali Kulkarni (Placement Head)",
-    content: "Landing a job at top-tier product companies like Amazon, Microsoft, or high-growth tech startups requires a structured approach. First, master core Data Structures and Algorithms (DSA) with focus on Arrays, Trees, Graphs, and Dynamic Programming. Second, build 2-3 substantial projects using React, Node.js, or cloud native technologies. Third, focus on System Design basics and database normalization. Ratnaparkkhi Institute of Engineering & Management's placement cell runs specialized coding bootcamps starting from the 5th semester, ensuring all students are interview-ready.",
-    readTime: "5 min read"
-  },
-  {
-    slug: "future-of-ai-data-science",
-    title: "The Future of AI & Data Science in Engineering Education",
-    excerpt: "Exploring the shift in computer science towards artificial intelligence and machine learning models.",
-    date: "June 08, 2026",
-    author: "Dr. S. K. Deshmukh (Director)",
-    content: "AI is no longer just a specialization; it is becoming the foundation of software development. As we transition to complex Large Language Models and AI-driven automation, developers must learn how to design, fine-tune, and deploy AI models. At Ratnaparkkhi Institute of Engineering & Management, we have integrated practical Python, PyTorch, and cloud computing frameworks directly into our CSE curriculum. We emphasize hands-on project building so that students understand the math behind neural networks rather than just writing API calls.",
-    readTime: "7 min read"
-  },
-  {
-    slug: "value-of-internships-for-careers",
-    title: "Why Internships are Mandatory for Engineering Students",
-    excerpt: "Bridging the academic-industry gap through real-world work experience and converting them into pre-placement offers.",
-    date: "May 28, 2026",
-    author: "Dr. Vinay Joshi (Dean R&D)",
-    content: "Textbooks lay down the theory, but industrial settings test your adaptive engineering skills. Internships expose students to version control (Git), team coordination, production deadlines, and real-world debugging. Ratnaparkkhi Institute of Engineering & Management has signed MOUs with over 25 industry leaders to offer structured internship projects. Over 40% of our student internships convert into high-paying Full Time Employment (FTE) offers, highlighting how vital these programs are.",
+    author: "Dr. S. K. Deshmukh (Academic Director)",
+    content: "With rising demands for credentials in the job market, returning to a physical classroom isn't feasible for everyone. Online and Distance Education provides the ultimate flexibility, allowing you to learn at your own pace while maintaining a full-time job. Ratnaparkkhi Institute provides comprehensive study materials, counseling, and exam support for UGC-approved degrees, ensuring you achieve academic success without compromise.",
     readTime: "4 min read"
   },
   {
-    slug: "career-guidance-after-mba-mca",
-    title: "Career Pathways After Completing MBA or MCA in 2026",
-    excerpt: "Deciding between business consulting, corporate management, system architecture, or full stack roles.",
-    date: "May 14, 2026",
-    author: "Prof. Rajesh Mehta (MBA Dept)",
-    content: "Both MBA and MCA offer stellar career growth, but they cater to different profiles. MCA graduates lead technical implementation, stepping into roles like Full Stack Architects, Cloud Architects, and DevOps specialists. On the other hand, MBA graduates lead business planning, acting as Project Managers, Business Analysts, and HR/Financial Consultants. Ratnaparkkhi Institute of Engineering & Management offers cross-disciplinary workshops so that our technical MCA students understand business needs, and our MBA students learn data analytics, creating highly sought-after professional profiles.",
-    readTime: "6 min read"
+    slug: "learn-and-earn-scheme-benefits",
+    title: "Understanding the Learn & Earn Scheme for Skill Development",
+    excerpt: "Learn how NSDC and Skill India certified courses can help you earn stipends while studying.",
+    date: "June 08, 2026",
+    author: "Dr. Vinay Joshi (Dean of Skill Development)",
+    content: "The Learn & Earn model is a revolutionary pathway bridging education and immediate employment. By enrolling in certified skill programs, students participate in real-world corporate apprenticeships (NAPS). This gives them critical hand-on skills, a monthly stipend to support their fees, and a direct path to full-time placement after graduation.",
+    readTime: "5 min read"
+  },
+  {
+    slug: "career-guidance-after-iti-trades",
+    title: "Career Pathways & NAPS Apprenticeships after ITI Trades",
+    excerpt: "A complete guide on securing government and private technical jobs after your vocational training.",
+    date: "May 28, 2026",
+    author: "Prof. Anjali Kulkarni (Admissions Head)",
+    content: "Completing an ITI trade is one of the fastest routes to a stable technical career. Under the National Apprenticeship Promotion Scheme (NAPS), ITI graduates can directly secure internships at state utilities like Mahadiscom, railways, or private engineering corporations. Ratnaparkkhi Institute coordinates NAPS application desk support, helping students secure their placement.",
+    readTime: "4 min read"
   }
 ];

@@ -11,7 +11,7 @@ export default function AboutPage() {
         <div className="relative max-w-7xl mx-auto px-4 text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-black tracking-tight text-navy-900">About Ratnaparkkhi Institute of Engineering & Management</h1>
           <p className="text-sm md:text-base text-slate-600 max-w-2xl mx-auto font-medium">
-            Discover our rich academic legacy, governing body values, and our commitment to professional development.
+            Discover our legacy since 2008, our mission for flexible education, and our affiliations with top universities and skill councils.
           </p>
         </div>
       </section>
@@ -25,7 +25,7 @@ export default function AboutPage() {
             </div>
             <h3 className="text-xl font-bold text-navy-900">Our Vision</h3>
             <p className="text-sm text-slate-655 leading-relaxed font-medium">
-              To be a premier global center of higher learning, recognized for excellence in technical innovation, academic rigor, and value-based mentoring that empowers students to lead, innovate, and serve society.
+              To be a premier center of flexible learning, vocational skill development, and distance education that empowers every individual in Maharashtra with affordable, high-quality, and accessible career opportunities.
             </p>
           </div>
 
@@ -35,7 +35,7 @@ export default function AboutPage() {
             </div>
             <h3 className="text-xl font-bold text-navy-900">Our Mission</h3>
             <p className="text-sm text-slate-655 leading-relaxed font-medium">
-              To provide industry-aligned curricula and cutting-edge laboratory ecosystems. We foster critical thinking, soft skills, and lifelong learning, establishing strong corporate tie-ups to guarantee global career launchpads.
+              Provide affordable and accessible education to students, working professionals and people who could not complete their education through modern technology and flexible learning systems.
             </p>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function AboutPage() {
               Message from the Founder's Desk
             </h3>
             <p className="text-sm text-slate-600 leading-relaxed font-medium">
-              "Higher education is not just about earning degree titles; it is about building character, nurturing inquisitive minds, and establishing societal welfare. At Ratnaparkkhi Institute of Engineering & Management, we aim to provide an affordable, high-quality gateway to professional life for students from all walks of life. Our modern infrastructure and corporate linkages ensure that every student leaves our campus fully equipped for the global economy."
+              &quot;Online and distance education is the ultimate gateway to lifelong progress. At Ratnaparkkhi Institute, we aim to provide an affordable, high-quality gateway to professional life for working professionals, school dropouts, and students from all walks of life. Our NSDC/Skill India collaborations and university counseling services ensure that every candidate gains the skills and qualifications necessary to succeed in government and private sectors.&quot;
             </p>
           </div>
         </div>
@@ -70,7 +70,7 @@ export default function AboutPage() {
               SD
             </div>
             <h4 className="text-md font-bold text-navy-900">Dr. S. K. Deshmukh</h4>
-            <span className="text-xs text-gold-600 font-bold uppercase tracking-wider block mt-1">Principal / Director</span>
+            <span className="text-xs text-gold-600 font-bold uppercase tracking-wider block mt-1">Principal / Academic Director</span>
           </div>
           <div className="lg:col-span-9 space-y-4">
             <h3 className="text-xl font-bold text-navy-900 flex items-center gap-2">
@@ -78,7 +78,7 @@ export default function AboutPage() {
               From the Director's Desk
             </h3>
             <p className="text-sm text-slate-600 leading-relaxed font-medium">
-              "We welcome you to a community dedicated to technological innovation and management strategy. Our academic structures are built on hands-on lab experiments, project-based engineering, and regular corporate mentoring sessions. By partnering with leading technological companies, we ensure our labs remain equipped with the software and hardware setups currently used in top-tier R&D departments."
+              &quot;We welcome you to a community dedicated to flexible learning and vocational mastery. Our academic counselor desk is structured to provide complete guidance for NIOS school boards, ITI technical trades, and UGC-DEB approved university degrees. By partnering with leading boards like YCMOU, Tilak Maharashtra Vidyapeeth, and Skill India, we ensure our courses deliver immediate, practical value and NAPS apprenticeship options.&quot;
             </p>
           </div>
         </div>
@@ -114,28 +114,28 @@ export default function AboutPage() {
       <section className="bg-slate-50 border-t border-slate-100 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
           <div className="max-w-2xl mx-auto space-y-3">
-            <h2 className="text-2xl font-extrabold text-navy-900">Recognition & Accreditation</h2>
+            <h2 className="text-2xl font-extrabold text-navy-900">Recognition, Boards & Partners</h2>
             <p className="text-xs sm:text-sm text-slate-500 font-medium">
-              Ratnaparkkhi Institute of Engineering & Management conforms to the highest standards of safety, quality of education, and ethical management.
+              Ratnaparkkhi Institute is affiliated with leading state universities, skill boards, and apprenticeship systems.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="bg-white border border-slate-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-navy-900 mb-1">AICTE approved</h4>
-              <p className="text-[11px] text-slate-500 uppercase tracking-widest font-bold">New Delhi, Govt. of India</p>
+              <h4 className="font-bold text-navy-900 mb-1">State Skill Councils</h4>
+              <p className="text-[11px] text-slate-500 uppercase tracking-widest font-bold">NSDC, Skill India & MSBSVET ITI</p>
             </div>
             <div className="bg-white border border-slate-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-navy-900 mb-1">SPPU Affiliated</h4>
-              <p className="text-[11px] text-slate-500 uppercase tracking-widest font-bold">Savitribai Phule Pune University</p>
+              <h4 className="font-bold text-navy-900 mb-1">Open Boards</h4>
+              <p className="text-[11px] text-slate-500 uppercase tracking-widest font-bold">YCMOU, TMV, MHV & NIOS</p>
             </div>
             <div className="bg-white border border-slate-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-navy-900 mb-1">DTE Code: 6220</h4>
-              <p className="text-[11px] text-slate-500 uppercase tracking-widest font-bold">Directorate of Tech Education</p>
+              <h4 className="font-bold text-navy-900 mb-1">Apprenticeship Schemes</h4>
+              <p className="text-[11px] text-slate-500 uppercase tracking-widest font-bold">NAPS & BTP Approved Center</p>
             </div>
             <div className="bg-white border border-slate-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-navy-900 mb-1">Grade 'A' Accredited</h4>
-              <p className="text-[11px] text-slate-500 uppercase tracking-widest font-bold">Highest compliance rating</p>
+              <h4 className="font-bold text-navy-900 mb-1">Counseling Universities</h4>
+              <p className="text-[11px] text-slate-500 uppercase tracking-widest font-bold">DY Patil, Mangalayatan, ISBM, CV Raman</p>
             </div>
           </div>
         </div>

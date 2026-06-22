@@ -60,8 +60,8 @@ const Navbar = () => {
   ];
 
   const suggestions = [
-    { text: "B.Tech Computer Science Program", href: "/courses" },
-    { label: "Trending", text: "Highest Placement Package 45.0 LPA", href: "/placement-cell" },
+    { text: "Online & Distance Degree Programs", href: "/courses" },
+    { label: "Trending", text: "Learn & Earn Scheme Placements", href: "/placement-cell" },
     { label: "Admission", text: "Admission Enquiry Registration 2026", href: "/online-admission" },
     { text: "Scholarship & Financial Concessions Guide", href: "/scholarship-program" },
     { text: "Contact Administrative Office Desk", href: "/contact-us" }

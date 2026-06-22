@@ -44,9 +44,17 @@ export default function FranchisePage() {
   };
 
   const models = [
-    { title: "Skill Development Center", details: "Requires 1,500+ sq ft. Focus on short-term certifications (AWS, Cisco, Web Dev)." },
-    { title: "Executive Management Center", details: "Requires 3,000+ sq ft. Focus on executive MBA certificates and business consultancy drives." },
-    { title: "Technical Engineering Academy", details: "Requires 5,000+ sq ft. Focus on full-time polytechnic or technical branch training." }
+    { title: "Authorized Counseling Center", details: "Admission counseling hub for online & distance university programs (DY Patil, Mangalayatan, ISBM, Dr. CV Raman University)." },
+    { title: "Skill Development & ITI Center", details: "Vocational trades training center. Focus on MSBSVET ITI courses, NSDC, Skill India, and NAPS apprenticeship programs." },
+    { title: "Comprehensive Academic Hub", details: "Providing the complete academic portfolio: school boards, ITI, graduation/post-graduation degrees, and skill development." }
+  ];
+
+  const benefits = [
+    { title: "Ready-made System", desc: "Access to an established educational and counseling system built since 2008." },
+    { title: "Academic Support", desc: "Complete syllabus guidelines, study materials, and academic coordinator support." },
+    { title: "Marketing Support", desc: "Co-branded digital/physical marketing assets, banners, and lead generation guidance." },
+    { title: "Technical Support", desc: "LMS portal access, online admission system, and technical maintenance support." },
+    { title: "25% Revenue Share", desc: "Attractive and transparent 25% revenue sharing model for sustainable center growth." }
   ];
 
   return (
@@ -63,6 +71,27 @@ export default function FranchisePage() {
         </div>
       </section>
 
+      {/* Franchise Benefits Section */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <div className="text-center max-w-2xl mx-auto space-y-3">
+          <h2 className="text-3xl font-extrabold text-navy-900">Official Franchise Benefits</h2>
+          <p className="text-xs sm:text-sm text-slate-500 font-medium">
+            We provide our center partners with complete end-to-end enablement to ensure high success rates and smooth student counseling operations.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          {benefits.map((b, idx) => (
+            <div key={idx} className="bg-white border border-slate-100 p-5 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 space-y-3 text-center">
+              <div className="w-10 h-10 rounded-full bg-gold-100 text-gold-700 flex items-center justify-center font-bold text-lg mx-auto">
+                ✓
+              </div>
+              <h4 className="font-bold text-navy-900 text-sm">{b.title}</h4>
+              <p className="text-[11px] text-slate-500 leading-relaxed font-medium">{b.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Models & Value Propositon */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
@@ -70,7 +99,7 @@ export default function FranchisePage() {
             Why Collaborate with Ratnaparkkhi Institute of Engineering & Management?
           </h2>
           <p className="text-sm text-slate-655 leading-relaxed font-medium">
-            Ratnaparkkhi Educational Society is a trusted name in higher technical learning. By joining our franchise network, you get complete access to our structured curriculum guides, digital LMS portals, trained faculty certification roadmaps, and central placements cell assistance.
+            Ratnaparkkhi Educational Society is a trusted name in education and skill development since 2008. By joining our franchise network, you partner with an established system to deliver distance education, ITI programs, and skill certifications.
           </p>
           <div className="space-y-4">
             {models.map((m, idx) => (

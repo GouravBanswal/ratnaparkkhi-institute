@@ -17,15 +17,15 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Ratnaparkkhi Institute of Engineering & Management",
-  description: "Accredited Grade 'A' university campus in Chh. Sambhajinagar offering B.Tech, MBA, and MCA courses with high-paying placements and direct corporate internships.",
-  keywords: "Ratnaparkkhi Institute of Engineering & Management, Engineering College Sambhajinagar, Management Institute Sambhajinagar, Admissions 2026, Best Placements, MCA, MBA, B.Tech",
+  description: "Official admissions counseling & vocational training center in Chh. Sambhajinagar. Offering UGC-recognized Online & Distance degrees, ITI trade courses, NIOS 10th/12th, and NSDC/Skill India programs with our unique Learn & Earn scheme.",
+  keywords: "Ratnaparkkhi Institute of Engineering & Management, RIEM Sambhajinagar, Online Education Maharashtra, Distance Learning degrees, ITI courses, NIOS 10th 12th, YCMOU, Skill India, NAPS apprenticeships, Learn and Earn, MBA, MCA, BBA, BCA, BA, B.Com",
   icons: {
     icon: "/logo.png",
     apple: "/logo.png",
   },
   openGraph: {
     title: "Ratnaparkkhi Institute of Engineering & Management",
-    description: "Accredited Grade 'A' university campus in Chh. Sambhajinagar offering B.Tech, MBA, and MCA courses with high-paying placements and direct corporate internships.",
+    description: "Official admissions counseling & vocational training center in Chh. Sambhajinagar. Offering UGC-recognized Online & Distance degrees, ITI trade courses, NIOS 10th/12th, and NSDC/Skill India programs with our unique Learn & Earn scheme.",
     images: [
       {
         url: "/logo.png",

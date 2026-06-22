@@ -12,7 +12,7 @@ export default function SuccessStoriesPage() {
         <div className="relative max-w-7xl mx-auto px-4 text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-black tracking-tight text-navy-900">Student Success Stories</h1>
           <p className="text-sm md:text-base text-slate-655 max-w-2xl mx-auto font-medium">
-            Meet our shining stars. Read how our graduates transitioned into roles at top-tier multinational product, core, and consulting companies.
+            Meet our shining stars. Read how our graduates achieved career growth, secured NAPS apprenticeships, and transitioned into private and government sector roles.
           </p>
         </div>
       </section>
@@ -37,7 +37,7 @@ export default function SuccessStoriesPage() {
                 </h3>
                 
                 <p className="text-xs text-slate-500 leading-relaxed font-medium">
-                  The practical environment at Ratnaparkkhi Institute of Engineering & Management allowed me to balance research, hackathon participations, and interview preparation. The mentorship from faculty made sure I stayed on track despite intense pressure.
+                  The flexible learning system at Ratnaparkkhi Institute allowed me to balance distance learning, skill development, and jobs. The mentorship from the academic counselors made sure I successfully cleared my programs.
                 </p>
               </div>
 
@@ -64,7 +64,7 @@ export default function SuccessStoriesPage() {
           <div className="space-y-6">
             <h2 className="text-2xl font-extrabold text-navy-900">Active Alumni Mentoring Network</h2>
             <p className="text-sm text-slate-655 leading-relaxed font-medium">
-              Success leaves clues. Ratnaparkkhi Institute of Engineering & Management maintains an active Alumni Association. Placed graduates return to campus regularly to host mock hackathons, review resumes, conduct mock technical interviews, and refer junior students for internships.
+              Success leaves clues. Ratnaparkkhi Institute maintains an active Alumni Association. Successfully passed graduates return to mentor current batches, share exam guidance, conduct skill sessions, and refer students for placements and apprenticeships.
             </p>
             <p className="text-sm text-slate-655 leading-relaxed font-medium">
               This ecosystem ensures current students receive practical, real-world advice on current industry requirements, technologies, and interview trends.
@@ -96,7 +96,7 @@ export default function SuccessStoriesPage() {
       <section className="max-w-4xl mx-auto px-4 text-center space-y-6">
         <h3 className="text-2xl font-bold text-navy-900">Start Your Success Story Today</h3>
         <p className="text-slate-500 text-xs sm:text-sm leading-relaxed max-w-xl mx-auto font-medium">
-          Admissions are strictly based on JEE/CET eligibility ranks and academic screening. Register your enquiry to speak with an advisor.
+          Admissions are open for our distance, degree, ITI, and skill development programs. Register your enquiry to speak with an admissions advisor.
         </p>
         <div className="pt-2">
           <Link 

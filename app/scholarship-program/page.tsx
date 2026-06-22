@@ -8,7 +8,7 @@ export default function ScholarshipsPage() {
     "Caste Validity Certificate (for Reserved categories)",
     "Non-Creamy Layer Certificate (for OBC/VJNT/SBC)",
     "Family Income Certificate issued by Tahsildar (less than ₹8 Lakhs for EBC/EWS)",
-    "CAP Allotment Letter (Centralized Admission Process confirmation)",
+    "Admission Confirmation Letter / ID Card",
     "Previous Class Marksheets (SSC / HSC / Semester GPA)",
     "Domicile Certificate of Maharashtra State",
     "Aadhaar Card linked to Bank Account (mandatory for direct DBT transfers)"
@@ -23,7 +23,7 @@ export default function ScholarshipsPage() {
         <div className="relative max-w-7xl mx-auto px-4 text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-black tracking-tight text-navy-900">Scholarships & Financial Aid</h1>
           <p className="text-sm md:text-base text-slate-600 max-w-2xl mx-auto font-medium">
-            Making quality engineering and management education accessible to all deserving aspirants.
+            Making quality online, distance, and vocational education accessible to all deserving aspirants.
           </p>
         </div>
       </section>
@@ -73,10 +73,10 @@ export default function ScholarshipsPage() {
           <div className="space-y-6">
             <h2 className="text-2xl font-extrabold text-navy-900">Scholarship Documentation</h2>
             <p className="text-sm text-slate-655 leading-relaxed font-medium">
-              To apply for state scholarships (MAHADBT) or merit waivers, students must submit correct and verified documents at the time of college registration. 
+              To apply for distance education merit waivers or state/national scholarships, students must submit correct and verified documents at the time of enrollment. 
             </p>
             <p className="text-sm text-slate-655 leading-relaxed font-medium">
-              Any discrepancy or missing documents may lead to the cancellation of the scholarship by the social welfare department. Our dedicated scholarship desk assists students in verifying and submitting these files.
+              Any discrepancy or missing documents may lead to the rejection of fee concessions. Our dedicated counselor desk assists students in verifying and submitting these files.
             </p>
           </div>
 
@@ -98,9 +98,9 @@ export default function ScholarshipsPage() {
 
       {/* Scholarship Help desk */}
       <section className="max-w-4xl mx-auto px-4 text-center bg-white border border-slate-100 p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 space-y-4">
-        <h3 className="text-xl font-bold text-navy-900">Have Questions about EBC or Caste Concessions?</h3>
+        <h3 className="text-xl font-bold text-navy-900">Have Questions about Fee Concessions or Scholarships?</h3>
         <p className="text-slate-500 text-xs sm:text-sm leading-relaxed max-w-xl mx-auto font-medium">
-          Our specialized scholarship guidance counselor team helps students solve documentation issues and submit applications on the MAHADBT portal.
+          Our specialized scholarship guidance counselor team helps students solve documentation issues and submit applications on the official portals.
         </p>
         <div className="pt-2">
           <Link 

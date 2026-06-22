@@ -21,55 +21,53 @@ export default function HomePage() {
   const [questionSubmitted, setQuestionSubmitted] = useState(false);
   const [userQuestion, setUserQuestion] = useState('');
   
-  // Video Playlist State
+  // Video Playlist State (updated with distance and vocational content)
   const [activeVideo, setActiveVideo] = useState({
-    title: "Life at Ratnaparkkhi Campus - A Day in the Life of an Engineering Student",
+    title: "Overview of our signature Learn & Earn Scheme Model",
     url: "https://www.youtube.com/embed/dQw4w9WgXcQ", // mock
     duration: "4:15",
-    views: "1.2K views"
+    views: "5.4K views"
   });
 
   const videosList = [
     {
-      title: "Life at Ratnaparkkhi Campus - A Day in the Life of an Engineering Student",
+      title: "Overview of our signature Learn & Earn Scheme Model",
       duration: "4:15",
-      views: "1.2K views"
+      views: "5.4K views"
     },
     {
-      title: "What makes Ratnaparkkhi Institute Stand Out? Principal Interview",
+      title: "How to Enroll in ITI Trades & NAPS Apprenticeship Programs",
       duration: "6:30",
-      views: "850 views"
+      views: "3.2K views"
     },
     {
-      title: "Campus Placement Cell Success Stories & Interview Mock Sessions",
+      title: "Distance & Online Degree Admissions Guide (B.A, B.Com, MBA, MCA)",
       duration: "5:10",
-      views: "2.1K views"
+      views: "4.8K views"
     },
     {
-      title: "Annual Cultural Fest - Tarang Campus Highlights",
+      title: "Student Success Stories & Placements Across Maharashtra",
       duration: "3:45",
-      views: "3.4K views"
+      views: "6.1K views"
     }
   ];
 
-  // Course eligibility check mock state
-  const [cetPercentile, setCetPercentile] = useState('');
+  // Course eligibility check based on 10th/12th marks percentage
+  const [marksPercentage, setMarksPercentage] = useState('');
   const [eligibilityResult, setEligibilityResult] = useState<string | null>(null);
 
   const handleCheckEligibility = (e: React.FormEvent) => {
     e.preventDefault();
-    const score = parseFloat(cetPercentile);
-    if (isNaN(score) || score < 0 || score > 100) {
-      setEligibilityResult("Please enter a valid MHT-CET percentile between 0 and 100.");
+    const score = parseFloat(marksPercentage);
+    if (isNaN(score) || score < 35 || score > 100) {
+      setEligibilityResult("Please enter a valid percentage score between 35% and 100%.");
       return;
     }
 
-    if (score >= 90) {
-      setEligibilityResult("Congratulations! You are highly eligible for B.Tech Computer Science and merit scholarship waivers.");
-    } else if (score >= 75) {
-      setEligibilityResult("You are eligible for B.Tech Electronics, MBA, and MCA branches. Register to secure counseling.");
+    if (score >= 50) {
+      setEligibilityResult("Congratulations! You are highly eligible for our Graduation degrees (B.A, B.Com, B.Sc, BBA, BCA) and post-graduate university options. Direct seat registration open.");
     } else {
-      setEligibilityResult("You are eligible for Mechanical and Civil engineering. Direct admission options are also available.");
+      setEligibilityResult("You are eligible for ITI Trades (MSBSVET), 10th/12th NIOS board counseling, and Skill Development certifications. Register for career guidance.");
     }
   };
 
@@ -97,28 +95,43 @@ export default function HomePage() {
     const matchesSearch = c.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
                           c.highlights.toLowerCase().includes(searchQuery.toLowerCase());
     
-    // Tab filters
+    // Tab filters: ALL, DEGREE, ITI, SCHOOL_SKILLS
     let matchesTab = true;
-    if (selectedCourseTab === 'BTECH') {
-      matchesTab = c.name.toLowerCase().includes('b.tech');
-    } else if (selectedCourseTab === 'UG') {
-      matchesTab = c.name.toLowerCase().includes('bachelor') || c.name.toLowerCase().includes('bba') || c.name.toLowerCase().includes('bca');
-    } else if (selectedCourseTab === 'PG') {
-      matchesTab = c.name.toLowerCase().includes('master') || c.name.toLowerCase().includes('mba') || c.name.toLowerCase().includes('mca');
+    if (selectedCourseTab === 'DEGREE') {
+      matchesTab = c.name.toLowerCase().includes('bachelor') || 
+                  c.name.toLowerCase().includes('master') || 
+                  c.name.toLowerCase().includes('b.a') || 
+                  c.name.toLowerCase().includes('b.com') || 
+                  c.name.toLowerCase().includes('b.sc') || 
+                  c.name.toLowerCase().includes('bba') || 
+                  c.name.toLowerCase().includes('bca') || 
+                  c.name.toLowerCase().includes('mba') || 
+                  c.name.toLowerCase().includes('mca') || 
+                  c.name.toLowerCase().includes('m.com') || 
+                  c.name.toLowerCase().includes('m.a');
+    } else if (selectedCourseTab === 'ITI') {
+      matchesTab = c.name.toLowerCase().includes('iti');
+    } else if (selectedCourseTab === 'SCHOOL_SKILLS') {
+      matchesTab = c.name.toLowerCase().includes('10th') || 
+                  c.name.toLowerCase().includes('12th') || 
+                  c.name.toLowerCase().includes('skill');
     }
 
     // Chip category filters
     let matchesChip = true;
     if (selectedCategoryChip !== 'ALL') {
       const chipLower = selectedCategoryChip.toLowerCase();
-      if (chipLower === 'cse') matchesChip = c.name.toLowerCase().includes('computer science') || c.name.toLowerCase().includes('cse');
-      else if (chipLower === 'entc') matchesChip = c.name.toLowerCase().includes('electronics') || c.name.toLowerCase().includes('entc');
-      else if (chipLower === 'mech') matchesChip = c.name.toLowerCase().includes('mechanical') || c.name.toLowerCase().includes('mech');
-      else if (chipLower === 'civil') matchesChip = c.name.toLowerCase().includes('civil');
-      else if (chipLower === 'mba') matchesChip = c.name.toLowerCase().includes('business administration') || c.name.toLowerCase().includes('mba');
-      else if (chipLower === 'mca') matchesChip = c.name.toLowerCase().includes('computer applications') || c.name.toLowerCase().includes('mca');
-      else if (chipLower === 'bba') matchesChip = c.name.toLowerCase().includes('bachelor of business') || c.name.toLowerCase().includes('bba');
-      else if (chipLower === 'bca') matchesChip = c.name.toLowerCase().includes('bachelor of computer') || c.name.toLowerCase().includes('bca');
+      if (chipLower === '10th_12th') {
+        matchesChip = c.name.toLowerCase().includes('10th') || c.name.toLowerCase().includes('12th');
+      } else if (chipLower === 'iti') {
+        matchesChip = c.name.toLowerCase().includes('iti');
+      } else if (chipLower === 'ug') {
+        matchesChip = c.name.toLowerCase().includes('bachelor') || c.name.toLowerCase().includes('b.a') || c.name.toLowerCase().includes('b.com') || c.name.toLowerCase().includes('b.sc') || c.name.toLowerCase().includes('bba') || c.name.toLowerCase().includes('bca');
+      } else if (chipLower === 'pg') {
+        matchesChip = c.name.toLowerCase().includes('master') || c.name.toLowerCase().includes('mba') || c.name.toLowerCase().includes('mca') || c.name.toLowerCase().includes('m.com') || c.name.toLowerCase().includes('m.a');
+      } else if (chipLower === 'skills') {
+        matchesChip = c.name.toLowerCase().includes('skill');
+      }
     }
 
     return matchesSearch && matchesTab && matchesChip;
@@ -156,7 +169,7 @@ export default function HomePage() {
 
             {/* Subheadline */}
             <p className="text-sm sm:text-base md:text-lg text-slate-700 font-semibold leading-relaxed max-w-xl">
-              Shaping the innovators of tomorrow with our signature {tagline} model, industry-oriented programs, and premium campus placements.
+              Ratnaparkkhi Institute provides Online & Distance Education, Skill Development, ITI Programs, Graduation, Post Graduation, and Career Guidance.
             </p>
 
             {/* CTA Buttons */}
@@ -190,13 +203,13 @@ export default function HomePage() {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 text-gold-500" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l3-3z" clipRule="evenodd" />
                 </svg>
-                Industry Oriented Programs
+                Flexible Distance Learning
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/90 border border-slate-200/60 rounded-full text-[10px] sm:text-xs font-bold text-navy-900 shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 text-gold-500" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l3-3z" clipRule="evenodd" />
                 </svg>
-                Placement Support
+                Apprenticeship & Jobs
               </span>
             </div>
           </div>
@@ -238,13 +251,12 @@ export default function HomePage() {
             <div className="flex flex-wrap items-center gap-2  text-[11px]">
               <span className="text-slate-450 font-bold uppercase tracking-wider mr-1">Quick Links:</span>
               {[
-                { name: "B.Tech CSE", tab: "BTECH", chip: "cse" },
-                { name: "B.Tech ENTC", tab: "BTECH", chip: "entc" },
-                { name: "B.Tech Mech", tab: "BTECH", chip: "mech" },
-                { name: "MBA", tab: "PG", chip: "mba" },
-                { name: "MCA", tab: "PG", chip: "mca" },
-                { name: "BBA", tab: "UG", chip: "bba" },
-                { name: "BCA", tab: "UG", chip: "bca" }
+                { name: "10th/12th NIOS", tab: "SCHOOL_SKILLS", chip: "10th_12th" },
+                { name: "ITI Programs", tab: "ITI", chip: "iti" },
+                { name: "B.A / B.Com", tab: "DEGREE", chip: "ug" },
+                { name: "BBA / BCA", tab: "DEGREE", chip: "ug" },
+                { name: "MBA / MCA", tab: "DEGREE", chip: "pg" },
+                { name: "Skill Development", tab: "SCHOOL_SKILLS", chip: "skills" }
               ].map((chip, idx) => (
                 <button
                   key={idx}
@@ -259,58 +271,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 2: Dedicated Statistics Section (Slate-50 Background) */}
+      {/* SECTION 2: Dedicated Statistics Section (Slate-50 Background - Official achievements) */}
       <section className="bg-slate-50 pt-28 pb-20 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto pt-6 mb-6 space-y-2">
             <span className="text-xs font-bold uppercase tracking-widest text-gold-600">RIEM at a Glance</span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900">Academic & Placement Milestones</h2>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900">Official Milestones & Placements</h2>
             <p className="text-xs sm:text-sm text-slate-500 font-medium">
-              Empowering students with top engineering training and corporate-aligned curriculum.
+              Shaping career opportunities with recognized university counseling and vocational trades.
             </p>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {/* Card 1: Placement Rate */}
-            <div className="bg-white border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-              <div className="w-12 h-12 bg-navy-50 text-navy-900 rounded-xl flex items-center justify-center shrink-0 shadow-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-              <div>
-                <span className="block text-2xl sm:text-3xl font-black text-gold-505 text-gold-500">{placementStats.placementRate}</span>
-                <span className="text-[10px] sm:text-xs uppercase text-slate-500 font-bold tracking-wider">Placement Rate</span>
-              </div>
-            </div>
-
-            {/* Card 2: Highest Package */}
-            <div className="bg-white border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-              <div className="w-12 h-12 bg-navy-50 text-navy-900 rounded-xl flex items-center justify-center shrink-0 shadow-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <div>
-                <span className="block text-2xl sm:text-3xl font-black text-gold-505 text-gold-500">{placementStats.highestPackage}</span>
-                <span className="text-[10px] sm:text-xs uppercase text-slate-500 font-bold tracking-wider">Highest Package</span>
-              </div>
-            </div>
-
-            {/* Card 3: Recruiters */}
-            <div className="bg-white border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-              <div className="w-12 h-12 bg-navy-50 text-navy-900 rounded-xl flex items-center justify-center shrink-0 shadow-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <div>
-                <span className="block text-2xl sm:text-3xl font-black text-gold-505 text-gold-500">{placementStats.companiesVisited}</span>
-                <span className="text-[10px] sm:text-xs uppercase text-slate-500 font-bold tracking-wider">Corporate Partners</span>
-              </div>
-            </div>
-
-            {/* Card 4: Students Enrolled */}
+            {/* Card 1: Passed Students */}
             <div className="bg-white border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
               <div className="w-12 h-12 bg-navy-50 text-navy-900 rounded-xl flex items-center justify-center shrink-0 shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -319,8 +292,48 @@ export default function HomePage() {
                 </svg>
               </div>
               <div>
-                <span className="block text-2xl sm:text-3xl font-black text-gold-500">3,500+</span>
-                <span className="text-[10px] sm:text-xs uppercase text-slate-500 font-bold tracking-wider">Students Enrolled</span>
+                <span className="block text-2xl sm:text-3xl font-black text-gold-500">23,000+</span>
+                <span className="text-[10px] sm:text-xs uppercase text-slate-500 font-bold tracking-wider">Passed Students</span>
+              </div>
+            </div>
+
+            {/* Card 2: Success Rate */}
+            <div className="bg-white border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+              <div className="w-12 h-12 bg-navy-50 text-navy-900 rounded-xl flex items-center justify-center shrink-0 shadow-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <span className="block text-2xl sm:text-3xl font-black text-gold-500">100%</span>
+                <span className="text-[10px] sm:text-xs uppercase text-slate-500 font-bold tracking-wider">Success Rate</span>
+              </div>
+            </div>
+
+            {/* Card 3: Placed Students */}
+            <div className="bg-white border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+              <div className="w-12 h-12 bg-navy-50 text-navy-900 rounded-xl flex items-center justify-center shrink-0 shadow-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <div>
+                <span className="block text-2xl sm:text-3xl font-black text-gold-500">8,000+</span>
+                <span className="text-[10px] sm:text-xs uppercase text-slate-500 font-bold tracking-wider">Placed Students</span>
+              </div>
+            </div>
+
+            {/* Card 4: Geographic Reach */}
+            <div className="bg-white border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+              <div className="w-12 h-12 bg-navy-50 text-navy-900 rounded-xl flex items-center justify-center shrink-0 shadow-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div>
+                <span className="block text-[15px] sm:text-lg font-black text-gold-505 text-gold-500 leading-tight uppercase">Maharashtra</span>
+                <span className="text-[9px] uppercase text-slate-500 font-bold tracking-wider">Statewide Coverage</span>
               </div>
             </div>
           </div>
@@ -336,17 +349,17 @@ export default function HomePage() {
             <span className="text-xs font-bold uppercase tracking-widest text-gold-600">Course Directories</span>
             <h2 className="text-3xl font-extrabold text-navy-900">Explore Programs & Specialties</h2>
             <p className="text-xs sm:text-sm text-slate-500 font-medium">
-              Filter by department tabs or select course categories below to view seats, syllabus, and fees.
+              Filter by category tabs or select course types below to view seats, durations, and details.
             </p>
           </div>
 
-          {/* Department Tabs */}
+          {/* Category Tabs: ALL, DEGREE, ITI, SCHOOL_SKILLS */}
           <div className="flex flex-wrap justify-center border-b border-slate-100 max-w-lg mx-auto">
             {[
               { id: 'ALL', label: 'All Programs' },
-              { id: 'BTECH', label: 'B.Tech Dept' },
-              { id: 'UG', label: 'Under-Graduate' },
-              { id: 'PG', label: 'Post-Graduate' }
+              { id: 'DEGREE', label: 'Degrees' },
+              { id: 'ITI', label: 'ITI Programs' },
+              { id: 'SCHOOL_SKILLS', label: 'School & Skills' }
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -369,14 +382,11 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center justify-center gap-2 max-w-3xl mx-auto text-xs">
             {[
               { id: 'ALL', label: 'All Specialties' },
-              { id: 'cse', label: 'Computer Science' },
-              { id: 'entc', label: 'Electronics & Telecom' },
-              { id: 'mech', label: 'Mechanical Engg' },
-              { id: 'civil', label: 'Civil Engg' },
-              { id: 'mba', label: 'MBA Management' },
-              { id: 'mca', label: 'MCA Computer App' },
-              { id: 'bba', label: 'BBA Management' },
-              { id: 'bca', label: 'BCA Computer App' }
+              { id: '10th_12th', label: '10th & 12th NIOS' },
+              { id: 'iti', label: 'ITI Trades' },
+              { id: 'ug', label: 'Under-Graduate (UG)' },
+              { id: 'pg', label: 'Post-Graduate (PG)' },
+              { id: 'skills', label: 'Skill Certifications' }
             ].map((chip) => (
               <button
                 key={chip.id}
@@ -398,15 +408,15 @@ export default function HomePage() {
             <div className="bg-slate-50 border border-slate-100 p-6 rounded-2xl space-y-4 shadow-sm">
               <h4 className="font-bold text-navy-900 text-sm flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0"></span>
-                Predict Admission Eligibility
+                Check Admission Eligibility
               </h4>
-              <p className="text-[11px] text-slate-500 font-medium">Enter your MHT-CET / JEE percentile score to check eligibility.</p>
+              <p className="text-[11px] text-slate-500 font-medium">Enter your 10th or 12th percentage score to check eligibility.</p>
               <form onSubmit={handleCheckEligibility} className="flex gap-2">
                 <input 
                   type="text" 
-                  placeholder="e.g. 85.50"
-                  value={cetPercentile}
-                  onChange={(e) => setCetPercentile(e.target.value)}
+                  placeholder="e.g. 65.50"
+                  value={marksPercentage}
+                  onChange={(e) => setMarksPercentage(e.target.value)}
                   className="bg-white border border-slate-200 rounded px-3 py-1.5 text-xs text-navy-955 focus:outline-none focus:border-gold-500 w-full"
                 />
                 <button type="submit" className="bg-navy-900 hover:bg-navy-950 text-white font-bold text-xs px-4 py-1.5 rounded transition-colors cursor-pointer shrink-0">Check</button>
@@ -423,15 +433,15 @@ export default function HomePage() {
               <div className="space-y-2">
                 <h4 className="font-bold text-navy-900 text-sm flex items-center gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-gold-500 shrink-0"></span>
-                  Syllabus & Course Details
+                  Degree & ITI Prospectus
                 </h4>
-                <p className="text-[11px] text-slate-500 font-medium">Download the latest choice-based credit system curriculum guides for academic year 2026.</p>
+                <p className="text-[11px] text-slate-500 font-medium">Download the latest information guides and fee schedules for academic year 2026.</p>
               </div>
               <a 
                 href="/online-admission"
                 className="inline-block text-center bg-white border border-slate-200 hover:border-gold-500 hover:text-gold-600 text-navy-900 font-bold text-xs py-2 rounded transition-colors cursor-pointer shadow-sm"
               >
-                Request Syllabus PDF
+                Request Prospectus PDF
               </a>
             </div>
 
@@ -442,7 +452,7 @@ export default function HomePage() {
                   <span className="w-2.5 h-2.5 rounded-full bg-blue-500 shrink-0"></span>
                   Admissions Helpline
                 </h4>
-                <p className="text-[11px] text-slate-500 font-medium">Connect with our head counsellors for direct and CAP round admission registration updates.</p>
+                <p className="text-[11px] text-slate-500 font-medium">Connect with our registrar desk for direct admission and university registration details.</p>
               </div>
               <a 
                 href={`tel:${formattedPhone}`}
@@ -525,16 +535,16 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
             <span className="text-xs font-bold uppercase tracking-widest text-gold-600">Our Commitments</span>
-            <h2 className="text-3xl font-extrabold text-navy-900">Why Parents Trust Ratnaparkkhi Institute</h2>
+            <h2 className="text-3xl font-extrabold text-navy-900">Why Parents & Working Professionals Trust Us</h2>
             <p className="text-xs sm:text-sm text-slate-500 font-medium">
-              We prioritize the safety, overall mentoring, and career security of every student who walks through our gates.
+              We prioritize flexible, accredited, and industry-oriented vocational pathways for all.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyParentsTrust.map((item, index) => (
               <div key={index} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                <div className="w-10 h-10 rounded-lg bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-sm mb-4 border border-slate-100 group-hover:bg-gold-500 group-hover:text-navy-950 transition-colors">
+                <div className="w-10 h-10 rounded-lg bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-sm mb-4 border border-slate-100 group-hover:bg-gold-500 group-hover:text-navy-955 transition-colors">
                   0{index + 1}
                 </div>
                 <h3 className="text-md font-bold text-navy-900 mb-2">{item.title}</h3>
@@ -605,11 +615,11 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Side: Mock Video Player & Playlist */}
+            {/* Right Side: Video Player & Playlist */}
             <div className="lg:col-span-5 space-y-6">
               <div className="space-y-2 border-b border-slate-100 pb-4">
                 <span className="text-xs font-bold uppercase tracking-widest text-gold-600">Video Walkthrough</span>
-                <h2 className="text-2xl font-extrabold text-navy-900">Campus Life in Video</h2>
+                <h2 className="text-2xl font-extrabold text-navy-900">Vocational & Degree Guides</h2>
               </div>
 
               {/* Video Player Display */}
@@ -626,7 +636,7 @@ export default function HomePage() {
 
                 <div className="relative z-20 space-y-1.5 text-left">
                   <span className="inline-block bg-gold-500/20 text-gold-400 text-[9px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded border border-gold-500/35">
-                    Campus Tour ({activeVideo.duration})
+                    Course Guide ({activeVideo.duration})
                   </span>
                   <h4 className="text-white font-bold text-sm leading-tight max-w-sm">
                     {activeVideo.title}
@@ -671,18 +681,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 6: Top Recruiters & Placement Partners (Slate-50 Background) */}
+      {/* SECTION 6: Top Recognitions & University Partners (Slate-50 Background) */}
       <section className="bg-slate-50 py-20 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-bold uppercase tracking-widest text-gold-600">Corporate Linkages</span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900">Top Recruiters & Placement Partners</h2>
+            <span className="text-xs font-bold uppercase tracking-widest text-gold-600">Recognitions & Partners</span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900">Authorized Boards, Skill Councils & Universities</h2>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {recruiters.map((r, i) => (
-              <div key={i} className="bg-white border border-slate-100 p-5 rounded-xl flex items-center justify-center shadow-sm hover:shadow-md transition-all text-center group cursor-default">
-                <span className="text-xs md:text-sm font-extrabold text-navy-900 group-hover:text-gold-600 transition-colors uppercase tracking-wider">
+              <div key={i} className="bg-white border border-slate-100 p-5 rounded-2xl flex items-center justify-center shadow-sm hover:shadow-md transition-all text-center group cursor-default min-h-[80px]">
+                <span className="text-xs font-extrabold text-navy-900 group-hover:text-gold-600 transition-colors uppercase tracking-wider leading-snug">
                   {r.logoText}
                 </span>
               </div>
@@ -699,8 +709,8 @@ export default function HomePage() {
 
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <div className="space-y-2">
-            <h3 className="text-lg sm:text-xl font-bold">Get our engineering & management experts to answer your queries</h3>
-            <p className="text-slate-400 text-xs font-medium">Submit your question, CET rank details, or course query below. A counsellor will call you within 24 Hours.</p>
+            <h3 className="text-lg sm:text-xl font-bold">Get our distance & vocational education experts to answer your queries</h3>
+            <p className="text-slate-400 text-xs font-medium">Submit your question, board query, or university counseling question below. A counsellor will call you within 24 Hours.</p>
           </div>
 
           {questionSubmitted ? (
@@ -714,7 +724,7 @@ export default function HomePage() {
             <form onSubmit={handleAskQuestion} className="flex flex-col sm:flex-row gap-2 max-w-2xl mx-auto">
               <input 
                 type="text" 
-                placeholder="Ask about admissions, cutoffs, syllabus, direct seats..."
+                placeholder="Ask about NIOS, ITI, degree counseling, admissions, fees..."
                 value={userQuestion}
                 onChange={(e) => setUserQuestion(e.target.value)}
                 className="flex-grow bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-xs sm:text-sm text-white placeholder:text-slate-400 focus:outline-none focus:border-gold-500 focus:bg-white/15"
@@ -743,7 +753,7 @@ export default function HomePage() {
               </div>
               <h2 className="text-3xl font-extrabold text-navy-900">Administrative Help Desk</h2>
               <p className="text-xs sm:text-sm text-slate-500 font-medium leading-relaxed">
-                Connect with our registrar desk or Social Welfare scholarship desk for admission enrollment help.
+                Connect with our registrar desk or scholarship guidance desk for admissions and counseling.
               </p>
             </div>
 
@@ -756,7 +766,7 @@ export default function HomePage() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-bold text-navy-900">Campus Address</h4>
+                  <h4 className="font-bold text-navy-900">Office Address</h4>
                   <p className="text-slate-505 mt-0.5 font-medium leading-relaxed">
                     &quot;Tirumal&quot; Plot No. 8, New Shantiniketan Colony, Trimurti Chowk, Chh. Sambhajinagar.
                   </p>

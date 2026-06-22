@@ -10,15 +10,15 @@ export default function ContactPage() {
     { title: "Student Section / Fees Counter", contact: officialPhone, email: officialEmail },
     { title: "Training & Placement Cell", contact: officialPhone, email: officialEmail },
     { title: "Scholarships Desk", contact: officialPhone, email: officialEmail },
-    { title: "Boys & Girls Hostels", contact: officialPhone, email: officialEmail },
+    { title: "Skill Development / NAPS Desk", contact: officialPhone, email: officialEmail },
     { title: "Franchise Collaborations Office", contact: officialPhone, email: officialEmail }
   ];
 
   const faqs = [
-    { q: "What is the DTE/MHT-CET code for the Institute?", a: "The official Directorate of Technical Education (DTE) code for admission CAP rounds is Savitribai Phule Pune University code 6220." },
-    { q: "Are the courses approved by AICTE?", a: "Yes, all our B.Tech engineering branches, MBA, and MCA programs are fully approved by the All India Council for Technical Education (AICTE), New Delhi." },
-    { q: "Does the college offer in-campus hostel accommodation?", a: "Yes, we offer separate in-campus hostels for boys and girls, equipped with 24/7 security, wardens, wi-fi, power backup, and nutritious mess food." },
-    { q: "How can I apply for EBC and State scholarships?", a: "Once CAP allocation is confirmed, you can apply on the MAHADBT portal. Our dedicated scholarship cell will verify your files and submit them to social welfare." }
+    { q: "What boards and universities are you associated with?", a: "We are authorized admission & counseling partners for NSDC, Skill India, NAPS, BTP, BOSS Board, YCMOU, Tilak Maharashtra Vidyapeeth, Mumbai Hindi Vidyapeeth, and MSBSVET ITI. Our university partnerships include DY Patil University, Mangalayatan University, ISBM University, and Dr. CV Raman University." },
+    { q: "What types of programs do you offer, and are they recognized?", a: "We offer 10th & 12th NIOS/MHV secondary schooling, ITI vocational programs certified by MSBSVET, UGC-entitled graduation and post-graduation degrees (BA, B.Com, B.Sc, BBA, BCA, MBA, MCA, M.Com, MA), and Skill Development programs approved by NSDC & Skill India." },
+    { q: "Who is eligible for the Learn & Earn scheme and how does it work?", a: "The Learn & Earn scheme is designed for students and working professionals. By registering for vocational or degree programs, you are connected to NAPS apprenticeship opportunities. This allows you to gain real work experience and receive monthly stipends while you study." },
+    { q: "How do I apply for courses and scholarships?", a: "You can apply online via our Admission Portal or call us at +91 9923313437. Our counselor cell will guide you in choosing the right course, managing installment payment plans, and applying for applicable scholarship/fee concessions." }
   ];
 
   return (
@@ -140,7 +140,7 @@ export default function ContactPage() {
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="text-center space-y-2">
           <h2 className="text-2xl font-extrabold text-navy-900">Frequently Asked Questions</h2>
-          <p className="text-xs text-slate-400 font-bold">General queries about admissions, approvals, and hostels.</p>
+          <p className="text-xs text-slate-400 font-bold">General queries about admissions, partners, and apprenticeships.</p>
         </div>
         
         <div className="space-y-6">

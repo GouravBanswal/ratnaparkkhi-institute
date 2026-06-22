@@ -5,16 +5,16 @@ import { officialPhone, officialEmail } from '@/components/data/collegeData';
 export default function AdmissionPage() {
   const steps = [
     { title: "Fill Online Form", desc: "Submit your personal, academic, and course preferences details via this portal." },
-    { title: "Document Verification", desc: "Our counselling cell will verify your JEE/CET scorecards and academic certificates." },
-    { title: "Branch Allocation", desc: "Based on merit lists and seat availability, we will allocate branches or call you for counseling." },
+    { title: "Document Verification", desc: "Our counselling cell will verify your academic certificates and eligibility." },
+    { title: "Course Allocation", desc: "Based on seat availability, we will allocate courses or call you for counseling." },
     { title: "Fee Payment & Confirm", desc: "Submit your tuition fee installment and confirm your seat registration in person." }
   ];
 
   const requiredDocs = [
     "SSC (10th) Marksheet & Certificate",
-    "HSC (12th) Marksheet & Certificate (for B.Tech)",
-    "JEE Main / MHT-CET Scorecard (for Engineering)",
-    "Graduation Marksheet (for MBA/MCA)",
+    "HSC (12th) Marksheet & Certificate",
+    "Previous School Leaving Certificate (TC)",
+    "Graduation Marksheet (for Post-Graduation)",
     "School / College Leaving Certificate (LC)",
     "Domicile Certificate of Maharashtra State",
     "Caste Certificate & Non-Creamy Layer (if applicable)",
@@ -101,7 +101,7 @@ export default function AdmissionPage() {
           <div className="lg:col-span-6 w-full">
             <EnquiryForm 
               title="Admission Registration 2026"
-              subtitle="Please provide accurate academic grades so our mentors can evaluate CET cutoffs."
+              subtitle="Please provide accurate details so our admission mentors can contact you and assist in your process."
               compact={false}
             />
           </div>

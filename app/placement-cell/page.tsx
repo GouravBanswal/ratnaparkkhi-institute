@@ -3,11 +3,11 @@ import { placementStats, recruiters, successStories } from '@/components/data/co
 
 export default function PlacementsPage() {
   const steps = [
-    { title: "Registration & Resume Building", desc: "Students register with the placement cell in 6th semester and build validated tech resumes." },
-    { title: "Skill Enhancement Bootcamps", desc: "Rigorous coding training, resume reviews, soft-skills workshops, and mock interview drills." },
-    { title: "Pre-Placement Talks (PPT)", desc: "Recruiting companies present their work profiles, roles, and compensation details on campus." },
-    { title: "Testing & Shortlisting", desc: "Online aptitude tests, coding rounds, group discussions (GD) conducted on campus." },
-    { title: "Technical & HR Interviews", desc: "Final interview panels face-to-face or virtually, followed by immediate offer releases." }
+    { title: "Profile Mapping & Career Counseling", desc: "Admissions counselors review student backgrounds, qualifications, and employment goals to select the right degree or ITI trade." },
+    { title: "Skill & Trade Development", desc: "Students undergo vocational ITI trade preparation or NSDC-approved skill development modules matching market demands." },
+    { title: "Apprenticeship Matchmaking (NAPS/BTP)", desc: "We coordinate with corporate and government partners to register students for apprenticeships with monthly stipends." },
+    { title: "Job Placement Interviews", desc: "Candidates are scheduled for placement drives and interviews in government departments and private sectors." },
+    { title: "Ongoing Placement Assistance", desc: "Successful candidates receive final job assignments, while other graduates receive continuous job referral support." }
   ];
 
   return (
@@ -17,9 +17,9 @@ export default function PlacementsPage() {
       <section className="bg-slate-50 border-b border-slate-100 py-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#0b2240_1px,transparent_1px),linear-gradient(to_bottom,#0b2240_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
         <div className="relative max-w-7xl mx-auto px-4 text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-black tracking-tight text-navy-900">Placement Cell</h1>
+          <h1 className="text-4xl md:text-5xl font-black tracking-tight text-navy-900">Placement Assistance</h1>
           <p className="text-sm md:text-base text-slate-650 max-w-2xl mx-auto font-medium">
-            Our dedicated training & placement department works year-round to connect recruiters with engineering and management students.
+            Our placement department works year-round to coordinate Learn & Earn corporate apprenticeships, ITI job placements, and private sector opportunities.
           </p>
         </div>
       </section>
@@ -27,32 +27,32 @@ export default function PlacementsPage() {
       {/* 2. Placements Stats Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="text-center max-w-2xl mx-auto space-y-3">
-          <h2 className="text-3xl font-extrabold text-navy-900">Our Placement Statistics</h2>
+          <h2 className="text-3xl font-extrabold text-navy-900">Placement Achievements</h2>
           <p className="text-xs sm:text-sm text-slate-500 font-medium">
-            A breakdown of our placement records over the recent graduating batches.
+            A track record of our successfully qualified and placed distance learning and ITI graduates.
           </p>
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 text-center">
           <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
             <span className="block text-3xl font-black text-gold-655">{placementStats.highestPackage}</span>
-            <span className="block text-[10px] text-navy-900 uppercase tracking-widest font-bold mt-1">Highest Package</span>
+            <span className="block text-[10px] text-navy-900 uppercase tracking-widest font-bold mt-1">Total Placed</span>
           </div>
           <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
             <span className="block text-3xl font-black text-gold-655">{placementStats.averagePackage}</span>
-            <span className="block text-[10px] text-navy-900 uppercase tracking-widest font-bold mt-1">Average Package</span>
+            <span className="block text-[10px] text-navy-900 uppercase tracking-widest font-bold mt-1">Academic Success</span>
           </div>
           <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
             <span className="block text-3xl font-black text-gold-655">{placementStats.placementRate}</span>
-            <span className="block text-[10px] text-navy-900 uppercase tracking-widest font-bold mt-1">Placement Rate</span>
+            <span className="block text-[10px] text-navy-900 uppercase tracking-widest font-bold mt-1">Success Rate</span>
           </div>
           <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-            <span className="block text-3xl font-black text-gold-655">{placementStats.totalOffers}</span>
-            <span className="block text-[10px] text-navy-900 uppercase tracking-widest font-bold mt-1">Job Offers</span>
+            <span className="block text-3xl font-black text-gold-655">23,000+</span>
+            <span className="block text-[10px] text-navy-900 uppercase tracking-widest font-bold mt-1">Passed Students</span>
           </div>
           <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 col-span-2 lg:col-span-1">
-            <span className="block text-3xl font-black text-gold-655">{placementStats.internshipOffers}</span>
-            <span className="block text-[10px] text-navy-900 uppercase tracking-widest font-bold mt-1">Paid Internships</span>
+            <span className="block text-lg font-black text-gold-655 uppercase mt-2">NAPS / NSDC</span>
+            <span className="block text-[10px] text-navy-900 uppercase tracking-widest font-bold mt-1">Apprenticeships</span>
           </div>
         </div>
       </section>
@@ -70,10 +70,10 @@ export default function PlacementsPage() {
           <div className="lg:col-span-9 space-y-4">
             <h3 className="text-xl font-bold text-navy-900 flex items-center gap-2">
               <span className="w-1.5 h-5 bg-gold-500 rounded-full"></span>
-              Placement Officer's Desk
+              Placement Desk Message
             </h3>
             <p className="text-sm text-slate-655 leading-relaxed font-medium">
-              "At Ratnaparkkhi Institute of Engineering & Management, we believe that academic brilliance is complete only when aligned with a successful career. Our Corporate Relations and Placements department works around the clock to create industry tie-ups, organize mock drives, and conduct specialized bootcamps in collaboration with technical leaders like AWS, RedHat, and Cisco. We focus not only on coding skills, but also on communication, email etiquette, and presentation abilities."
+              &quot;At Ratnaparkkhi Institute of Engineering & Management, we believe that education must lead to practical career growth. Our placement cell coordinates Corporate Relations and NAPS apprenticeships. We assist candidates in securing jobs in private enterprises, retail, IT support, and government sectors. We train students under our signature Learn & Earn model, ensuring they gain real-world corporate experience while earning their degree.&quot;
             </p>
           </div>
         </div>
@@ -82,9 +82,9 @@ export default function PlacementsPage() {
       {/* 4. Training Curriculum / Roadmap */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center max-w-2xl mx-auto space-y-3">
-          <h2 className="text-2xl font-extrabold text-navy-900">Structured Placement Process</h2>
+          <h2 className="text-2xl font-extrabold text-navy-900">Career Assistance Roadmap</h2>
           <p className="text-xs sm:text-sm text-slate-500 font-medium">
-            Our step-by-step career program ensures our candidates transition smoothly from academics to corporate work life.
+            Our step-by-step career program ensures our candidates transition smoothly from distance education to placements.
           </p>
         </div>
 
@@ -103,16 +103,16 @@ export default function PlacementsPage() {
         </div>
       </section>
 
-      {/* 5. Recruiters logos (Light theme) */}
+      {/* 5. Recognitions logos (Light theme) */}
       <section className="bg-slate-50 border-y border-slate-100 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <h3 className="text-xl font-bold text-navy-900">Top Recruiting Corporates</h3>
-            <p className="text-xs text-slate-500 font-semibold">These companies regularly visit our campus for placement drives.</p>
+            <h3 className="text-xl font-bold text-navy-900">Our Recognition & University Partners</h3>
+            <p className="text-xs text-slate-500 font-semibold">We coordinate university admissions and apprenticeship placements with these organizations.</p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-            {recruiters.map((r, i) => (
-              <div key={i} className="bg-white border border-slate-100 p-4 rounded-lg flex items-center justify-center shadow-sm hover:shadow-md transition-all text-center uppercase font-bold text-xs md:text-sm text-navy-900 hover:text-gold-600">
+            {recruiters.slice(0, 10).map((r, i) => (
+              <div key={i} className="bg-white border border-slate-100 p-4 rounded-lg flex items-center justify-center shadow-sm hover:shadow-md transition-all text-center uppercase font-bold text-xs md:text-sm text-navy-900 hover:text-gold-600 min-h-[70px]">
                 {r.logoText}
               </div>
             ))}
@@ -121,11 +121,11 @@ export default function PlacementsPage() {
       </section>
 
       {/* 6. Success Stories Testimonials */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 pb-10">
         <div className="text-center max-w-2xl mx-auto space-y-3">
-          <h2 className="text-3xl font-extrabold text-navy-900">Words from Placed Students</h2>
+          <h2 className="text-3xl font-extrabold text-navy-900">Student Placement Journeys</h2>
           <p className="text-xs sm:text-sm text-slate-500 font-medium">
-            Read about the recruitment journeys of our recent alumni.
+            Read about the career transitions of our vocational and distance learning graduates.
           </p>
         </div>
 
@@ -141,7 +141,7 @@ export default function PlacementsPage() {
                   ))}
                 </div>
                 <p className="text-xs sm:text-sm text-slate-600 italic leading-relaxed font-medium">
-                  "{story.quote}"
+                  &quot;{story.quote}&quot;
                 </p>
               </div>
               
@@ -153,7 +153,7 @@ export default function PlacementsPage() {
                   <h4 className="text-xs sm:text-sm font-bold text-navy-900">{story.name}</h4>
                   <span className="block text-[10px] text-slate-400 font-bold">{story.branch}</span>
                   <span className="inline-block mt-1 text-[10px] font-bold text-gold-600 uppercase tracking-wider">
-                    {story.designation} at {story.company} | Package: {story.package}
+                    {story.designation} at {story.company} | Pathway: {story.package}
                   </span>
                 </div>
               </div>

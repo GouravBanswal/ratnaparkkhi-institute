@@ -72,7 +72,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             <div className="bg-slate-50 border border-slate-100 p-6 rounded-xl space-y-4 text-xs mt-10">
               <h4 className="font-bold text-navy-900">Academic Guidance Policy</h4>
               <p className="text-slate-500 leading-relaxed font-medium">
-                Ratnaparkkhi Institute of Engineering & Management is dedicated to keeping engineering and management syllabi updated with current industrial developments. We provide all students with access to software tools, coding bootcamps, mock tests, and alumni referral opportunities. Admissions are currently open for B.Tech, MBA, and MCA courses.
+                Ratnaparkkhi Institute of Engineering & Management is dedicated to keeping distance education curricula, ITI trade materials, and skill development programs updated with current industrial developments. We provide all students with comprehensive counseling, exam preparation guides, and placement cell assistance. Admissions are currently open for 10th/12th NIOS, ITI, Degrees, and Skill programs.
               </p>
             </div>
 
