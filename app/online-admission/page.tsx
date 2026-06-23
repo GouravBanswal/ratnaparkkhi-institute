@@ -153,11 +153,19 @@ export default function AdmissionPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-navy-900">Diploma in Electrical</h3>
+                <h3 className="text-xl font-bold text-navy-900 leading-tight">Diploma in Electrical</h3>
+                <p className="text-[10px] font-black text-navy-950 bg-slate-50 border border-slate-100 rounded px-2.5 py-1 inline-block">
+                  Industrial Technical Institute (ITI), Maharashtra State
+                </p>
                 <p className="text-xs text-slate-500 leading-relaxed font-semibold">Practical exposure in home/industrial wiring, motors, electrical machines, maintenance, and solar panel setups.</p>
                 <div className="space-y-1.5 text-xs border-t border-slate-50 pt-3">
+                  <p><strong className="text-slate-700 font-bold">Mode:</strong> Regular / Practical</p>
                   <p><strong className="text-slate-700 font-bold">Duration:</strong> 2 Years</p>
                   <p><strong className="text-slate-700 font-bold">Eligibility:</strong> 10th Passed from recognized board</p>
+                  <div className="mt-2 space-y-1 bg-gold-500/5 border border-gold-500/10 p-2 rounded text-[10px] leading-relaxed">
+                    <p><strong className="text-slate-700 font-bold">Approved By:</strong> DGT / NCVT</p>
+                    <p><strong className="text-slate-700 font-bold">Skill Partners:</strong> NSDC / Skill India / NAPS</p>
+                  </div>
                 </div>
               </div>
               <a href="#admission-form-top" className="block text-center py-2.5 text-xs font-bold uppercase tracking-wider text-navy-955 bg-gold-500 hover:bg-gold-600 rounded-lg transition-colors cursor-pointer">Apply Now</a>
@@ -172,11 +180,19 @@ export default function AdmissionPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-navy-900">Diploma in Fitter</h3>
+                <h3 className="text-xl font-bold text-navy-900 leading-tight">Diploma in Fitter</h3>
+                <p className="text-[10px] font-black text-navy-950 bg-slate-50 border border-slate-100 rounded px-2.5 py-1 inline-block">
+                  Industrial Technical Institute (ITI), Maharashtra State
+                </p>
                 <p className="text-xs text-slate-500 leading-relaxed font-semibold">Intensive workshops covering structure assembly, pipe joints, lathe machine fabrication, and industrial tools fitting.</p>
                 <div className="space-y-1.5 text-xs border-t border-slate-50 pt-3">
+                  <p><strong className="text-slate-700 font-bold">Mode:</strong> Regular / Practical</p>
                   <p><strong className="text-slate-700 font-bold">Duration:</strong> 2 Years</p>
                   <p><strong className="text-slate-700 font-bold">Eligibility:</strong> 10th Passed from recognized board</p>
+                  <div className="mt-2 space-y-1 bg-gold-500/5 border border-gold-500/10 p-2 rounded text-[10px] leading-relaxed">
+                    <p><strong className="text-slate-700 font-bold">Approved By:</strong> DGT / NCVT</p>
+                    <p><strong className="text-slate-700 font-bold">Skill Partners:</strong> NSDC / Skill India / NAPS</p>
+                  </div>
                 </div>
               </div>
               <a href="#admission-form-top" className="block text-center py-2.5 text-xs font-bold uppercase tracking-wider text-navy-955 bg-gold-500 hover:bg-gold-600 rounded-lg transition-colors cursor-pointer">Apply Now</a>
@@ -190,11 +206,19 @@ export default function AdmissionPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 7.89M9 11l3 3L22 4" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-navy-900">Diploma in Turner</h3>
+                <h3 className="text-xl font-bold text-navy-900 leading-tight">Diploma in Turner</h3>
+                <p className="text-[10px] font-black text-navy-950 bg-slate-50 border border-slate-100 rounded px-2.5 py-1 inline-block">
+                  Industrial Technical Institute (ITI), Maharashtra State
+                </p>
                 <p className="text-xs text-slate-500 leading-relaxed font-semibold">Specialized training in precision lathe machine settings, boring, thread-cutting, drilling, and metal shapes turning.</p>
                 <div className="space-y-1.5 text-xs border-t border-slate-50 pt-3">
+                  <p><strong className="text-slate-700 font-bold">Mode:</strong> Regular / Practical</p>
                   <p><strong className="text-slate-700 font-bold">Duration:</strong> 2 Years</p>
                   <p><strong className="text-slate-700 font-bold">Eligibility:</strong> 10th Passed from recognized board</p>
+                  <div className="mt-2 space-y-1 bg-gold-500/5 border border-gold-500/10 p-2 rounded text-[10px] leading-relaxed">
+                    <p><strong className="text-slate-700 font-bold">Approved By:</strong> DGT / NCVT</p>
+                    <p><strong className="text-slate-700 font-bold">Skill Partners:</strong> NSDC / Skill India / NAPS</p>
+                  </div>
                 </div>
               </div>
               <a href="#admission-form-top" className="block text-center py-2.5 text-xs font-bold uppercase tracking-wider text-navy-955 bg-gold-500 hover:bg-gold-600 rounded-lg transition-colors cursor-pointer">Apply Now</a>
@@ -208,11 +232,19 @@ export default function AdmissionPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 5h10a2 2 0 012 2v10a2 2 0 01-2 2H7a2 2 0 01-2-2V7a2 2 0 012-2z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-navy-900">Diploma in CNC Operator</h3>
+                <h3 className="text-xl font-bold text-navy-900 leading-tight">Diploma in CNC Operator</h3>
+                <p className="text-[10px] font-black text-navy-950 bg-slate-50 border border-slate-100 rounded px-2.5 py-1 inline-block">
+                  Industrial Technical Institute (ITI), Maharashtra State
+                </p>
                 <p className="text-xs text-slate-500 leading-relaxed font-semibold">Covers computer numerical control programming, milling and turning operations, CAD/CAM fundamentals, and machinery setups.</p>
                 <div className="space-y-1.5 text-xs border-t border-slate-50 pt-3">
+                  <p><strong className="text-slate-700 font-bold">Mode:</strong> Regular / Practical</p>
                   <p><strong className="text-slate-700 font-bold">Duration:</strong> 1 Year</p>
                   <p><strong className="text-slate-700 font-bold">Eligibility:</strong> 10th Passed from recognized board</p>
+                  <div className="mt-2 space-y-1 bg-gold-500/5 border border-gold-500/10 p-2 rounded text-[10px] leading-relaxed">
+                    <p><strong className="text-slate-700 font-bold">Approved By:</strong> DGT / NCVT</p>
+                    <p><strong className="text-slate-700 font-bold">Skill Partners:</strong> NSDC / Skill India / NAPS</p>
+                  </div>
                 </div>
               </div>
               <a href="#admission-form-top" className="block text-center py-2.5 text-xs font-bold uppercase tracking-wider text-navy-955 bg-gold-500 hover:bg-gold-600 rounded-lg transition-colors cursor-pointer">Apply Now</a>
@@ -227,11 +259,19 @@ export default function AdmissionPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-navy-900">Diploma in Welder</h3>
+                <h3 className="text-xl font-bold text-navy-900 leading-tight">Diploma in Welder</h3>
+                <p className="text-[10px] font-black text-navy-950 bg-slate-50 border border-slate-100 rounded px-2.5 py-1 inline-block">
+                  Industrial Technical Institute (ITI), Maharashtra State
+                </p>
                 <p className="text-xs text-slate-500 leading-relaxed font-semibold">Hands-on practice in Arc, Gas, TIG, and MIG welding, structural steel assembly, fabrication, and industrial safety regulations.</p>
                 <div className="space-y-1.5 text-xs border-t border-slate-50 pt-3">
+                  <p><strong className="text-slate-700 font-bold">Mode:</strong> Regular / Practical</p>
                   <p><strong className="text-slate-700 font-bold">Duration:</strong> 1 Year</p>
                   <p><strong className="text-slate-700 font-bold">Eligibility:</strong> 10th Passed / Fail</p>
+                  <div className="mt-2 space-y-1 bg-gold-500/5 border border-gold-500/10 p-2 rounded text-[10px] leading-relaxed">
+                    <p><strong className="text-slate-700 font-bold">Approved By:</strong> DGT / NCVT</p>
+                    <p><strong className="text-slate-700 font-bold">Skill Partners:</strong> NSDC / Skill India / NAPS</p>
+                  </div>
                 </div>
               </div>
               <a href="#admission-form-top" className="block text-center py-2.5 text-xs font-bold uppercase tracking-wider text-navy-955 bg-gold-500 hover:bg-gold-600 rounded-lg transition-colors cursor-pointer">Apply Now</a>
@@ -245,11 +285,19 @@ export default function AdmissionPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-navy-900">Diploma in Sales & Marketing</h3>
+                <h3 className="text-xl font-bold text-navy-900 leading-tight">Diploma in Sales & Marketing</h3>
+                <p className="text-[10px] font-black text-navy-955 bg-slate-50 border border-slate-100 rounded px-2.5 py-1 inline-block">
+                  Industrial Technical Institute (ITI), Maharashtra State
+                </p>
                 <p className="text-xs text-slate-500 leading-relaxed font-semibold">Job-oriented training in retail store systems, customer care relations, digital marketing foundations, sales pitches, and communication skills.</p>
                 <div className="space-y-1.5 text-xs border-t border-slate-50 pt-3">
+                  <p><strong className="text-slate-700 font-bold">Mode:</strong> Regular / Practical</p>
                   <p><strong className="text-slate-700 font-bold">Duration:</strong> 1 Year</p>
                   <p><strong className="text-slate-700 font-bold">Eligibility:</strong> 10th / 12th Passed from any stream</p>
+                  <div className="mt-2 space-y-1 bg-gold-500/5 border border-gold-500/10 p-2 rounded text-[10px] leading-relaxed">
+                    <p><strong className="text-slate-700 font-bold">Approved By:</strong> DGT / NCVT</p>
+                    <p><strong className="text-slate-700 font-bold">Skill Partners:</strong> NSDC / Skill India / NAPS</p>
+                  </div>
                 </div>
               </div>
               <a href="#admission-form-top" className="block text-center py-2.5 text-xs font-bold uppercase tracking-wider text-navy-955 bg-gold-500 hover:bg-gold-600 rounded-lg transition-colors cursor-pointer">Apply Now</a>

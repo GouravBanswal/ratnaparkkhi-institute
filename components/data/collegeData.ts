@@ -107,7 +107,9 @@ export const coursesOffered = [
     eligibility: "School dropouts or anyone seeking secondary certification",
     fees: "Contact Counsel Desk",
     seats: 300,
-    highlights: "National Institute of Open Schooling / Mumbai Hindi Vidyapeeth board patterns. Flexible learning and exams."
+    highlights: "National Institute of Open Schooling / Mumbai Hindi Vidyapeeth board patterns. Flexible learning and exams.",
+    universityOrInstitution: "NIOS / Mumbai Hindi Vidyapeeth",
+    mode: "Flexible / Distance"
   },
   {
     name: "12th (Senior Secondary)",
@@ -115,7 +117,9 @@ export const coursesOffered = [
     eligibility: "10th Passed from any recognized board",
     fees: "Contact Counsel Desk",
     seats: 300,
-    highlights: "Flexible subject choices. Direct admission to Senior Secondary certifications. Study materials provided."
+    highlights: "Flexible subject choices. Direct admission to Senior Secondary certifications. Study materials provided.",
+    universityOrInstitution: "NIOS / Mumbai Hindi Vidyapeeth",
+    mode: "Flexible / Distance"
   },
   {
     name: "Diploma in Electrical",
@@ -125,7 +129,11 @@ export const coursesOffered = [
     seats: 40,
     highlights: "Practical training in electrical wiring, industrial motors, electrical machines, and domestic appliances.",
     careerOpportunities: "Electrical Contractor, Junior Electrician in Mahadiscom/Railways, Maintenance Technician, Solar Panel Installer.",
-    isIti: true
+    isIti: true,
+    universityOrInstitution: "Industrial Technical Institute (ITI), Maharashtra State",
+    mode: "Regular / Practical",
+    approvedBy: "DGT / NCVT",
+    skillPartners: "NSDC / Skill India / NAPS"
   },
   {
     name: "Diploma in Fitter",
@@ -135,7 +143,11 @@ export const coursesOffered = [
     seats: 40,
     highlights: "Hands-on training in pipe fitting, metal jointing, lathe machine operation, and structure assembly.",
     careerOpportunities: "Industrial Fitter, Mechanical Apprentice (Indian Railways, TATA Motors), Plant Maintenance Technician, Assembly Operator.",
-    isIti: true
+    isIti: true,
+    universityOrInstitution: "Industrial Technical Institute (ITI), Maharashtra State",
+    mode: "Regular / Practical",
+    approvedBy: "DGT / NCVT",
+    skillPartners: "NSDC / Skill India / NAPS"
   },
   {
     name: "Diploma in Turner",
@@ -145,7 +157,11 @@ export const coursesOffered = [
     seats: 20,
     highlights: "Specialized skill development in metal cutting, lathe machine configuration, threading, and precision engineering.",
     careerOpportunities: "Lathe Operator, Precision Machinist, Tool Room Technician, Quality Inspector in auto industries.",
-    isIti: true
+    isIti: true,
+    universityOrInstitution: "Industrial Technical Institute (ITI), Maharashtra State",
+    mode: "Regular / Practical",
+    approvedBy: "DGT / NCVT",
+    skillPartners: "NSDC / Skill India / NAPS"
   },
   {
     name: "Diploma in CNC Operator",
@@ -155,7 +171,11 @@ export const coursesOffered = [
     seats: 30,
     highlights: "Advanced vocational course covering CNC programming, milling, turning machine operations, and CAD/CAM basics.",
     careerOpportunities: "CNC Machinist, VMC Operator, Machine Setter, CNC Maintenance Assistant.",
-    isIti: true
+    isIti: true,
+    universityOrInstitution: "Industrial Technical Institute (ITI), Maharashtra State",
+    mode: "Regular / Practical",
+    approvedBy: "DGT / NCVT",
+    skillPartners: "NSDC / Skill India / NAPS"
   },
   {
     name: "Diploma in Welder",
@@ -165,7 +185,11 @@ export const coursesOffered = [
     seats: 30,
     highlights: "Practical expertise in arc welding, gas welding, TIG/MIG welding techniques, and safety standards.",
     careerOpportunities: "Structural Welder, Gas Fabricator, Pipeline Welder, Structural Welder.",
-    isIti: true
+    isIti: true,
+    universityOrInstitution: "Industrial Technical Institute (ITI), Maharashtra State",
+    mode: "Regular / Practical",
+    approvedBy: "DGT / NCVT",
+    skillPartners: "NSDC / Skill India / NAPS"
   },
   {
     name: "Diploma in Sales & Marketing",
@@ -175,7 +199,11 @@ export const coursesOffered = [
     seats: 40,
     highlights: "Job-oriented skill course in retail sales, digital marketing fundamentals, customer relation management, and sales pitch delivery.",
     careerOpportunities: "Sales Executive, Retail Store Supervisor, Customer Relationship Officer, Digital Marketing Assistant.",
-    isIti: true
+    isIti: true,
+    universityOrInstitution: "Industrial Technical Institute (ITI), Maharashtra State",
+    mode: "Regular / Practical",
+    approvedBy: "DGT / NCVT",
+    skillPartners: "NSDC / Skill India / NAPS"
   },
   {
     name: "Bachelor of Arts (B.A.)",
@@ -183,7 +211,9 @@ export const coursesOffered = [
     eligibility: "12th Passed from any stream",
     fees: "Contact Counsel Desk",
     seats: 200,
-    highlights: "Online and Distance degree. Choice of subjects (English, History, Sociology). Affiliated university counseling."
+    highlights: "Online and Distance degree. Choice of subjects (English, History, Sociology). Affiliated university counseling.",
+    universityOrInstitution: "Mangalayatan University (MU)",
+    mode: "UGC-DEB Online / Distance"
   },
   {
     name: "Bachelor of Commerce (B.Com.)",
@@ -191,7 +221,9 @@ export const coursesOffered = [
     eligibility: "12th Passed from any stream",
     fees: "Contact Counsel Desk",
     seats: 200,
-    highlights: "Focus on corporate accounting, business economics, and taxation. Highly flexible for working professionals."
+    highlights: "Focus on corporate accounting, business economics, and taxation. Highly flexible for working professionals.",
+    universityOrInstitution: "Tilak Maharashtra Vidyapeeth (TMV)",
+    mode: "Distance / Online"
   },
   {
     name: "Bachelor of Science (B.Sc.)",
@@ -199,7 +231,9 @@ export const coursesOffered = [
     eligibility: "12th Passed in Science stream",
     fees: "Contact Counsel Desk",
     seats: 120,
-    highlights: "Distance mode science education. Flexible lab schedules and comprehensive study support."
+    highlights: "Distance mode science education. Flexible lab schedules and comprehensive study support.",
+    universityOrInstitution: "ISBM University",
+    mode: "Distance / Online"
   },
   {
     name: "Bachelor of Business Administration (BBA)",
@@ -207,7 +241,9 @@ export const coursesOffered = [
     eligibility: "12th Passed in any stream",
     fees: "Contact Counsel Desk",
     seats: 120,
-    highlights: "Core marketing, finance, and human resource management. Direct Learn & Earn scheme alignment."
+    highlights: "Core marketing, finance, and human resource management. Direct Learn & Earn scheme alignment.",
+    universityOrInstitution: "Mangalayatan University (MU)",
+    mode: "UGC-DEB Online / Distance"
   },
   {
     name: "Bachelor of Computer Applications (BCA)",
@@ -215,7 +251,9 @@ export const coursesOffered = [
     eligibility: "12th Passed in any stream",
     fees: "Contact Counsel Desk",
     seats: 120,
-    highlights: "Core programming languages, web development, and database administration via distance learning."
+    highlights: "Core programming languages, web development, and database administration via distance learning.",
+    universityOrInstitution: "Mangalayatan University (MU)",
+    mode: "UGC-DEB Online / Distance"
   },
   {
     name: "Master of Business Administration (MBA)",
@@ -223,7 +261,9 @@ export const coursesOffered = [
     eligibility: "Bachelor's Degree in any discipline",
     fees: "Contact Counsel Desk",
     seats: 120,
-    highlights: "Specializations in HR, Marketing, Operations, and IT. Perfect for career transitions in corporate sectors."
+    highlights: "Specializations in HR, Marketing, Operations, and IT. Perfect for career transitions in corporate sectors.",
+    universityOrInstitution: "Mangalayatan University (MU)",
+    mode: "UGC-DEB Online / Distance"
   },
   {
     name: "Master of Computer Applications (MCA)",
@@ -231,7 +271,9 @@ export const coursesOffered = [
     eligibility: "Graduation with Mathematics at 10+2 or degree level",
     fees: "Contact Counsel Desk",
     seats: 60,
-    highlights: "Advanced software system design, computer architectures, and software engineering methodologies."
+    highlights: "Advanced software system design, computer architectures, and software engineering methodologies.",
+    universityOrInstitution: "Mangalayatan University (MU)",
+    mode: "UGC-DEB Online / Distance"
   },
   {
     name: "Master of Commerce (M.Com.)",
@@ -239,7 +281,9 @@ export const coursesOffered = [
     eligibility: "B.Com / BBA or equivalent graduation degree",
     fees: "Contact Counsel Desk",
     seats: 100,
-    highlights: "Advanced business analysis, financial management, and corporate auditing modules."
+    highlights: "Advanced business analysis, financial management, and corporate auditing modules.",
+    universityOrInstitution: "Tilak Maharashtra Vidyapeeth (TMV)",
+    mode: "Distance / Online"
   },
   {
     name: "Master of Arts (M.A.)",
@@ -247,7 +291,9 @@ export const coursesOffered = [
     eligibility: "Graduation in any discipline",
     fees: "Contact Counsel Desk",
     seats: 100,
-    highlights: "Advanced studies in Literature, History, or Social Sciences via flexible online learning."
+    highlights: "Advanced studies in Literature, History, or Social Sciences via flexible online learning.",
+    universityOrInstitution: "Tilak Maharashtra Vidyapeeth (TMV)",
+    mode: "Distance / Online"
   },
   {
     name: "Skill Development Programs",
@@ -255,7 +301,9 @@ export const coursesOffered = [
     eligibility: "10th / 12th passed or working professionals",
     fees: "Contact Counsel Desk",
     seats: 500,
-    highlights: "NSDC / Skill India certified job-oriented vocational modules with NAPS internship assistance."
+    highlights: "NSDC / Skill India certified job-oriented vocational modules with NAPS internship assistance.",
+    universityOrInstitution: "NSDC / Skill India Center",
+    mode: "Flexible / Regular"
   }
 ];
 

@@ -483,13 +483,30 @@ export default function HomePage() {
                       {c.name}
                     </h3>
                     
+                    {((c as any).universityOrInstitution) && (
+                      <p className="text-[10px] font-black text-navy-950 bg-slate-50 border border-slate-100 rounded px-2.5 py-1 inline-block">
+                        {((c as any).universityOrInstitution)}
+                      </p>
+                    )}
+                    
                     <p className="text-xs text-slate-500 leading-relaxed font-medium">
                       {c.highlights}
                     </p>
 
                     <div className="pt-3 border-t border-slate-50 space-y-1.5 text-xs text-slate-550">
+                      {((c as any).mode) && (
+                        <p className="leading-relaxed"><strong className="text-slate-700 font-bold">Mode:</strong> {((c as any).mode)}</p>
+                      )}
                       <p className="leading-relaxed"><strong className="text-slate-700 font-bold">Eligibility:</strong> {c.eligibility}</p>
                       <p><strong className="text-slate-700 font-bold">Approved Annual Fees:</strong> {c.fees}</p>
+                      
+                      {((c as any).isIti) && (
+                        <div className="mt-2 space-y-1 bg-gold-500/5 border border-gold-500/10 p-2.5 rounded-lg text-[10px] leading-relaxed">
+                          <p><strong className="text-slate-700 font-bold">Approved By:</strong> DGT / NCVT</p>
+                          <p><strong className="text-slate-700 font-bold">Skill Partners:</strong> NSDC / Skill India / NAPS</p>
+                        </div>
+                      )}
+                      
                       {(c as any).careerOpportunities && (
                         <p className="leading-relaxed mt-1"><strong className="text-slate-700 font-bold">Careers:</strong> {(c as any).careerOpportunities}</p>
                       )}

@@ -99,6 +99,12 @@ export default function CoursesPage() {
                   {c.name}
                 </h3>
                 
+                {((c as any).universityOrInstitution) && (
+                  <p className="text-[10px] font-black text-navy-950 bg-slate-50 border border-slate-100 rounded px-2.5 py-1 inline-block">
+                    {((c as any).universityOrInstitution)}
+                  </p>
+                )}
+                
                 <p className="text-sm text-slate-500 leading-relaxed font-medium">
                   {c.highlights}
                 </p>
@@ -109,11 +115,23 @@ export default function CoursesPage() {
                       <span className="block text-[10px] text-slate-400 uppercase tracking-widest font-bold">Eligibility</span>
                       <span className="block text-slate-700 mt-1 font-semibold leading-relaxed">{c.eligibility}</span>
                     </div>
-                    <div className="bg-slate-50 p-3 rounded-lg border border-slate-100 md:col-span-2">
+                    <div className="bg-slate-50 p-3 rounded-lg border border-slate-100">
                       <span className="block text-[10px] text-slate-400 uppercase tracking-widest font-bold">Approved Annual Fees</span>
                       <span className="block text-slate-700 mt-1 font-semibold">{c.fees}</span>
                     </div>
+                    <div className="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                      <span className="block text-[10px] text-slate-400 uppercase tracking-widest font-bold">Mode</span>
+                      <span className="block text-slate-700 mt-1 font-semibold">{((c as any).mode) || "Regular / Distance"}</span>
+                    </div>
                   </div>
+                  
+                  {((c as any).isIti) && (
+                    <div className="bg-gold-500/5 border border-gold-500/10 p-3 rounded-lg text-xs leading-relaxed">
+                      <p><strong className="text-slate-700 font-bold">Approved By:</strong> DGT / NCVT</p>
+                      <p><strong className="text-slate-700 font-bold">Skill Partners:</strong> NSDC / Skill India / NAPS</p>
+                    </div>
+                  )}
+                  
                   {(c as any).careerOpportunities && (
                     <div className="bg-slate-50 p-3 rounded-lg border border-slate-100 text-xs">
                       <span className="block text-[10px] text-slate-400 uppercase tracking-widest font-bold">Career Opportunities</span>
