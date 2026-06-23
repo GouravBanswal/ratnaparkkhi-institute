@@ -93,7 +93,8 @@ export default function HomePage() {
   // Filter courses based on search query, tabs and chips
   const filteredCourses = coursesOffered.filter(c => {
     const matchesSearch = c.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                          c.highlights.toLowerCase().includes(searchQuery.toLowerCase());
+                          c.highlights.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                          ((c as any).isIti && searchQuery.toLowerCase().includes('iti'));
     
     // Tab filters: ALL, DEGREE, ITI, SCHOOL_SKILLS
     let matchesTab = true;
@@ -110,7 +111,7 @@ export default function HomePage() {
                   c.name.toLowerCase().includes('m.com') || 
                   c.name.toLowerCase().includes('m.a');
     } else if (selectedCourseTab === 'ITI') {
-      matchesTab = c.name.toLowerCase().includes('iti');
+      matchesTab = c.name.toLowerCase().includes('iti') || (c as any).isIti === true;
     } else if (selectedCourseTab === 'SCHOOL_SKILLS') {
       matchesTab = c.name.toLowerCase().includes('10th') || 
                   c.name.toLowerCase().includes('12th') || 
@@ -124,7 +125,7 @@ export default function HomePage() {
       if (chipLower === '10th_12th') {
         matchesChip = c.name.toLowerCase().includes('10th') || c.name.toLowerCase().includes('12th');
       } else if (chipLower === 'iti') {
-        matchesChip = c.name.toLowerCase().includes('iti');
+        matchesChip = c.name.toLowerCase().includes('iti') || (c as any).isIti === true;
       } else if (chipLower === 'ug') {
         matchesChip = c.name.toLowerCase().includes('bachelor') || c.name.toLowerCase().includes('b.a') || c.name.toLowerCase().includes('b.com') || c.name.toLowerCase().includes('b.sc') || c.name.toLowerCase().includes('bba') || c.name.toLowerCase().includes('bca');
       } else if (chipLower === 'pg') {
@@ -489,6 +490,9 @@ export default function HomePage() {
                     <div className="pt-3 border-t border-slate-50 space-y-1.5 text-xs text-slate-550">
                       <p className="leading-relaxed"><strong className="text-slate-700 font-bold">Eligibility:</strong> {c.eligibility}</p>
                       <p><strong className="text-slate-700 font-bold">Approved Annual Fees:</strong> {c.fees}</p>
+                      {(c as any).careerOpportunities && (
+                        <p className="leading-relaxed mt-1"><strong className="text-slate-700 font-bold">Careers:</strong> {(c as any).careerOpportunities}</p>
+                      )}
                     </div>
                   </div>
 

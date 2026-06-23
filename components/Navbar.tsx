@@ -56,7 +56,6 @@ const Navbar = () => {
 
   const admissionsLinks = [
     { label: "Online Admission", href: "/online-admission" },
-    { label: "Franchise Network", href: "/franchise-network" },
   ];
 
   const suggestions = [
@@ -373,6 +372,14 @@ const Navbar = () => {
             </div>
           </div>
 
+          {/* Franchise Network */}
+          <Link 
+            href="/franchise-network" 
+            className={`px-3 py-1.5 text-xs font-black uppercase tracking-wider rounded transition-all hover:text-gold-600 whitespace-nowrap ${isActive("/franchise-network") ? "text-gold-600 bg-slate-50 border border-slate-100 shadow-sm" : "text-slate-700"}`}
+          >
+            Franchise Network
+          </Link>
+
           {/* Blog */}
           <Link 
             href="/career-guidance-blog" 
@@ -519,6 +526,15 @@ const Navbar = () => {
               </div>
             )}
           </div>
+
+          {/* Franchise Network */}
+          <Link 
+            href="/franchise-network" 
+            onClick={closeAll}
+            className={`block px-3 py-2.5 rounded-md text-sm font-bold ${isActive("/franchise-network") ? "bg-slate-50 text-gold-600" : "text-slate-700"}`}
+          >
+            Franchise Network
+          </Link>
 
           <Link 
             href="/career-guidance-blog" 

@@ -102,7 +102,7 @@ export const facultyHighlights = [
 
 export const coursesOffered = [
   {
-    name: "10th (Secondary School - NIOS / MHV)",
+    name: "10th (Secondary School)",
     duration: "1 Year",
     eligibility: "School dropouts or anyone seeking secondary certification",
     fees: "Contact Counsel Desk",
@@ -110,7 +110,7 @@ export const coursesOffered = [
     highlights: "National Institute of Open Schooling / Mumbai Hindi Vidyapeeth board patterns. Flexible learning and exams."
   },
   {
-    name: "12th (Senior Secondary - NIOS)",
+    name: "12th (Senior Secondary)",
     duration: "1 Year",
     eligibility: "10th Passed from any recognized board",
     fees: "Contact Counsel Desk",
@@ -118,12 +118,64 @@ export const coursesOffered = [
     highlights: "Flexible subject choices. Direct admission to Senior Secondary certifications. Study materials provided."
   },
   {
-    name: "ITI Programs (MSBSVET Trades)",
-    duration: "1 - 2 Years",
-    eligibility: "10th Passed / Fail (depending on the chosen trade)",
+    name: "Diploma in Electrical",
+    duration: "2 Years",
+    eligibility: "10th Passed from any recognized board",
     fees: "Contact Counsel Desk",
-    seats: 120,
-    highlights: "Approved vocational trades (Electrician, Fitter, Welder). Hands-on practice with NAPS apprenticeship connections."
+    seats: 40,
+    highlights: "Practical training in electrical wiring, industrial motors, electrical machines, and domestic appliances.",
+    careerOpportunities: "Electrical Contractor, Junior Electrician in Mahadiscom/Railways, Maintenance Technician, Solar Panel Installer.",
+    isIti: true
+  },
+  {
+    name: "Diploma in Fitter",
+    duration: "2 Years",
+    eligibility: "10th Passed from any recognized board",
+    fees: "Contact Counsel Desk",
+    seats: 40,
+    highlights: "Hands-on training in pipe fitting, metal jointing, lathe machine operation, and structure assembly.",
+    careerOpportunities: "Industrial Fitter, Mechanical Apprentice (Indian Railways, TATA Motors), Plant Maintenance Technician, Assembly Operator.",
+    isIti: true
+  },
+  {
+    name: "Diploma in Turner",
+    duration: "2 Years",
+    eligibility: "10th Passed from any recognized board",
+    fees: "Contact Counsel Desk",
+    seats: 20,
+    highlights: "Specialized skill development in metal cutting, lathe machine configuration, threading, and precision engineering.",
+    careerOpportunities: "Lathe Operator, Precision Machinist, Tool Room Technician, Quality Inspector in auto industries.",
+    isIti: true
+  },
+  {
+    name: "Diploma in CNC Operator",
+    duration: "1 Year",
+    eligibility: "10th Passed from any recognized board",
+    fees: "Contact Counsel Desk",
+    seats: 30,
+    highlights: "Advanced vocational course covering CNC programming, milling, turning machine operations, and CAD/CAM basics.",
+    careerOpportunities: "CNC Machinist, VMC Operator, Machine Setter, CNC Maintenance Assistant.",
+    isIti: true
+  },
+  {
+    name: "Diploma in Welder",
+    duration: "1 Year",
+    eligibility: "10th Passed / Fail",
+    fees: "Contact Counsel Desk",
+    seats: 30,
+    highlights: "Practical expertise in arc welding, gas welding, TIG/MIG welding techniques, and safety standards.",
+    careerOpportunities: "Structural Welder, Gas Fabricator, Pipeline Welder, Structural Welder.",
+    isIti: true
+  },
+  {
+    name: "Diploma in Sales & Marketing",
+    duration: "1 Year",
+    eligibility: "10th / 12th Passed from any stream",
+    fees: "Contact Counsel Desk",
+    seats: 40,
+    highlights: "Job-oriented skill course in retail sales, digital marketing fundamentals, customer relation management, and sales pitch delivery.",
+    careerOpportunities: "Sales Executive, Retail Store Supervisor, Customer Relationship Officer, Digital Marketing Assistant.",
+    isIti: true
   },
   {
     name: "Bachelor of Arts (B.A.)",

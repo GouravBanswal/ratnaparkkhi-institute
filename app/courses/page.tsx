@@ -6,6 +6,7 @@ import { coursesOffered, officialPhone } from '@/components/data/collegeData';
 
 export default function CoursesPage() {
   const [filter, setFilter] = useState<'ALL' | 'DEGREES' | 'ITI' | 'SCHOOL_SKILLS'>('ALL');
+  const [selectedCourse, setSelectedCourse] = useState<any | null>(null);
 
   const filteredCourses = coursesOffered.filter(c => {
     if (filter === 'ALL') return true;
@@ -22,7 +23,7 @@ export default function CoursesPage() {
              c.name.toLowerCase().includes('m.com') || 
              c.name.toLowerCase().includes('m.a');
     }
-    if (filter === 'ITI') return c.name.toLowerCase().includes('iti');
+    if (filter === 'ITI') return c.name.toLowerCase().includes('iti') || (c as any).isIti === true;
     if (filter === 'SCHOOL_SKILLS') {
       return c.name.toLowerCase().includes('10th') || 
              c.name.toLowerCase().includes('12th') || 
@@ -113,6 +114,12 @@ export default function CoursesPage() {
                       <span className="block text-slate-700 mt-1 font-semibold">{c.fees}</span>
                     </div>
                   </div>
+                  {(c as any).careerOpportunities && (
+                    <div className="bg-slate-50 p-3 rounded-lg border border-slate-100 text-xs">
+                      <span className="block text-[10px] text-slate-400 uppercase tracking-widest font-bold">Career Opportunities</span>
+                      <span className="block text-slate-700 mt-1 font-semibold leading-relaxed">{(c as any).careerOpportunities}</span>
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -123,12 +130,22 @@ export default function CoursesPage() {
                 >
                   Apply Online 2026
                 </Link>
-                <Link 
-                  href="/contact-us"
-                  className="flex-grow text-center py-3 text-xs font-bold uppercase tracking-wider text-navy-900 border border-slate-200 hover:border-gold-500 hover:bg-slate-50 rounded-lg transition-colors cursor-pointer"
-                >
-                  Inquire Now
-                </Link>
+                {(c as any).isIti ? (
+                  <button 
+                    type="button"
+                    onClick={() => setSelectedCourse(c)}
+                    className="flex-grow text-center py-3 text-xs font-bold uppercase tracking-wider text-navy-900 border border-slate-200 hover:border-gold-500 hover:bg-slate-50 rounded-lg transition-colors cursor-pointer"
+                  >
+                    Learn More
+                  </button>
+                ) : (
+                  <Link 
+                    href="/contact-us"
+                    className="flex-grow text-center py-3 text-xs font-bold uppercase tracking-wider text-navy-900 border border-slate-200 hover:border-gold-500 hover:bg-slate-50 rounded-lg transition-colors cursor-pointer"
+                  >
+                    Inquire Now
+                  </Link>
+                )}
               </div>
             </div>
           ))}
@@ -158,6 +175,73 @@ export default function CoursesPage() {
           </div>
         </div>
       </section>
+
+      {/* Modal Dialog for Learn More */}
+      {selectedCourse && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-fade-in">
+          <div className="bg-white border border-slate-100 rounded-2xl max-w-lg w-full p-6 md:p-8 shadow-2xl relative space-y-6">
+            <button 
+              type="button"
+              onClick={() => setSelectedCourse(null)}
+              className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors p-1.5 hover:bg-slate-55 rounded-full cursor-pointer"
+              title="Close Dialog"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </button>
+
+            <div className="space-y-4">
+              <span className="bg-navy-50 text-navy-900 border border-slate-100 px-3 py-1 rounded text-xs font-bold uppercase tracking-wider inline-block">
+                {selectedCourse.duration} Program
+              </span>
+              <h3 className="text-xl md:text-2xl font-extrabold text-navy-900">{selectedCourse.name}</h3>
+              
+              <div className="space-y-1">
+                <h4 className="text-[10px] font-bold uppercase tracking-widest text-gold-600">Course Highlights</h4>
+                <p className="text-slate-600 text-xs leading-relaxed font-semibold">{selectedCourse.highlights}</p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                  <span className="block text-[10px] text-slate-400 uppercase tracking-widest font-bold">Eligibility</span>
+                  <span className="block text-slate-700 mt-1 text-xs font-bold leading-relaxed">{selectedCourse.eligibility}</span>
+                </div>
+                <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                  <span className="block text-[10px] text-slate-400 uppercase tracking-widest font-bold">Annual Fees</span>
+                  <span className="block text-slate-700 mt-1 text-xs font-bold">{selectedCourse.fees}</span>
+                </div>
+              </div>
+
+              <div className="space-y-1 pt-2">
+                <h4 className="text-[10px] font-bold uppercase tracking-widest text-gold-600">Career Opportunities</h4>
+                <p className="text-slate-600 text-xs leading-relaxed font-semibold">{selectedCourse.careerOpportunities}</p>
+              </div>
+
+              <div className="bg-navy-50/50 border border-navy-100/50 p-4 rounded-xl space-y-1">
+                <h4 className="text-xs font-bold text-navy-900">NSDC & NAPS Approved Trades</h4>
+                <p className="text-[10px] text-slate-550 leading-relaxed font-medium">This course is aligned with Skill India & NAPS apprenticeships. Students receive official certifications and corporate placements.</p>
+              </div>
+            </div>
+
+            <div className="pt-2 flex gap-3">
+              <Link 
+                href="/online-admission"
+                onClick={() => setSelectedCourse(null)}
+                className="flex-1 text-center py-3 text-xs font-bold uppercase tracking-wider text-navy-950 bg-gradient-to-r from-gold-400 to-gold-600 hover:from-gold-500 hover:to-gold-700 rounded-lg shadow-md cursor-pointer"
+              >
+                Apply Online Now
+              </Link>
+              <button 
+                onClick={() => setSelectedCourse(null)}
+                className="px-6 py-3 text-xs font-bold uppercase tracking-wider text-slate-600 border border-slate-200 hover:bg-slate-50 rounded-lg cursor-pointer"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );
