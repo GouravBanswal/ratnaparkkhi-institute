@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Ratnaparkkhi Institute of Engineering & Management",
   description: "Official admissions counseling & vocational training center in Chh. Sambhajinagar. Offering UGC-recognized Online & Distance degrees, ITI trade courses, NIOS 10th/12th, and NSDC/Skill India programs with our unique Learn & Earn scheme.",
-  keywords: "Ratnaparkkhi Institute of Engineering & Management, RIEM Sambhajinagar, Online Education Maharashtra, Distance Learning degrees, ITI courses, NIOS 10th 12th, YCMOU, Skill India, NAPS apprenticeships, Learn and Earn, MBA, MCA, BBA, BCA, BA, B.Com, ITI Courses Maharashtra, Industrial Technical Institute Maharashtra, Diploma in Electrical, Diploma in Fitter, Diploma in Turner, Diploma in CNC Operator, Diploma in Welder, Diploma in Sales & Marketing, Skill India, NSDC, NAPS, Vocational Training, Technical Education Maharashtra",
+  keywords: "Ratnaparkkhi Institute of Engineering & Management, RIEM Sambhajinagar, Online Education India, Distance Learning degrees, ITI courses, NIOS 10th 12th, YCMOU, Skill India, NAPS apprenticeships, Learn and Earn, MBA, MCA, BBA, BCA, BA, B.Com, ITI Courses India, Industrial Technical Institute India, Diploma in Electrical, Diploma in Fitter, Diploma in Turner, Diploma in CNC Operator, Diploma in Welder, Diploma in Sales & Marketing, Skill India, NSDC, NAPS, Vocational Training, Technical Education India, PAN India Coverage, All India Admissions Network, Nationwide Student Support, PAN India Placement Assistance, India-Wide Academic Network",
   icons: {
     icon: "/logo.png",
     apple: "/logo.png",

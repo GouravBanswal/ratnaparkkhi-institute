@@ -10,7 +10,7 @@ export default function ScholarshipsPage() {
     "Family Income Certificate issued by Tahsildar (less than ₹8 Lakhs for EBC/EWS)",
     "Admission Confirmation Letter / ID Card",
     "Previous Class Marksheets (SSC / HSC / Semester GPA)",
-    "Domicile Certificate of Maharashtra State",
+    "Domicile Certificate (if applicable)",
     "Aadhaar Card linked to Bank Account (mandatory for direct DBT transfers)"
   ];
 

@@ -36,7 +36,7 @@ export default function InternshipsPage() {
               At Ratnaparkkhi Institute, we believe that education must lead to practical, real-world skills. Through our collaborations with NSDC, Skill India, and NAPS (National Apprenticeship Promotion Scheme), we connect students directly with corporate and public sector apprenticeships.
             </p>
             <p className="text-sm text-slate-655 leading-relaxed font-medium">
-              Graduates participate in traineeships, enabling them to gain critical hands-on experience, support themselves with monthly stipends, and build careers in government and private sectors across Maharashtra.
+              Graduates participate in traineeships, enabling them to gain critical hands-on experience, support themselves with monthly stipends, and build careers in government and private sectors across India.
             </p>
             <div className="grid grid-cols-3 gap-4 border-t border-slate-100 pt-6">
               <div>

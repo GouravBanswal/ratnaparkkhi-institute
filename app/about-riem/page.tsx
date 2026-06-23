@@ -25,7 +25,7 @@ export default function AboutPage() {
             </div>
             <h3 className="text-xl font-bold text-navy-900">Our Vision</h3>
             <p className="text-sm text-slate-655 leading-relaxed font-medium">
-              To be a premier center of flexible learning, vocational skill development, and distance education that empowers every individual in Maharashtra with affordable, high-quality, and accessible career opportunities.
+              To be a premier center of flexible learning, vocational skill development, and distance education that empowers every individual across India with affordable, high-quality, and accessible career opportunities.
             </p>
           </div>
 

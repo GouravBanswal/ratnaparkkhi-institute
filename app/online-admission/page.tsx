@@ -16,7 +16,7 @@ export default function AdmissionPage() {
     "Previous School Leaving Certificate (TC)",
     "Graduation Marksheet (for Post-Graduation)",
     "School / College Leaving Certificate (LC)",
-    "Domicile Certificate of Maharashtra State",
+    "Domicile Certificate (if applicable)",
     "Caste Certificate & Non-Creamy Layer (if applicable)",
     "Income Certificate / EBC Letter (for scholarship seekers)",
     "Aadhaar Card copy & 4 Passport Photos"

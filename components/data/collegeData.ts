@@ -35,7 +35,7 @@ export const achievements = [
   { title: "Passed Students", value: "23,000+ Students", desc: "Successfully completed secondary, higher secondary, graduation, and post-graduation certifications." },
   { title: "Academic Success", value: "100% Success Rate", desc: "Maintained complete academic support and guidance ensuring graduation success." },
   { title: "Job Placements", value: "8,000+ Placed", desc: "Students placed in private enterprises and government organizations." },
-  { title: "Geographical Reach", value: "Maharashtra Coverage", desc: "Students enrolled from all 36 districts of Maharashtra." },
+  { title: "Geographical Reach", value: "PAN India Coverage", desc: "Students enrolled from all states and union territories across India." },
   { title: "Career Sectors", value: "Govt & Private", desc: "Alumni working in various departments, public sectors, and top private sectors." }
 ];
 

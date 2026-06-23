@@ -46,7 +46,7 @@ export default function HomePage() {
       views: "4.8K views"
     },
     {
-      title: "Student Success Stories & Placements Across Maharashtra",
+      title: "Student Success Stories & PAN India Placements",
       duration: "3:45",
       views: "6.1K views"
     }
@@ -333,8 +333,8 @@ export default function HomePage() {
                 </svg>
               </div>
               <div>
-                <span className="block text-[15px] sm:text-lg font-black text-gold-505 text-gold-500 leading-tight uppercase">Maharashtra</span>
-                <span className="text-[9px] uppercase text-slate-500 font-bold tracking-wider">Statewide Coverage</span>
+                <span className="block text-[15px] sm:text-lg font-black text-gold-505 text-gold-500 leading-tight uppercase">PAN India</span>
+                <span className="text-[9px] uppercase text-slate-500 font-bold tracking-wider">Nationwide Coverage</span>
               </div>
             </div>
           </div>
@@ -383,7 +383,7 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center justify-center gap-2 max-w-3xl mx-auto text-xs">
             {[
               { id: 'ALL', label: 'All Specialties' },
-              { id: '10th_12th', label: '10th & 12th NIOS' },
+              { id: '10th_12th', label: '10th & 12th' },
               { id: 'iti', label: 'ITI Trades' },
               { id: 'ug', label: 'Under-Graduate (UG)' },
               { id: 'pg', label: 'Post-Graduate (PG)' },
