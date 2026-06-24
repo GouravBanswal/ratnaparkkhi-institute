@@ -16,25 +16,111 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ratnaparkkhi Institute of Engineering & Management",
-  description: "Official admissions counseling & vocational training center in Chh. Sambhajinagar. Offering UGC-recognized Online & Distance degrees, ITI trade courses, NIOS 10th/12th, and NSDC/Skill India programs with our unique Learn & Earn scheme.",
-  keywords: "Ratnaparkkhi Institute of Engineering & Management, RIEM Sambhajinagar, Online Education India, Distance Learning degrees, ITI courses, NIOS 10th 12th, YCMOU, Skill India, NAPS apprenticeships, Learn and Earn, MBA, MCA, BBA, BCA, BA, B.Com, ITI Courses India, Industrial Technical Institute India, Diploma in Electrical, Diploma in Fitter, Diploma in Turner, Diploma in CNC Operator, Diploma in Welder, Diploma in Sales & Marketing, Skill India, NSDC, NAPS, Vocational Training, Technical Education India, PAN India Coverage, All India Admissions Network, Nationwide Student Support, PAN India Placement Assistance, India-Wide Academic Network",
+  metadataBase: new URL("https://ratnaparkkhisansttha.com"),
+
+  title: {
+    default: "Ratnaparkkhi Institute of Engineering & Management (RIEM)",
+    template: "%s | RIEM",
+  },
+
+  description:
+    "Ratnaparkkhi Institute of Engineering & Management (RIEM) is a leading education, skill development, vocational training, and career guidance institute offering Online & Distance Education, ITI Courses, NIOS 10th/12th, Skill India Programs, Apprenticeships, and Learn & Earn opportunities across India.",
+
+  keywords: [
+    "Ratnaparkkhi Institute",
+    "RIEM",
+    "Online Education India",
+    "Distance Education",
+    "UGC Approved Degrees",
+    "BBA",
+    "BCA",
+    "MBA",
+    "MCA",
+    "BA",
+    "BCom",
+    "BSc",
+    "ITI Courses",
+    "Skill Development",
+    "NSDC",
+    "Skill India",
+    "NAPS",
+    "Apprenticeship",
+    "Learn and Earn",
+    "NIOS Admission",
+    "10th Open School",
+    "12th Open School",
+    "Engineering Courses",
+    "Technical Education",
+    "Career Guidance",
+    "Placement Assistance",
+    "Vocational Training",
+    "Computer Courses",
+    "Franchise Network",
+    "Education Franchise",
+    "Pan India Education Network",
+    "Chhatrapati Sambhajinagar",
+    "Maharashtra Education Institute",
+  ],
+
+  authors: [
+    {
+      name: "Ratnaparkkhi Institute of Engineering & Management",
+    },
+  ],
+
+  creator: "Ratnaparkkhi Institute of Engineering & Management",
+
+  publisher: "Ratnaparkkhi Institute of Engineering & Management",
+
+  alternates: {
+    canonical: "/",
+  },
+
   icons: {
     icon: "/logo.png",
+    shortcut: "/logo.png",
     apple: "/logo.png",
   },
+
   openGraph: {
-    title: "Ratnaparkkhi Institute of Engineering & Management",
-    description: "Official admissions counseling & vocational training center in Chh. Sambhajinagar. Offering UGC-recognized Online & Distance degrees, ITI trade courses, NIOS 10th/12th, and NSDC/Skill India programs with our unique Learn & Earn scheme.",
+    type: "website",
+    locale: "en_IN",
+    url: "https://ratnaparkkhisansttha.com",
+    siteName: "Ratnaparkkhi Institute of Engineering & Management",
+    title: "Ratnaparkkhi Institute of Engineering & Management (RIEM)",
+    description:
+      "Admissions, Skill Development, ITI Programs, Distance Education, Career Guidance, Learn & Earn Programs, Apprenticeships, and Vocational Training across India.",
     images: [
       {
         url: "/logo.png",
-        width: 800,
-        height: 800,
-        alt: "Ratnaparkkhi Institute of Engineering & Management Logo",
+        width: 1200,
+        height: 630,
+        alt: "Ratnaparkkhi Institute of Engineering & Management",
       },
     ],
   },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Ratnaparkkhi Institute of Engineering & Management (RIEM)",
+    description:
+      "Admissions, Skill Development, ITI Programs, Distance Education, Career Guidance, Learn & Earn Programs, Apprenticeships, and Vocational Training across India.",
+    images: ["/logo.png"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
+  category: "Education",
 };
 
 export default function RootLayout({

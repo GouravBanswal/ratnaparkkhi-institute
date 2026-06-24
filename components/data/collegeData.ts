@@ -15,6 +15,23 @@ export const placementStats = {
   internshipOffers: "NAPS/NSDC Approved",
 };
 
+
+  export interface Course {
+  name: string;
+  duration: string;
+  seats: number;
+  eligibility: string;
+  fees: string;
+  highlights: string;
+
+  isIti?: boolean;
+  mode?: string;
+  careerOpportunities?: string;
+  universityOrInstitution?: string;
+  approvedBy?: string;
+  skillPartners?: string;
+};
+
 export const recruiters = [
   { name: "National Skill Development Corporation", logoText: "NSDC" },
   { name: "Skill India", logoText: "Skill India" },

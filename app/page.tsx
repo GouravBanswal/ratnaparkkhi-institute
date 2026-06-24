@@ -4,14 +4,13 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import EnquiryForm from '@/components/EnquiryForm';
 import { 
-  placementStats, 
   recruiters, 
   whyParentsTrust, 
   coursesOffered, 
   blogPosts,
   officialPhone,
   officialEmail,
-  tagline
+  Course,
 } from '@/components/data/collegeData';
 
 export default function HomePage() {
@@ -28,6 +27,8 @@ export default function HomePage() {
     duration: "4:15",
     views: "5.4K views"
   });
+
+  
 
   const videosList = [
     {
@@ -90,11 +91,12 @@ export default function HomePage() {
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
+
   // Filter courses based on search query, tabs and chips
-  const filteredCourses = coursesOffered.filter(c => {
+  const filteredCourses = coursesOffered.filter((c: Course) => {
     const matchesSearch = c.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
                           c.highlights.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          ((c as any).isIti && searchQuery.toLowerCase().includes('iti'));
+                          (c.isIti && searchQuery.toLowerCase().includes('iti'));
     
     // Tab filters: ALL, DEGREE, ITI, SCHOOL_SKILLS
     let matchesTab = true;
@@ -111,7 +113,7 @@ export default function HomePage() {
                   c.name.toLowerCase().includes('m.com') || 
                   c.name.toLowerCase().includes('m.a');
     } else if (selectedCourseTab === 'ITI') {
-      matchesTab = c.name.toLowerCase().includes('iti') || (c as any).isIti === true;
+      matchesTab = c.name.toLowerCase().includes('iti') || c.isIti === true;
     } else if (selectedCourseTab === 'SCHOOL_SKILLS') {
       matchesTab = c.name.toLowerCase().includes('10th') || 
                   c.name.toLowerCase().includes('12th') || 
@@ -125,7 +127,7 @@ export default function HomePage() {
       if (chipLower === '10th_12th') {
         matchesChip = c.name.toLowerCase().includes('10th') || c.name.toLowerCase().includes('12th');
       } else if (chipLower === 'iti') {
-        matchesChip = c.name.toLowerCase().includes('iti') || (c as any).isIti === true;
+        matchesChip = c.name.toLowerCase().includes('iti') || c.isIti === true;
       } else if (chipLower === 'ug') {
         matchesChip = c.name.toLowerCase().includes('bachelor') || c.name.toLowerCase().includes('b.a') || c.name.toLowerCase().includes('b.com') || c.name.toLowerCase().includes('b.sc') || c.name.toLowerCase().includes('bba') || c.name.toLowerCase().includes('bca');
       } else if (chipLower === 'pg') {
@@ -483,9 +485,9 @@ export default function HomePage() {
                       {c.name}
                     </h3>
                     
-                    {((c as any).universityOrInstitution) && (
+                    {(c.universityOrInstitution) && (
                       <p className="text-[10px] font-black text-navy-950 bg-slate-50 border border-slate-100 rounded px-2.5 py-1 inline-block">
-                        {((c as any).universityOrInstitution)}
+                        {(c.universityOrInstitution)}
                       </p>
                     )}
                     
@@ -494,21 +496,21 @@ export default function HomePage() {
                     </p>
 
                     <div className="pt-3 border-t border-slate-50 space-y-1.5 text-xs text-slate-550">
-                      {((c as any).mode) && (
-                        <p className="leading-relaxed"><strong className="text-slate-700 font-bold">Mode:</strong> {((c as any).mode)}</p>
+                      {(c.mode) && (
+                        <p className="leading-relaxed"><strong className="text-slate-700 font-bold">Mode:</strong> {(c.mode)}</p>
                       )}
                       <p className="leading-relaxed"><strong className="text-slate-700 font-bold">Eligibility:</strong> {c.eligibility}</p>
                       <p><strong className="text-slate-700 font-bold">Approved Annual Fees:</strong> {c.fees}</p>
                       
-                      {((c as any).isIti) && (
+                      {c.isIti && (
                         <div className="mt-2 space-y-1 bg-gold-500/5 border border-gold-500/10 p-2.5 rounded-lg text-[10px] leading-relaxed">
                           <p><strong className="text-slate-700 font-bold">Approved By:</strong> DGT / NCVT</p>
                           <p><strong className="text-slate-700 font-bold">Skill Partners:</strong> NSDC / Skill India / NAPS</p>
                         </div>
                       )}
                       
-                      {(c as any).careerOpportunities && (
-                        <p className="leading-relaxed mt-1"><strong className="text-slate-700 font-bold">Careers:</strong> {(c as any).careerOpportunities}</p>
+                      {c.careerOpportunities && (
+                        <p className="leading-relaxed mt-1"><strong className="text-slate-700 font-bold">Careers:</strong> {c.careerOpportunities}</p>
                       )}
                     </div>
                   </div>
