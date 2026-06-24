@@ -144,15 +144,17 @@ export default function HomePage() {
     <div className="bg-white pb-0 animate-fade-in font-sans">
       
       {/* SECTION 1: Portal-Inspired Large Hero Section (Cover Banner, Campus Image background, Left Text Content) */}
-      <section className="relative w-full min-h-[550px] md:min-h-[600px] flex items-center bg-cover bg-center" style={{ backgroundImage: "url('/images/building.png')" }}>
-        {/* Light gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/30 md:from-white md:via-white/80 md:to-transparent z-10" />
-        
-        {/* Decorative Grid Overlay */}
-        <div className="absolute inset-0 opacity-[0.03] z-10 bg-[linear-gradient(to_right,#0b2240_1px,transparent_1px),linear-gradient(to_bottom,#0b2240_1px,transparent_1px)] bg-[size:3rem_3rem]" />
+      <section className="relative w-full bg-slate-50 md:bg-transparent overflow-hidden">
+        {/* Absolute Background Image for Desktop */}
+        <div className="absolute inset-0 hidden md:block bg-cover bg-center" style={{ backgroundImage: "url('/images/building.png')" }}>
+          {/* Light gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/30 md:from-white md:via-white/80 md:to-transparent z-10" />
+          {/* Decorative Grid Overlay */}
+          <div className="absolute inset-0 opacity-[0.03] z-10 bg-[linear-gradient(to_right,#0b2240_1px,transparent_1px),linear-gradient(to_bottom,#0b2240_1px,transparent_1px)] bg-[size:3rem_3rem]" />
+        </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-20 pt-16 pb-28 md:pt-24 md:pb-36">
-          <div className="max-w-2xl text-left space-y-6">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-20 pt-8 pb-8 md:pt-24 md:pb-36 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="max-w-2xl text-center md:text-left space-y-6 w-full flex flex-col items-center md:items-start">
             {/* Active Admission Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-50 border border-navy-100/60 text-[10px] sm:text-xs font-bold text-navy-900 uppercase tracking-wider shadow-sm">
               <span className="relative flex h-2 w-2">
@@ -163,7 +165,7 @@ export default function HomePage() {
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-navy-900 leading-none">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-navy-900 leading-tight md:leading-none">
               Build Your Future with <br className="hidden sm:block" />
               <span className="bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 bg-clip-text text-transparent">
                 Quality Education
@@ -176,39 +178,40 @@ export default function HomePage() {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-3.5 pt-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2 w-full sm:w-auto">
               <Link 
                 href="/online-admission"
-                className="bg-gold-500 hover:bg-gold-600 text-navy-955 font-black text-xs sm:text-sm uppercase tracking-wider px-6 py-3.5 rounded-lg shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 active:scale-95 cursor-pointer"
+                className="w-full sm:w-auto text-center bg-gold-500 hover:bg-gold-600 text-navy-955 font-black text-xs sm:text-sm uppercase tracking-wider px-6 py-3.5 rounded-lg shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 active:scale-95 cursor-pointer"
               >
                 Apply Now 2026
               </Link>
               <button 
+                type="button"
                 onClick={() => {
                   const el = document.getElementById('courses-section');
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="bg-transparent border-2 border-navy-900 hover:border-gold-500 text-navy-900 hover:text-gold-600 font-black text-xs sm:text-sm uppercase tracking-wider px-6 py-3 rounded-lg transition-all hover:-translate-y-0.5 active:scale-95 cursor-pointer"
+                className="w-full sm:w-auto text-center bg-transparent border-2 border-navy-900 hover:border-gold-500 text-navy-900 hover:text-gold-600 font-black text-xs sm:text-sm uppercase tracking-wider px-6 py-3 rounded-lg transition-all hover:-translate-y-0.5 active:scale-95 cursor-pointer"
               >
                 Explore Courses
               </button>
             </div>
 
             {/* Feature Pills */}
-            <div className="flex flex-wrap gap-2.5 pt-6">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/90 border border-slate-200/60 rounded-full text-[10px] sm:text-xs font-bold text-navy-900 shadow-sm">
+            <div className="flex flex-wrap justify-center md:justify-start gap-2.5 pt-6 w-full">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-slate-200/60 rounded-full text-[10px] sm:text-xs font-bold text-navy-900 shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 text-gold-500" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l3-3z" clipRule="evenodd" />
                 </svg>
                 Learn & Earn Scheme
               </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/90 border border-slate-200/60 rounded-full text-[10px] sm:text-xs font-bold text-navy-900 shadow-sm">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-slate-200/60 rounded-full text-[10px] sm:text-xs font-bold text-navy-900 shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 text-gold-500" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l3-3z" clipRule="evenodd" />
                 </svg>
                 Flexible Distance Learning
               </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/90 border border-slate-200/60 rounded-full text-[10px] sm:text-xs font-bold text-navy-900 shadow-sm">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-slate-200/60 rounded-full text-[10px] sm:text-xs font-bold text-navy-900 shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 text-gold-500" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l3-3z" clipRule="evenodd" />
                 </svg>
@@ -216,17 +219,22 @@ export default function HomePage() {
               </span>
             </div>
           </div>
+
+          {/* Mobile Image (shown below content on mobile, hidden on desktop) */}
+          <div className="w-full md:hidden rounded-2xl overflow-hidden shadow-md max-h-[220px]">
+            <img src="/images/building.png" alt="RIEM Campus Building" className="w-full h-auto object-cover max-h-[220px]" />
+          </div>
         </div>
 
-        {/* Floating Glassmorphism Search Panel Overlapping the bottom boundary */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-full max-w-5xl px-4 z-30">
+        {/* Floating Glassmorphism Search Panel */}
+        <div className="relative md:absolute md:bottom-0 md:left-1/2 md:-translate-x-1/2 md:translate-y-1/2 w-full max-w-5xl px-4 z-30 pb-6 md:pb-0">
           <div className="bg-white/20 backdrop-blur-md border border-white/30 shadow-2xl rounded-2xl p-6 sm:p-8 space-y-4">
-            <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-navy-900">
+            <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-navy-900 text-center md:text-left">
               Search courses, branches and placement stats
             </h3>
             
-            <div className="flex items-center bg-white border border-slate-200 focus-within:border-gold-500 rounded-lg overflow-hidden transition-all shadow-sm">
-              <div className="pl-4 text-slate-400">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center bg-white border border-slate-200 focus-within:border-gold-500 rounded-lg overflow-hidden transition-all shadow-sm w-full">
+              <div className="hidden sm:flex pl-4 text-slate-400">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
@@ -244,15 +252,15 @@ export default function HomePage() {
                   const el = document.getElementById('courses-section');
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="bg-gold-500 hover:bg-gold-600 text-navy-955 font-black text-xs sm:text-sm px-6 sm:px-8 py-4 transition-colors border-l border-slate-200 cursor-pointer"
+                className="w-full sm:w-auto bg-gold-500 hover:bg-gold-600 text-navy-955 font-black text-xs sm:text-sm px-6 py-4 transition-colors border-t sm:border-t-0 sm:border-l border-slate-200 cursor-pointer text-center"
               >
                 Search
               </button>
             </div>
 
             {/* Quick Course Chips */}
-            <div className="flex flex-wrap items-center gap-2  text-[11px]">
-              <span className="text-slate-450 font-bold uppercase tracking-wider mr-1">Quick Links:</span>
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 text-[11px] w-full">
+              <span className="text-slate-450 font-bold uppercase tracking-wider mr-1 hidden sm:inline">Quick Links:</span>
               {[
                 { name: "10th/12th NIOS", tab: "SCHOOL_SKILLS", chip: "10th_12th" },
                 { name: "ITI Programs", tab: "ITI", chip: "iti" },
@@ -275,7 +283,7 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 2: Dedicated Statistics Section (Slate-50 Background - Official achievements) */}
-      <section className="bg-slate-50 pt-28 pb-20 border-b border-slate-100">
+      <section className="bg-slate-50 pt-12 pb-12 md:pt-28 md:pb-20 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto pt-6 mb-6 space-y-2">
             <span className="text-xs font-bold uppercase tracking-widest text-gold-600">RIEM at a Glance</span>
@@ -285,9 +293,9 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
             {/* Card 1: Passed Students */}
-            <div className="bg-white border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+            <div className="bg-white border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
               <div className="w-12 h-12 bg-navy-50 text-navy-900 rounded-xl flex items-center justify-center shrink-0 shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
@@ -301,7 +309,7 @@ export default function HomePage() {
             </div>
 
             {/* Card 2: Success Rate */}
-            <div className="bg-white border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+            <div className="bg-white border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
               <div className="w-12 h-12 bg-navy-50 text-navy-900 rounded-xl flex items-center justify-center shrink-0 shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -314,7 +322,7 @@ export default function HomePage() {
             </div>
 
             {/* Card 3: Placed Students */}
-            <div className="bg-white border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+            <div className="bg-white border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
               <div className="w-12 h-12 bg-navy-50 text-navy-900 rounded-xl flex items-center justify-center shrink-0 shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -327,15 +335,15 @@ export default function HomePage() {
             </div>
 
             {/* Card 4: Geographic Reach */}
-            <div className="bg-white border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+            <div className="bg-white border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
               <div className="w-12 h-12 bg-navy-50 text-navy-900 rounded-xl flex items-center justify-center shrink-0 shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </div>
               <div>
-                <span className="block text-[15px] sm:text-lg font-black text-gold-505 text-gold-500 leading-tight uppercase">PAN India</span>
+                <span className="block text-[15px] sm:text-lg font-black text-gold-500 leading-tight uppercase">PAN India</span>
                 <span className="text-[9px] uppercase text-slate-500 font-bold tracking-wider">Nationwide Coverage</span>
               </div>
             </div>

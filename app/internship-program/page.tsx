@@ -38,7 +38,7 @@ export default function InternshipsPage() {
             <p className="text-sm text-slate-655 leading-relaxed font-medium">
               Graduates participate in traineeships, enabling them to gain critical hands-on experience, support themselves with monthly stipends, and build careers in government and private sectors across India.
             </p>
-            <div className="grid grid-cols-3 gap-4 border-t border-slate-100 pt-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-slate-100 pt-6 text-center sm:text-left">
               <div>
                 <span className="block text-2xl font-bold text-navy-900">100%</span>
                 <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Success Rate</span>

@@ -82,10 +82,10 @@ export default function FranchiseWizard({ onNavigateToAdmin }: FranchiseWizardPr
   const [filePreviews, setFilePreviews] = useState<Record<string, string>>({});
 
   // Styles utility mapping based on light theme specifications
-  const inputClasses = "w-full px-3 py-2 text-xs bg-white text-[#0F172A] placeholder-[#64748B] border border-[#CBD5E1] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#D4AF37]/25 focus:border-[#D4AF37] transition-all opacity-100";
-  const selectClasses = "w-full px-3 py-2 text-xs bg-white text-[#0F172A] border border-[#CBD5E1] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#D4AF37]/25 focus:border-[#D4AF37] transition-all cursor-pointer opacity-100";
-  const labelClasses = "block text-[10px] font-bold uppercase tracking-wider text-[#334155] mb-1";
-  const headingClasses = "text-base font-extrabold text-[#0F172A] flex items-center gap-2";
+  const inputClasses = "w-full px-3 py-3 text-sm bg-white text-[#0F172A] placeholder-[#64748B] border border-[#CBD5E1] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#D4AF37]/25 focus:border-[#D4AF37] transition-all opacity-100";
+  const selectClasses = "w-full px-3 py-3 text-sm bg-white text-[#0F172A] border border-[#CBD5E1] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#D4AF37]/25 focus:border-[#D4AF37] transition-all cursor-pointer opacity-100";
+  const labelClasses = "block text-xs font-bold uppercase tracking-wider text-[#334155] mb-1";
+  const headingClasses = "text-lg font-extrabold text-[#0F172A] flex items-center gap-2";
 
   // Load progress from localStorage on mount
   useEffect(() => {
@@ -483,7 +483,7 @@ export default function FranchiseWizard({ onNavigateToAdmin }: FranchiseWizardPr
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
           
           {/* Sidebar Step indicator */}
-          <div className="lg:col-span-1 space-y-4">
+          <div className="hidden lg:block lg:col-span-1 space-y-4">
             <div className="p-4 rounded-xl border border-[#E2E8F0] bg-white shadow-sm">
               <h4 className="text-[10px] uppercase tracking-widest text-slate-400 font-extrabold mb-3">Onboarding Wizard</h4>
               
@@ -677,12 +677,56 @@ export default function FranchiseWizard({ onNavigateToAdmin }: FranchiseWizardPr
           <div className="lg:col-span-3">
             <div className="p-6 md:p-8 rounded-2xl border border-[#E2E8F0] bg-white shadow-sm space-y-6 animate-fade-in text-[#0F172A]">
               
-              {/* Stepper Progress Bar */}
-              <div className="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
-                <div 
-                  className="h-full bg-gradient-to-r from-gold-400 to-gold-600 transition-all duration-300 rounded-full" 
-                  style={{ width: `${currentStep * 10}%` }}
-                ></div>
+              {/* Stepper Progress Bar & Horizontal Stepper on Mobile */}
+              <div className="space-y-4">
+                {/* Horizontal Stepper (shown on mobile, hidden on desktop) */}
+                <div className="lg:hidden flex items-center gap-1.5 overflow-x-auto py-2 px-1 scrollbar-none snap-x snap-mandatory border-b border-slate-100">
+                  {STEPS.map((s) => {
+                    const isActive = currentStep === s.id;
+                    const isCompleted = currentStep > s.id;
+                    return (
+                      <button
+                        key={s.id}
+                        type="button"
+                        onClick={() => {
+                          if (s.id < currentStep) {
+                            setCurrentStep(s.id);
+                          } else {
+                            let valid = true;
+                            for (let st = currentStep; st < s.id; st++) {
+                              if (!validateStep(st)) {
+                                valid = false;
+                                break;
+                              }
+                            }
+                            if (valid) setCurrentStep(s.id);
+                          }
+                        }}
+                        className={`snap-center shrink-0 w-9 h-9 rounded-full flex items-center justify-center text-xs font-black border transition-all cursor-pointer ${
+                          isActive 
+                            ? 'bg-navy-800 border-gold-500 text-white shadow-md' 
+                            : isCompleted
+                            ? 'bg-emerald-500 border-emerald-500 text-white'
+                            : 'bg-white border-slate-200 text-slate-500'
+                        }`}
+                      >
+                        {isCompleted ? '✓' : s.id}
+                      </button>
+                    );
+                  })}
+                </div>
+
+                {/* Progress bar and label */}
+                <div className="flex justify-between items-center text-xs">
+                  <span className="font-bold text-slate-500">Step {currentStep} of 10: <span className="text-[#0F172A]">{STEPS[currentStep - 1].name}</span></span>
+                  <span className="font-black text-gold-600 bg-gold-500/10 px-2 py-0.5 rounded border border-gold-500/10">{currentStep * 10}%</span>
+                </div>
+                <div className="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
+                  <div 
+                    className="h-full bg-gradient-to-r from-gold-400 to-gold-600 transition-all duration-300 rounded-full" 
+                    style={{ width: `${currentStep * 10}%` }}
+                  ></div>
+                </div>
               </div>
 
               {errors.apiError && (
@@ -1033,7 +1077,7 @@ export default function FranchiseWizard({ onNavigateToAdmin }: FranchiseWizardPr
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3 bg-slate-50 p-4 rounded-xl border border-[#E2E8F0]">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 bg-slate-50 p-4 rounded-xl border border-[#E2E8F0]">
                     {[
                       { key: 'computerLabAvailable', label: 'Computer Lab Available' },
                       { key: 'internetFacility', label: 'Internet Facility' },
@@ -1554,12 +1598,12 @@ export default function FranchiseWizard({ onNavigateToAdmin }: FranchiseWizardPr
               )}
 
               {/* Wizard Navigation Footer */}
-              <div className="flex justify-between items-center border-t border-slate-200 pt-5">
+              <div className="flex flex-col-reverse sm:flex-row sm:justify-between gap-3 border-t border-slate-200 pt-5 w-full">
                 <button
                   type="button"
                   onClick={handlePrev}
                   disabled={currentStep === 1 || isSubmitting}
-                  className={`px-5 py-2.5 text-xs font-bold rounded-lg border transition-all ${
+                  className={`w-full sm:w-auto px-5 py-3 text-xs font-bold rounded-lg border transition-all text-center ${
                     currentStep === 1 
                       ? 'border-slate-100 text-slate-300 cursor-not-allowed'
                       : 'border-slate-200 text-[#0F172A] hover:bg-slate-50 cursor-pointer'
@@ -1572,7 +1616,7 @@ export default function FranchiseWizard({ onNavigateToAdmin }: FranchiseWizardPr
                   <button
                     type="button"
                     onClick={handleNext}
-                    className="px-6 py-2.5 text-xs font-bold bg-gradient-to-r from-gold-400 to-gold-600 text-navy-955 hover:from-gold-500 hover:to-gold-700 rounded-lg shadow-md hover:shadow-lg transition-all cursor-pointer"
+                    className="w-full sm:w-auto px-6 py-3 text-xs font-bold bg-gradient-to-r from-gold-400 to-gold-600 text-navy-955 hover:from-gold-500 hover:to-gold-700 rounded-lg shadow-md hover:shadow-lg transition-all cursor-pointer text-center"
                   >
                     Next Step
                   </button>
@@ -1581,7 +1625,7 @@ export default function FranchiseWizard({ onNavigateToAdmin }: FranchiseWizardPr
                     type="button"
                     onClick={handleSubmit}
                     disabled={isSubmitting}
-                    className="px-7 py-2.5 text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-gold-400 to-gold-600 text-navy-955 hover:from-gold-500 hover:to-gold-700 rounded-lg shadow-md hover:shadow-lg transition-all cursor-pointer"
+                    className="w-full sm:w-auto px-7 py-3 text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-gold-400 to-gold-600 text-[#0F172A] hover:from-gold-500 hover:to-gold-700 rounded-lg shadow-md hover:shadow-lg transition-all cursor-pointer text-center"
                   >
                     {isSubmitting ? 'Submitting...' : 'Submit Application'}
                   </button>

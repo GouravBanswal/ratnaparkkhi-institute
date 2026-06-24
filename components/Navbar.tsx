@@ -92,7 +92,7 @@ const Navbar = () => {
   return (
     <header className="w-full bg-white z-40 relative">
       {/* 1. Top Utility Bar with Contact details & Social icons */}
-      <div className="bg-navy-950 text-slate-300 text-xs py-2.5 px-4 sm:px-6 lg:px-8 border-b border-navy-900">
+      <div className="hidden md:block bg-navy-950 text-slate-300 text-xs py-2.5 px-4 sm:px-6 lg:px-8 border-b border-navy-900">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
           {/* Contact info links */}
           <div className="flex flex-wrap justify-center sm:justify-start items-center gap-4 sm:gap-6 font-medium">
@@ -246,14 +246,14 @@ const Navbar = () => {
         <div className="flex items-center gap-3 shrink-0">
           <a 
             href={`tel:${formattedPhone}`} 
-            className="hidden sm:inline-flex px-4 py-2 text-xs font-bold uppercase tracking-wider text-navy-900 border border-navy-900 hover:bg-navy-900 hover:text-white rounded-lg transition-all text-center cursor-pointer whitespace-nowrap"
+            className="hidden md:inline-flex px-4 py-2 text-xs font-bold uppercase tracking-wider text-navy-900 border border-navy-900 hover:bg-navy-900 hover:text-white rounded-lg transition-all text-center cursor-pointer whitespace-nowrap"
           >
             Call Now
           </a>
 
           <Link 
             href="/online-admission"
-            className="px-4.5 py-2 sm:py-2.5 text-xs font-bold uppercase tracking-wider text-navy-955 bg-gradient-to-r from-gold-400 to-gold-600 hover:from-gold-500 hover:to-gold-700 rounded-lg shadow-md transition-all hover:-translate-y-0.5 cursor-pointer whitespace-nowrap"
+            className="px-4.5 py-2.5 text-xs font-bold uppercase tracking-wider text-navy-955 bg-gradient-to-r from-gold-400 to-gold-600 hover:from-gold-500 hover:to-gold-700 rounded-lg shadow-md transition-all hover:-translate-y-0.5 cursor-pointer whitespace-nowrap"
           >
             Apply Online
           </Link>
@@ -262,7 +262,7 @@ const Navbar = () => {
           <button 
             type="button"
             onClick={toggleMenu} 
-            className="inline-flex lg:hidden items-center justify-center p-2 rounded-md text-slate-500 hover:text-navy-900 hover:bg-slate-50 focus:outline-none cursor-pointer border border-slate-100"
+            className="inline-flex md:hidden items-center justify-center w-11 h-11 rounded-md text-slate-500 hover:text-navy-900 hover:bg-slate-50 focus:outline-none cursor-pointer border border-slate-100"
           >
             <span className="sr-only">Open main menu</span>
             {isOpen ? (
@@ -279,8 +279,8 @@ const Navbar = () => {
       </div>
 
       {/* 3. Sticky Bottom Navigation Menu (Clean white theme with blur shadow effect) */}
-      <div className="sticky top-0 z-35 bg-white/95 backdrop-blur-md border-t border-b border-slate-100 py-2 px-8 shadow-sm">
-        <div className="max-w-7xl mx-auto flex items-center justify-center gap-1.5 xl:gap-2">
+      <div className="hidden md:block sticky top-0 z-35 bg-white/95 backdrop-blur-md border-t border-b border-slate-100 py-2 px-4 sm:px-6 lg:px-8 shadow-sm">
+        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-1 md:gap-1.5 lg:gap-2 text-[10px] lg:text-xs">
           {/* Home */}
           <Link 
             href="/" 
@@ -400,7 +400,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation Drawer */}
       {isOpen && (
-        <div className="lg:hidden bg-white border-t border-slate-100 max-h-[85vh] overflow-y-auto px-4 pt-2 pb-6 space-y-2 shadow-lg">
+        <div className="md:hidden bg-white border-t border-slate-100 max-h-[85vh] overflow-y-auto px-4 pt-2 pb-6 space-y-2 shadow-lg">
           {/* Mobile Search input */}
           <div className="px-3 py-2 border-b border-slate-50">
             <form onSubmit={handleSearchSubmit} className="flex items-center bg-slate-50 border border-slate-200 rounded-lg overflow-hidden">

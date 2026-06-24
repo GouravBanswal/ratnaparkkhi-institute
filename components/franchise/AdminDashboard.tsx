@@ -191,9 +191,9 @@ export default function AdminDashboard() {
   const labelClasses = "block text-[9px] font-bold uppercase tracking-wider text-[#334155] mb-1";
   
   // Explicit form styling classes matching prompt requirements
-  const filterSelectClasses = "text-xs px-2.5 py-1.5 bg-white text-[#0F172A] border border-[#CBD5E1] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#D4AF37]/25 focus:border-[#D4AF37] cursor-pointer opacity-100";
-  const searchInputClasses = "w-full pl-8 pr-3 py-1.5 text-xs bg-white text-[#0F172A] placeholder-[#64748B] border border-[#CBD5E1] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#D4AF37]/25 focus:border-[#D4AF37] transition-all opacity-100";
-  const workflowInputClasses = "w-full px-3 py-1.5 text-xs bg-white text-[#0F172A] placeholder-[#64748B] border border-[#CBD5E1] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#D4AF37]/25 focus:border-[#D4AF37] transition-all opacity-100";
+  const filterSelectClasses = "w-full sm:w-auto text-sm px-2.5 py-3 bg-white text-[#0F172A] border border-[#CBD5E1] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#D4AF37]/25 focus:border-[#D4AF37] cursor-pointer opacity-100";
+  const searchInputClasses = "w-full pl-8 pr-3 py-3 text-sm bg-white text-[#0F172A] placeholder-[#64748B] border border-[#CBD5E1] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#D4AF37]/25 focus:border-[#D4AF37] transition-all opacity-100";
+  const workflowInputClasses = "w-full px-3 py-3 text-sm bg-white text-[#0F172A] placeholder-[#64748B] border border-[#CBD5E1] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#D4AF37]/25 focus:border-[#D4AF37] transition-all opacity-100";
 
   return (
     <div className="space-y-8">
@@ -204,7 +204,7 @@ export default function AdminDashboard() {
       )}
 
       {/* Analytics Cards Grid */}
-      <div className="grid grid-cols-2 lg:grid-cols-6 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
         {[
           { label: 'Total Leads', val: totalLeads, desc: 'Total applications', color: 'text-[#0F172A]' },
           { label: 'Approved Leads', val: approvedLeads, desc: 'Center authorized', color: 'text-emerald-600' },
@@ -349,7 +349,7 @@ export default function AdminDashboard() {
             </span>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full md:w-auto">
             {/* Search Input */}
             <div className="relative flex-1 md:w-56">
               <input 
@@ -395,7 +395,6 @@ export default function AdminDashboard() {
           </div>
         </div>
 
-        {/* Table representation */}
         <div className="overflow-x-auto">
           {loading ? (
             <div className="py-20 text-center text-xs text-slate-400 font-bold">
@@ -406,27 +405,93 @@ export default function AdminDashboard() {
               No franchise applications found matching filters.
             </div>
           ) : (
-            <table className="w-full text-left text-xs border-collapse">
-              <thead>
-                <tr className="bg-slate-50 text-slate-550 uppercase tracking-wider text-[9px] font-extrabold border-b border-slate-100">
-                  <th className="p-3 text-slate-600">Franchise ID</th>
-                  <th className="p-3 text-slate-600 cursor-pointer select-none" onClick={() => handleSort('fullName')}>
-                    Applicant Name {sortBy === 'fullName' ? (sortOrder === 'asc' ? '▲' : '▼') : ''}
-                  </th>
-                  <th className="p-3 text-slate-600">State</th>
-                  <th className="p-3 text-slate-600">District</th>
-                  <th className="p-3 text-slate-600">Investment Range</th>
-                  <th className="p-3 text-slate-600 cursor-pointer select-none" onClick={() => handleSort('leadScore')}>
-                    Score {sortBy === 'leadScore' ? (sortOrder === 'asc' ? '▲' : '▼') : ''}
-                  </th>
-                  <th className="p-3 text-slate-600">Status</th>
-                  <th className="p-3 text-slate-600 cursor-pointer select-none" onClick={() => handleSort('submittedAt')}>
-                    Date Submitted {sortBy === 'submittedAt' ? (sortOrder === 'asc' ? '▲' : '▼') : ''}
-                  </th>
-                  <th className="p-3 text-slate-650 text-center">Action</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-100">
+            <>
+              {/* Desktop Table View */}
+              <div className="hidden md:block">
+                <table className="w-full text-left text-xs border-collapse">
+                  <thead>
+                    <tr className="bg-slate-50 text-slate-550 uppercase tracking-wider text-[9px] font-extrabold border-b border-slate-100">
+                      <th className="p-3 text-slate-600">Franchise ID</th>
+                      <th className="p-3 text-slate-600 cursor-pointer select-none" onClick={() => handleSort('fullName')}>
+                        Applicant Name {sortBy === 'fullName' ? (sortOrder === 'asc' ? '▲' : '▼') : ''}
+                      </th>
+                      <th className="p-3 text-slate-600">State</th>
+                      <th className="p-3 text-slate-600">District</th>
+                      <th className="p-3 text-slate-600">Investment Range</th>
+                      <th className="p-3 text-slate-600 cursor-pointer select-none" onClick={() => handleSort('leadScore')}>
+                        Score {sortBy === 'leadScore' ? (sortOrder === 'asc' ? '▲' : '▼') : ''}
+                      </th>
+                      <th className="p-3 text-slate-600">Status</th>
+                      <th className="p-3 text-slate-600 cursor-pointer select-none" onClick={() => handleSort('submittedAt')}>
+                        Date Submitted {sortBy === 'submittedAt' ? (sortOrder === 'asc' ? '▲' : '▼') : ''}
+                      </th>
+                      <th className="p-3 text-slate-650 text-center">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100">
+                    {paginatedLeads.map((lead) => {
+                      const statusColors: Record<string, string> = {
+                        'New': 'bg-blue-500/10 border-blue-500/20 text-blue-600',
+                        'Under Review': 'bg-amber-500/10 border-amber-500/20 text-amber-700',
+                        'Approved': 'bg-emerald-500/10 border-emerald-500/20 text-emerald-650',
+                        'Rejected': 'bg-rose-500/10 border-rose-500/20 text-rose-650',
+                        'On Hold': 'bg-slate-500/10 border-slate-500/20 text-slate-600',
+                      };
+
+                      const scoreCat = getScoreCategory(lead.leadScore);
+                      const scoreColors: Record<string, string> = {
+                        'Excellent': 'bg-emerald-500/10 text-emerald-650 border-emerald-500/20',
+                        'Good': 'bg-teal-500/10 text-teal-650 border-teal-500/20',
+                        'Average': 'bg-amber-500/10 text-amber-700 border-amber-500/20',
+                        'Weak': 'bg-rose-500/10 text-rose-650 border-rose-500/20',
+                      };
+
+                      return (
+                        <tr key={lead.id} className="hover:bg-slate-50/50 transition-colors border-b border-[#E2E8F0] font-medium">
+                          <td className="p-3 font-bold text-[#0F172A]">{lead.id}</td>
+                          <td className="p-3">
+                            <div className="font-bold text-[#0F172A]">{lead.fullName}</div>
+                            <div className="text-[10px] text-slate-450">{lead.email}</div>
+                          </td>
+                          <td className="p-3">{lead.state}</td>
+                          <td className="p-3">{lead.district}</td>
+                          <td className="p-3 font-bold text-[#0F172A]">{lead.investmentCapacity}</td>
+                          <td className="p-3">
+                            <div className="flex items-center gap-1.5">
+                              <span className="font-black text-[#0F172A]">{lead.leadScore}</span>
+                              <span className={`text-[8px] font-bold px-1.5 py-0.2 rounded border uppercase tracking-wider ${scoreColors[scoreCat]}`}>
+                                {scoreCat}
+                              </span>
+                            </div>
+                          </td>
+                          <td className="p-3">
+                            <span className={`px-2 py-0.5 rounded border text-[10px] font-bold ${statusColors[lead.status]}`}>
+                              {lead.status}
+                            </span>
+                          </td>
+                          <td className="p-3 text-slate-400">{new Date(lead.submittedAt).toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' })}</td>
+                          <td className="p-3 text-center">
+                            <button
+                              onClick={() => {
+                                setSelectedLead(lead);
+                                setReviewNotes(lead.internalNotes || '');
+                                setReviewStatus(lead.status);
+                                setActiveReviewTab('info');
+                              }}
+                              className="px-3 py-1 bg-navy-800 hover:bg-navy-900 text-white rounded font-bold hover:shadow transition-all cursor-pointer text-[10px]"
+                            >
+                              Review
+                            </button>
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Mobile Card-Based View */}
+              <div className="block md:hidden divide-y divide-slate-100">
                 {paginatedLeads.map((lead) => {
                   const statusColors: Record<string, string> = {
                     'New': 'bg-blue-500/10 border-blue-500/20 text-blue-600',
@@ -445,47 +510,57 @@ export default function AdminDashboard() {
                   };
 
                   return (
-                    <tr key={lead.id} className="hover:bg-slate-50/50 transition-colors border-b border-[#E2E8F0] font-medium">
-                      <td className="p-3 font-bold text-[#0F172A]">{lead.id}</td>
-                      <td className="p-3">
-                        <div className="font-bold text-[#0F172A]">{lead.fullName}</div>
-                        <div className="text-[10px] text-slate-450">{lead.email}</div>
-                      </td>
-                      <td className="p-3">{lead.state}</td>
-                      <td className="p-3">{lead.district}</td>
-                      <td className="p-3 font-bold text-[#0F172A]">{lead.investmentCapacity}</td>
-                      <td className="p-3">
-                        <div className="flex items-center gap-1.5">
-                          <span className="font-black text-[#0F172A]">{lead.leadScore}</span>
-                          <span className={`text-[8px] font-bold px-1.5 py-0.2 rounded border uppercase tracking-wider ${scoreColors[scoreCat]}`}>
-                            {scoreCat}
-                          </span>
+                    <div key={lead.id} className="p-4 space-y-3 font-medium text-[#0F172A]">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <span className="block text-xs font-bold text-slate-400">{lead.id}</span>
+                          <span className="block text-sm font-bold mt-0.5">{lead.fullName}</span>
                         </div>
-                      </td>
-                      <td className="p-3">
-                        <span className={`px-2 py-0.5 rounded border text-[10px] font-bold ${statusColors[lead.status]}`}>
+                        <span className={`text-[10px] font-bold px-2 py-0.5 rounded border uppercase ${statusColors[lead.status] || 'bg-slate-100'}`}>
                           {lead.status}
                         </span>
-                      </td>
-                      <td className="p-3 text-slate-400">{new Date(lead.submittedAt).toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' })}</td>
-                      <td className="p-3 text-center">
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-2 text-xs border-t border-slate-50 pt-2 text-slate-550">
+                        <div>
+                          <span className="block text-[9px] uppercase font-bold text-slate-400">Location</span>
+                          <span className="block font-semibold mt-0.5">{lead.city}, {lead.state}</span>
+                        </div>
+                        <div>
+                          <span className="block text-[9px] uppercase font-bold text-slate-400">Investment</span>
+                          <span className="block font-semibold mt-0.5">{lead.investmentCapacity}</span>
+                        </div>
+                        <div>
+                          <span className="block text-[9px] uppercase font-bold text-slate-400">Lead Score</span>
+                          <span className={`inline-block text-[10px] font-bold px-1.5 py-0.2 rounded border uppercase mt-0.5 ${scoreColors[scoreCat] || 'bg-slate-100'}`}>
+                            {lead.leadScore} ({scoreCat})
+                          </span>
+                        </div>
+                        <div>
+                          <span className="block text-[9px] uppercase font-bold text-slate-400">Submitted</span>
+                          <span className="block font-semibold mt-0.5">{new Date(lead.submittedAt).toLocaleDateString()}</span>
+                        </div>
+                      </div>
+
+                      <div className="pt-2 border-t border-slate-50 flex justify-end">
                         <button
+                          type="button"
                           onClick={() => {
                             setSelectedLead(lead);
                             setReviewNotes(lead.internalNotes || '');
                             setReviewStatus(lead.status);
                             setActiveReviewTab('info');
                           }}
-                          className="px-3 py-1 bg-navy-800 hover:bg-navy-900 text-white rounded font-bold hover:shadow transition-all cursor-pointer text-[10px]"
+                          className="px-4 py-2.5 text-xs font-bold text-[#0F172A] bg-gold-500 hover:bg-gold-600 rounded-lg cursor-pointer transition-all w-full text-center"
                         >
-                          Review
+                          Review Profile
                         </button>
-                      </td>
-                    </tr>
+                      </div>
+                    </div>
                   );
                 })}
-              </tbody>
-            </table>
+              </div>
+            </>
           )}
         </div>
 
@@ -752,7 +827,7 @@ export default function AdminDashboard() {
                   <span className="text-xs text-[#0F172A] font-black">{selectedLead.leadScore}/100</span>
                 </h5>
                 
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-[10px] pt-1">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-[10px] pt-1">
                   <div>
                     <span className="block text-slate-450 font-bold">Area</span>
                     <span className="font-extrabold text-[#0F172A]">{selectedLead.totalArea} sq ft</span>
