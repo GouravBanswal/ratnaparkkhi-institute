@@ -9,9 +9,9 @@ export default function AboutPage() {
       <section className="bg-slate-50 border-b border-slate-100 py-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#0b2240_1px,transparent_1px),linear-gradient(to_bottom,#0b2240_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
         <div className="relative max-w-7xl mx-auto px-4 text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-black tracking-tight text-navy-900">About Ratnaparkkhi Institute of Engineering & Management</h1>
+          <h1 className="text-4xl md:text-5xl font-black tracking-tight text-navy-900">About Ratnaparkkhi Institute™ of Engineering & Management</h1>
           <p className="text-sm md:text-base text-slate-600 max-w-2xl mx-auto font-medium">
-            Discover our legacy since 2008, our mission for flexible education, and our affiliations with top universities and skill councils.
+            Discover our legacy since 2008, our mission for technical and engineering education, and our collaborations with skill councils and training boards.
           </p>
         </div>
       </section>
@@ -25,7 +25,7 @@ export default function AboutPage() {
             </div>
             <h3 className="text-xl font-bold text-navy-900">Our Vision</h3>
             <p className="text-sm text-slate-655 leading-relaxed font-medium">
-              To be a premier center of flexible learning, vocational skill development, and distance education that empowers every individual across India with affordable, high-quality, and accessible career opportunities.
+              To be a premier center of technical learning, engineering excellence, and vocational skill development that empowers every individual across India with affordable, high-quality, and accessible career opportunities.
             </p>
           </div>
 
@@ -58,7 +58,7 @@ export default function AboutPage() {
               Message from the Founder's Desk
             </h3>
             <p className="text-sm text-slate-600 leading-relaxed font-medium">
-              &quot;Online and distance education is the ultimate gateway to lifelong progress. At Ratnaparkkhi Institute, we aim to provide an affordable, high-quality gateway to professional life for working professionals, school dropouts, and students from all walks of life. Our NSDC/Skill India collaborations and university counseling services ensure that every candidate gains the skills and qualifications necessary to succeed in government and private sectors.&quot;
+              &quot;Technical and engineering education is the ultimate gateway to lifelong progress. At Ratnaparkkhi Institute™, our primary focus is providing high-quality Engineering, ITI, and Skill Development programs that prepare students for immediate industrial careers. Our NSDC/Skill India and NAPS apprenticeship collaborations ensure that every candidate gains the practical skills and qualifications necessary to succeed in government and private engineering sectors.&quot;
             </p>
           </div>
         </div>
@@ -78,7 +78,7 @@ export default function AboutPage() {
               From the Director's Desk
             </h3>
             <p className="text-sm text-slate-600 leading-relaxed font-medium">
-              &quot;We welcome you to a community dedicated to flexible learning and vocational mastery. Our academic counselor desk is structured to provide complete guidance for NIOS school boards, ITI technical trades, and UGC-DEB approved university degrees. By partnering with leading boards like YCMOU, Tilak Maharashtra Vidyapeeth, and Skill India, we ensure our courses deliver immediate, practical value and NAPS apprenticeship options.&quot;
+              &quot;We welcome you to a community dedicated to technical learning and vocational mastery. Our academic counselor desk is structured to provide complete guidance for ITI technical trades, Engineering branches, and MBA programs. By partnering with leading boards and industry associations, we ensure our courses deliver immediate, practical value and NAPS apprenticeship options.&quot;
             </p>
           </div>
         </div>
@@ -116,7 +116,7 @@ export default function AboutPage() {
           <div className="max-w-2xl mx-auto space-y-3">
             <h2 className="text-2xl font-extrabold text-navy-900">Recognition, Boards & Partners</h2>
             <p className="text-xs sm:text-sm text-slate-500 font-medium">
-              Ratnaparkkhi Institute is affiliated with leading state universities, skill boards, and apprenticeship systems.
+              Ratnaparkkhi Institute™ is affiliated with leading state skill boards, technical councils, and apprenticeship systems.
             </p>
           </div>
 
@@ -126,16 +126,16 @@ export default function AboutPage() {
               <p className="text-[11px] text-slate-500 uppercase tracking-widest font-bold">NSDC, Skill India & MSBSVET ITI</p>
             </div>
             <div className="bg-white border border-slate-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-navy-900 mb-1">Open Boards</h4>
-              <p className="text-[11px] text-slate-500 uppercase tracking-widest font-bold">YCMOU, TMV, MHV & NIOS</p>
+              <h4 className="font-bold text-navy-900 mb-1">Management Programs</h4>
+              <p className="text-[11px] text-slate-500 uppercase tracking-widest font-bold">UGC-Recognized MBA & Trade Studies</p>
             </div>
             <div className="bg-white border border-slate-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <h4 className="font-bold text-navy-900 mb-1">Apprenticeship Schemes</h4>
               <p className="text-[11px] text-slate-500 uppercase tracking-widest font-bold">NAPS & BTP Approved Center</p>
             </div>
             <div className="bg-white border border-slate-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-navy-900 mb-1">Counseling Universities</h4>
-              <p className="text-[11px] text-slate-500 uppercase tracking-widest font-bold">DY Patil, Mangalayatan, ISBM, CV Raman</p>
+              <h4 className="font-bold text-navy-900 mb-1">Technical Education</h4>
+              <p className="text-[11px] text-slate-500 uppercase tracking-widest font-bold">DGT, NCVT & Industry Aligned Programs</p>
             </div>
           </div>
         </div>

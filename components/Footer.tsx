@@ -19,18 +19,26 @@ const Footer = () => {
               />
               <div>
                 <span className="block font-black text-white text-xs tracking-wide uppercase leading-tight max-w-[180px]">
-                  Ratnaparkkhi Institute of Engineering & Management
+                  Ratnaparkkhi Institute™ of Engineering & Management
                 </span>
-                <span className="block text-[8px] text-gold-400 uppercase tracking-widest mt-1 font-bold">{tagline} • Since 2008</span>
               </div>
             </div>
             <p className="text-xs leading-relaxed text-slate-400">
-              Ratnaparkkhi Institute of Engineering & Management is a premier educational center dedicated to producing skilled professionals and industry leaders through holistic mentoring and advanced technological labs.
+              Ratnaparkkhi Institute™ of Engineering & Management is a premier educational center dedicated to producing skilled professionals and industry leaders through holistic mentoring and advanced technological labs.
             </p>
-            <div className="pt-2">
-              <span className="inline-block bg-navy-900 border border-navy-800 text-[10px] text-gold-500 font-bold px-3 py-1.5 rounded uppercase tracking-wider">
-                Approved by AICTE | Accredited Grade &apos;A&apos;
-              </span>
+            <div className="pt-2 space-y-2">
+              <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">Affiliations & Registrations</span>
+              <div className="flex flex-wrap gap-2">
+                <span className="inline-block bg-navy-900 border border-navy-800 text-[10px] text-gold-500 font-bold px-2.5 py-1.5 rounded uppercase tracking-wider">
+                  Skill India
+                </span>
+                <span className="inline-block bg-navy-900 border border-navy-800 text-[10px] text-gold-500 font-bold px-2.5 py-1.5 rounded uppercase tracking-wider">
+                  BTP
+                </span>
+                <span className="inline-block bg-navy-900 border border-navy-800 text-[10px] text-gold-500 font-bold px-2.5 py-1.5 rounded uppercase tracking-wider">
+                  MHV
+                </span>
+              </div>
             </div>
           </div>
 
@@ -105,7 +113,7 @@ const Footer = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h2.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
                 <a 
-                  href={`tel:${officialPhone.replace(/\s+/g, '')}`}
+                  href={`tel:${officialPhone.split('/')[0].trim().replace(/\s+/g, '')}`}
                   title="Click to Call Admissions"
                   className="text-slate-400 hover:text-gold-500 transition-colors cursor-pointer"
                 >
@@ -131,7 +139,7 @@ const Footer = () => {
         {/* Bottom Socials & Copy bar (Official Social Media handles) */}
         <div className="mt-16 pt-8 border-t border-navy-900 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
           <div>
-            &copy; {currentYear} Ratnaparkkhi Institute of Engineering & Management. All rights reserved. Estd 2008.
+            &copy; {currentYear} Ratnaparkkhi Institute™ of Engineering & Management. All rights reserved. Estd 2008.
           </div>
           <div className="flex gap-6 font-semibold">
             <a 

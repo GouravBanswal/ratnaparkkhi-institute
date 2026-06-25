@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { officialPhone } from './data/collegeData';
 
 const FloatingActions = () => {
-  const formattedPhone = officialPhone.replace(/\s+/g, '');
+  const formattedPhone = officialPhone.split('/')[0].trim().replace(/\s+/g, '');
 
   return (
     <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex flex-row-reverse md:flex-col items-center md:items-end gap-2 md:gap-3 pointer-events-none">

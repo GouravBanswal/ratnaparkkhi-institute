@@ -22,7 +22,7 @@ export default function AdmissionPage() {
     "Aadhaar Card copy & 4 Passport Photos"
   ];
 
-  const formattedPhone = officialPhone.replace(/\s+/g, '');
+  const formattedPhone = officialPhone.split('/')[0].trim().replace(/\s+/g, '');
 
   return (
     <div className="pb-20 space-y-16">
@@ -145,7 +145,7 @@ export default function AdmissionPage() {
 
           {/* ITI Course Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* 1. Diploma in Electrical */}
+            {/* 1. Diploma in Electrician */}
             <div className="bg-white border border-slate-100 rounded-2xl p-6 md:p-8 flex flex-col justify-between space-y-6 shadow-sm hover:shadow-md transition-shadow">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center">
@@ -153,7 +153,7 @@ export default function AdmissionPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-navy-900 leading-tight">Diploma in Electrical</h3>
+                <h3 className="text-xl font-bold text-navy-900 leading-tight">Diploma in Electrician</h3>
                 <p className="text-[10px] font-black text-navy-950 bg-slate-50 border border-slate-100 rounded px-2.5 py-1 inline-block">
                   Industrial Technical Institute (ITI), Maharashtra State
                 </p>
@@ -380,7 +380,7 @@ export default function AdmissionPage() {
                 Start Registration Form
               </a>
               <a 
-                href={`tel:${officialPhone.replace(/\s+/g, '')}`}
+                href={`tel:${officialPhone.split('/')[0].trim().replace(/\s+/g, '')}`}
                 className="px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white border border-slate-600 rounded-lg hover:bg-slate-800 transition-colors cursor-pointer"
               >
                 Call Hotline: {officialPhone}

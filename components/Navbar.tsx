@@ -59,11 +59,11 @@ const Navbar = () => {
   ];
 
   const suggestions = [
-    { text: "Online & Distance Degree Programs", href: "/courses" },
-    { label: "Trending", text: "Learn & Earn Scheme Placements", href: "/placement-cell" },
-    { label: "Admission", text: "Admission Enquiry Registration 2026", href: "/online-admission" },
-    { text: "Scholarship & Financial Concessions Guide", href: "/scholarship-program" },
-    { text: "Contact Administrative Office Desk", href: "/contact-us" }
+    { text: "Engineering Branches & Admissions", href: "/courses" },
+    { label: "Trending", text: "ITI Technical Trade Apprenticeships", href: "/placement-cell" },
+    { label: "Admission", text: "Engineering & ITI Admissions 2026", href: "/online-admission" },
+    { text: "MBA Specializations Directory", href: "/courses" },
+    { text: "Contact Academic Admissions Desk", href: "/contact-us" }
   ];
 
   const handleSearchSubmit = (e: React.FormEvent) => {
@@ -71,11 +71,16 @@ const Navbar = () => {
     if (!searchQuery.trim()) return;
     
     const query = searchQuery.toLowerCase();
-    if (query.includes('placement') || query.includes('job') || query.includes('salary')) {
+    if (query.includes('placement') || query.includes('job') || query.includes('salary') || query.includes('apprentice')) {
       router.push('/placement-cell');
     } else if (query.includes('admission') || query.includes('apply') || query.includes('fees')) {
       router.push('/online-admission');
-    } else if (query.includes('course') || query.includes('b.tech') || query.includes('engineering') || query.includes('mba') || query.includes('mca')) {
+    } else if (
+      query.includes('engineering') || query.includes('computer') || query.includes('mechanical') || query.includes('civil') || query.includes('electrical') ||
+      query.includes('iti') || query.includes('trade') || query.includes('fitter') || query.includes('electrician') || query.includes('welder') ||
+      query.includes('mba') || query.includes('specialization') || query.includes('management') || query.includes('finance') || query.includes('marketing') ||
+      query.includes('course') || query.includes('program')
+    ) {
       router.push('/courses');
     } else if (query.includes('scholarship') || query.includes('fee waiver') || query.includes('concession')) {
       router.push('/scholarship-program');
@@ -87,7 +92,7 @@ const Navbar = () => {
     closeAll();
   };
 
-  const formattedPhone = officialPhone.replace(/\s+/g, '');
+  const formattedPhone = officialPhone.split('/')[0].trim().replace(/\s+/g, '');
 
   return (
     <header className="w-full bg-white z-40 relative">
@@ -179,9 +184,9 @@ const Navbar = () => {
           />
           <div>
             <span className="block font-black text-[10px] sm:text-xs tracking-wide text-navy-900 group-hover:text-gold-600 transition-colors uppercase leading-tight max-w-[190px] sm:max-w-[210px] md:max-w-[260px]">
-              Ratnaparkkhi Institute of Engineering & Management
+              Ratnaparkkhi Institute™ of Engineering & Management
             </span>
-            <span className="block text-[7px] sm:text-[8px] text-gold-600 uppercase tracking-widest mt-0.5 font-black leading-none">{tagline} • Since 2008</span>
+          
           </div>
         </Link>
 
@@ -420,7 +425,7 @@ const Navbar = () => {
             <img src="/logo.png" alt="Logo" className="w-8 h-8 object-contain" />
             <div>
               <span className="block font-black text-[10px] text-navy-900 leading-tight uppercase max-w-[200px]">
-                Ratnaparkkhi Institute of Engineering & Management
+                Ratnaparkkhi Institute™ of Engineering & Management
               </span>
               <span className="block text-[8px] text-slate-555 font-bold uppercase mt-0.5">{tagline}</span>
             </div>

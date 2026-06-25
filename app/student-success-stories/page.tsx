@@ -96,7 +96,7 @@ export default function SuccessStoriesPage() {
       <section className="max-w-4xl mx-auto px-4 text-center space-y-6">
         <h3 className="text-2xl font-bold text-navy-900">Start Your Success Story Today</h3>
         <p className="text-slate-500 text-xs sm:text-sm leading-relaxed max-w-xl mx-auto font-medium">
-          Admissions are open for our distance, degree, ITI, and skill development programs. Register your enquiry to speak with an admissions advisor.
+          Admissions are open for our engineering, ITI trades, management (MBA), and skill development programs. Register your enquiry to speak with an admissions advisor.
         </p>
         <div className="pt-2">
           <Link 

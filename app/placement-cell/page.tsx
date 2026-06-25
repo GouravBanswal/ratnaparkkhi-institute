@@ -1,9 +1,11 @@
 import React from 'react';
-import { placementStats, recruiters, successStories } from '@/components/data/collegeData';
+import Image from 'next/image';
+import { placementStats, successStories } from '@/components/data/collegeData';
+import { universityPartners } from '@/components/data/universityPartners';
 
 export default function PlacementsPage() {
   const steps = [
-    { title: "Profile Mapping & Career Counseling", desc: "Admissions counselors review student backgrounds, qualifications, and employment goals to select the right degree or ITI trade." },
+    { title: "Profile Mapping & Career Counseling", desc: "Admissions counselors review student backgrounds, qualifications, and employment goals to select the right engineering branch, MBA specialization, or ITI trade." },
     { title: "Skill & Trade Development", desc: "Students undergo vocational ITI trade preparation or NSDC-approved skill development modules matching market demands." },
     { title: "Apprenticeship Matchmaking (NAPS/BTP)", desc: "We coordinate with corporate and government partners to register students for apprenticeships with monthly stipends." },
     { title: "Job Placement Interviews", desc: "Candidates are scheduled for placement drives and interviews in government departments and private sectors." },
@@ -29,7 +31,7 @@ export default function PlacementsPage() {
         <div className="text-center max-w-2xl mx-auto space-y-3">
           <h2 className="text-3xl font-extrabold text-navy-900">Placement Achievements</h2>
           <p className="text-xs sm:text-sm text-slate-500 font-medium">
-            A track record of our successfully qualified and placed distance learning and ITI graduates.
+            A track record of our successfully qualified and placed engineering, technical, and ITI graduates.
           </p>
         </div>
 
@@ -73,7 +75,7 @@ export default function PlacementsPage() {
               Placement Desk Message
             </h3>
             <p className="text-sm text-slate-655 leading-relaxed font-medium">
-              &quot;At Ratnaparkkhi Institute of Engineering & Management, we believe that education must lead to practical career growth. Our placement cell coordinates Corporate Relations and NAPS apprenticeships. We assist candidates in securing jobs in private enterprises, retail, IT support, and government sectors. We train students under our signature Learn & Earn model, ensuring they gain real-world corporate experience while earning their degree.&quot;
+              &quot;At Ratnaparkkhi Institute™ of Engineering & Management, we believe that education must lead to practical career growth. Our placement cell coordinates Corporate Relations and NAPS apprenticeships. We assist candidates in securing jobs in private enterprises, retail, IT support, and government sectors. We train students under our signature Learn & Earn model, ensuring they gain real-world corporate experience while pursuing their technical education.&quot;
             </p>
           </div>
         </div>
@@ -84,7 +86,7 @@ export default function PlacementsPage() {
         <div className="text-center max-w-2xl mx-auto space-y-3">
           <h2 className="text-2xl font-extrabold text-navy-900">Career Assistance Roadmap</h2>
           <p className="text-xs sm:text-sm text-slate-500 font-medium">
-            Our step-by-step career program ensures our candidates transition smoothly from distance education to placements.
+            Our step-by-step career program ensures our candidates transition smoothly from technical training to placements.
           </p>
         </div>
 
@@ -107,13 +109,23 @@ export default function PlacementsPage() {
       <section className="bg-slate-50 border-y border-slate-100 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <h3 className="text-xl font-bold text-navy-900">Our Recognition & University Partners</h3>
-            <p className="text-xs text-slate-500 font-semibold">We coordinate university admissions and apprenticeship placements with these organizations.</p>
+            <h3 className="text-xl font-bold text-navy-900">Our Certifications & Affiliations</h3>
+            <p className="text-xs text-slate-500 font-semibold">We coordinate skill certifications, technical training, and apprenticeship placements with these organizations.</p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-            {recruiters.slice(0, 10).map((r, i) => (
-              <div key={i} className="bg-white border border-slate-100 p-4 rounded-lg flex items-center justify-center shadow-sm hover:shadow-md transition-all text-center uppercase font-bold text-xs md:text-sm text-navy-900 hover:text-gold-600 min-h-[70px]">
-                {r.logoText}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+            {universityPartners.map((u, i) => (
+              <div key={i} className="bg-white border border-slate-100 p-4 rounded-lg flex flex-col items-center justify-center shadow-sm hover:shadow-md transition-all text-center uppercase font-bold text-xs md:text-sm text-navy-900 hover:text-gold-600 min-h-[80px]">
+                {u.logo ? (
+                  <Image 
+                    src={u.logo} 
+                    alt={u.name} 
+                    width={120} 
+                    height={60} 
+                    className="max-h-10 object-contain w-auto"
+                  />
+                ) : (
+                  <span className="text-[10px] sm:text-xs leading-tight font-extrabold">{u.name}</span>
+                )}
               </div>
             ))}
           </div>
@@ -125,7 +137,7 @@ export default function PlacementsPage() {
         <div className="text-center max-w-2xl mx-auto space-y-3">
           <h2 className="text-3xl font-extrabold text-navy-900">Student Placement Journeys</h2>
           <p className="text-xs sm:text-sm text-slate-500 font-medium">
-            Read about the career transitions of our vocational and distance learning graduates.
+            Read about the career transitions of our vocational, engineering, and management graduates.
           </p>
         </div>
 

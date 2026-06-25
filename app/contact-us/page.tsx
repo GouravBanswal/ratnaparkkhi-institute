@@ -3,7 +3,7 @@ import EnquiryForm from '@/components/EnquiryForm';
 import { officialPhone, officialEmail } from '@/components/data/collegeData';
 
 export default function ContactPage() {
-  const formattedPhone = officialPhone.replace(/\s+/g, '');
+  const formattedPhone = officialPhone.split('/')[0].trim().replace(/\s+/g, '');
 
   const departments = [
     { title: "Registrar / Admission Cell", contact: officialPhone, email: officialEmail },
@@ -15,10 +15,10 @@ export default function ContactPage() {
   ];
 
   const faqs = [
-    { q: "What boards and universities are you associated with?", a: "We are authorized admission & counseling partners for NSDC, Skill India, NAPS, BTP, BOSS Board, YCMOU, Tilak Maharashtra Vidyapeeth, Mumbai Hindi Vidyapeeth, and MSBSVET ITI. Our university partnerships include DY Patil University, Mangalayatan University, ISBM University, and Dr. CV Raman University." },
-    { q: "What types of programs do you offer, and are they recognized?", a: "We offer 10th & 12th secondary schooling, ITI vocational programs certified by MSBSVET, UGC-entitled graduation and post-graduation degrees (BA, B.Com, B.Sc, BBA, BCA, MBA, MCA, M.Com, MA), and Skill Development programs approved by NSDC & Skill India." },
+    { q: "What boards and training partners are you associated with?", a: "We are associated with NSDC, Skill India, NAPS, BTP, BOSS Board, YCMOU, Tilak Maharashtra Vidyapeeth, Mumbai Hindi Vidyapeeth, and MSBSVET ITI for technical, engineering, and skill training programs." },
+    { q: "What types of programs do you offer, and are they recognized?", a: "We offer technical Engineering branches (CSE, Mechanical, Civil, Electrical, E&TC), ITI vocational programs certified by MSBSVET, MBA programs, and Skill Development programs approved by NSDC & Skill India." },
     { q: "Who is eligible for the Learn & Earn scheme and how does it work?", a: "The Learn & Earn scheme is designed for students and working professionals. By registering for vocational or degree programs, you are connected to NAPS apprenticeship opportunities. This allows you to gain real work experience and receive monthly stipends while you study." },
-    { q: "How do I apply for courses and scholarships?", a: "You can apply online via our Admission Portal or call us at +91 9923313437. Our counselor cell will guide you in choosing the right course, managing installment payment plans, and applying for applicable scholarship/fee concessions." }
+    { q: "How do I apply for courses and scholarships?", a: "You can apply online via our Admission Portal or call us at +91 9923303437 / +91 9923313437. Our counselor cell will guide you in choosing the right course, managing installment payment plans, and applying for applicable scholarship/fee concessions." }
   ];
 
   return (
