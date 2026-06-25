@@ -10,40 +10,27 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 
 // Stats SVG Icons
-const TrainedIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-[#D4AF37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
-    <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-  </svg>
-);
 
-const PlacedIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-[#D4AF37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-  </svg>
-);
 
-const SupportIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-[#D4AF37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-  </svg>
-);
-
-const GovIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-[#D4AF37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-  </svg>
-);
 
 const categories = [
+  'Undergraduate (UG)',
+  'Postgraduate (PG)',
   'Engineering',
+  'Computer & IT',
+  'Commerce',
+  'Science',
+  'Arts & Humanities',
+  'Management',
+  'Law',
+  'Health & Allied Science',
+  'Yoga & Naturopathy',
+  'Journalism & Mass Communication',
+  'Library Science',
+  'Diploma Courses',
   'ITI Trades',
-  'Polytechnic',
-  'Diploma Engineering',
-  'MBA',
   'Skill Development',
   'Apprenticeship Programs',
-  'Certificate Courses',
   'Government Approved Courses',
 ];
 
@@ -61,7 +48,7 @@ export default function CourseExplorer({
   setSearchQuery: propSetSearchQuery,
 }: CourseExplorerProps = {}) {
   // Local state fallback for standalone courses page view
-  const [localCategory, localSetCategory] = useState('Engineering');
+  const [localCategory, localSetCategory] = useState('Undergraduate (UG)');
   const [localSearchQuery, localSetSearchQuery] = useState('');
 
   const selectedCategory = propSelectedCategory ?? localCategory;
@@ -77,135 +64,44 @@ export default function CourseExplorer({
     setSelectedFilter('all');
   }, [selectedCategory]);
 
-  // Debug Logging: Log the total number of loaded courses and category distribution
-  React.useEffect(() => {
-    console.log("Total courses loaded:", courseList.length);
-    categories.forEach((cat) => {
-      const count = courseList.filter((course) => {
-        const selLower = cat.toLowerCase().trim();
-        const courseCatLower = course.category.toLowerCase().trim();
-        const courseSubLower = course.subCategories?.map(s => s.toLowerCase().trim()) || [];
 
-        if (selLower === 'apprenticeship programs' || selLower === 'apprenticeship') {
-          return (
-            courseCatLower === 'apprenticeship' ||
-            courseCatLower === 'apprenticeship programs' ||
-            courseSubLower.includes('apprenticeship') ||
-            courseSubLower.includes('apprenticeship programs')
-          );
-        } else if (selLower === 'government approved courses' || selLower === 'government approved') {
-          return (
-            course.badge?.toLowerCase().includes('government') ||
-            course.badge?.toLowerCase().includes('gov') ||
-            courseSubLower.some(s => s.includes('government') || s.includes('gov')) ||
-            courseCatLower === 'iti trades' ||
-            courseCatLower === 'polytechnic' ||
-            courseCatLower === 'diploma engineering'
-          );
-        } else {
-          const isExactMatch = courseCatLower === selLower || courseSubLower.includes(selLower);
-          let isAliasMatch = false;
-          if (selLower === 'mba' || selLower === 'management') {
-            isAliasMatch = courseCatLower === 'mba' || courseCatLower === 'management';
-          } else if (selLower === 'iti' || selLower === 'iti trades') {
-            isAliasMatch = courseCatLower === 'iti' || courseCatLower === 'iti trades';
-          } else if (selLower === 'engineering' || selLower === 'engineering courses') {
-            isAliasMatch = courseCatLower === 'engineering' || courseCatLower === 'engineering courses';
-          } else if (selLower === 'polytechnic' || selLower === 'diploma engineering') {
-            isAliasMatch = courseCatLower === 'polytechnic' || courseCatLower === 'diploma engineering';
-          }
-          return isExactMatch || isAliasMatch;
-        }
-      }).length;
-      console.log(`Category "${cat}": ${count} courses available`);
-    });
-  }, []);
 
   // Filter courses based on active selections
   const filteredCourses = useMemo(() => {
     return courseList.filter((course) => {
-      // 1. Left Sidebar Filter (case-insensitive with aliases)
-      let matchesCategory = false;
-      const selCatLower = selectedCategory.toLowerCase().trim();
+      // 1. Left Sidebar Filter — match by course.category or any of course.subCategories
+      const selLower = selectedCategory.toLowerCase().trim();
       const courseCatLower = course.category.toLowerCase().trim();
       const courseSubLower = course.subCategories?.map(s => s.toLowerCase().trim()) || [];
 
-      if (selCatLower === 'apprenticeship programs' || selCatLower === 'apprenticeship') {
-        matchesCategory =
-          courseCatLower === 'apprenticeship' ||
-          courseCatLower === 'apprenticeship programs' ||
-          courseSubLower.includes('apprenticeship') ||
-          courseSubLower.includes('apprenticeship programs');
-      } else if (selCatLower === 'government approved courses' || selCatLower === 'government approved') {
-        matchesCategory =
-          course.badge?.toLowerCase().includes('government') ||
-          course.badge?.toLowerCase().includes('gov') ||
-          courseSubLower.some(s => s.includes('government') || s.includes('gov')) ||
-          courseCatLower === 'iti trades' ||
-          courseCatLower === 'polytechnic' ||
-          courseCatLower === 'diploma engineering';
-      } else {
-        const isExactMatch = courseCatLower === selCatLower || courseSubLower.includes(selCatLower);
-        let isAliasMatch = false;
-        if (selCatLower === 'mba' || selCatLower === 'management') {
-          isAliasMatch = courseCatLower === 'mba' || courseCatLower === 'management';
-        } else if (selCatLower === 'iti' || selCatLower === 'iti trades') {
-          isAliasMatch = courseCatLower === 'iti' || courseCatLower === 'iti trades';
-        } else if (selCatLower === 'engineering' || selCatLower === 'engineering courses') {
-          isAliasMatch = courseCatLower === 'engineering' || courseCatLower === 'engineering courses';
-        } else if (selCatLower === 'polytechnic' || selCatLower === 'diploma engineering') {
-          isAliasMatch = courseCatLower === 'polytechnic' || courseCatLower === 'diploma engineering';
-        }
-        matchesCategory = isExactMatch || isAliasMatch;
-      }
+      const matchesCategory =
+        courseCatLower === selLower ||
+        courseSubLower.includes(selLower);
 
       if (!matchesCategory) return false;
 
-      // 2. Filter Chips (case-insensitive)
-      let matchesFilter = true;
+      // 2. Filter Chips (case-insensitive badge matching)
       if (selectedFilter !== 'all') {
         const filter = selectedFilter.toLowerCase().trim();
         const badgeLower = course.badge?.toLowerCase() || '';
 
-        if (filter === 'engineering') {
-          matchesFilter = courseCatLower === 'engineering' || courseCatLower === 'engineering courses';
-        } else if (filter === 'iti') {
-          matchesFilter = courseCatLower === 'iti trades' || courseCatLower === 'iti';
-        } else if (filter === 'mba') {
-          matchesFilter = courseCatLower === 'mba' || courseCatLower === 'management';
-        } else if (filter === 'diploma') {
-          matchesFilter =
-            courseCatLower === 'polytechnic' ||
-            courseCatLower === 'diploma engineering' ||
-            courseSubLower.includes('diploma engineering') ||
-            courseSubLower.includes('polytechnic');
-        } else if (filter === 'popular') {
+        let matchesFilter = false;
+        if (filter === 'popular') {
           matchesFilter = badgeLower.includes('popular');
         } else if (filter === 'new') {
           matchesFilter = badgeLower.includes('new');
         } else if (filter === 'placement') {
-          matchesFilter =
-            courseSubLower.includes('placement programs') ||
-            badgeLower.includes('placement') ||
-            badgeLower.includes('placed');
+          matchesFilter = badgeLower.includes('placement') || badgeLower.includes('placed') || badgeLower.includes('high placement');
         } else if (filter === 'skill-india') {
-          matchesFilter =
-            badgeLower.includes('skill india') ||
-            courseCatLower === 'skill development' ||
-            courseSubLower.includes('apprenticeship') ||
-            courseSubLower.includes('apprenticeship programs');
+          matchesFilter = badgeLower.includes('skill india') || badgeLower.includes('nsdc');
         } else if (filter === 'gov-approved') {
-          matchesFilter =
-            badgeLower.includes('government') ||
-            badgeLower.includes('gov') ||
-            courseSubLower.some(s => s.includes('government approved')) ||
-            courseCatLower === 'iti trades' ||
-            courseCatLower === 'polytechnic' ||
-            courseCatLower === 'diploma engineering';
+          matchesFilter = badgeLower.includes('government') || badgeLower.includes('gov') || badgeLower.includes('ncvt') || badgeLower.includes('ugc');
+        } else {
+          matchesFilter = badgeLower.includes(filter);
         }
-      }
 
-      if (!matchesFilter) return false;
+        if (!matchesFilter) return false;
+      }
 
       // 3. Search box matching (case-insensitive)
       if (searchQuery.trim()) {
@@ -232,7 +128,7 @@ export default function CourseExplorer({
   };
 
   const resetFilters = () => {
-    setSelectedCategory('Engineering');
+    setSelectedCategory('Undergraduate (UG)');
     setSelectedFilter('all');
     setSearchQuery('');
   };
@@ -242,52 +138,7 @@ export default function CourseExplorer({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
         {/* Top Header Statistics Row placed above layout, separated by faint dividers */}
-        <div className="bg-white border border-slate-200/80 rounded-3xl py-6 px-4 shadow-sm flex flex-col md:flex-row items-center justify-around gap-6 md:gap-4 max-w-6xl mx-auto">
-          {/* Stat 1 */}
-          <div className="flex items-center gap-4 text-left px-4 flex-1 justify-center">
-            <TrainedIcon />
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-black text-[#0B1F3A] leading-none">23,000+</h2>
-              <p className="text-slate-450 text-[11px] mt-1 font-bold uppercase tracking-wider text-slate-400">Students Trained</p>
-            </div>
-          </div>
-          
-          {/* Divider */}
-          <div className="hidden md:block w-px h-12 bg-slate-200" />
-
-          {/* Stat 2 */}
-          <div className="flex items-center gap-4 text-left px-4 flex-1 justify-center">
-            <PlacedIcon />
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-black text-[#0B1F3A] leading-none">8,000+</h2>
-              <p className="text-slate-450 text-[11px] mt-1 font-bold uppercase tracking-wider text-slate-400">Placed Students</p>
-            </div>
-          </div>
-
-          {/* Divider */}
-          <div className="hidden md:block w-px h-12 bg-slate-200" />
-
-          {/* Stat 3 */}
-          <div className="flex items-center gap-4 text-left px-4 flex-1 justify-center">
-            <SupportIcon />
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-black text-[#0B1F3A] leading-none">100%</h2>
-              <p className="text-slate-450 text-[11px] mt-1 font-bold uppercase tracking-wider text-slate-400">Placement Assistance</p>
-            </div>
-          </div>
-
-          {/* Divider */}
-          <div className="hidden md:block w-px h-12 bg-slate-200" />
-
-          {/* Stat 4 */}
-          <div className="flex items-center gap-4 text-left px-4 flex-1 justify-center">
-            <GovIcon />
-            <div>
-              <h2 className="text-xl sm:text-2xl font-black text-[#D4AF37] leading-none uppercase">Official</h2>
-              <p className="text-slate-450 text-[10px] mt-1 font-bold uppercase tracking-wider text-slate-400">Gov Recognized</p>
-            </div>
-          </div>
-        </div>
+        
 
         {/* Layout Structure: Sticky Sidebar (Left) & Grid + Search (Right) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pt-4">
