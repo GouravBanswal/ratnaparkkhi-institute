@@ -32,6 +32,15 @@ const categories = [
   'Skill Development',
   'Apprenticeship Programs',
   'Government Approved Courses',
+  'UPES Online',
+  'Post Graduate Certificate',
+  'Pharmacy',
+  'Hotel Management',
+  'Fine Arts',
+  'Physical Education',
+  'Agriculture',
+  'Education',
+  'Research',
 ];
 
 interface CourseExplorerProps {
@@ -80,7 +89,7 @@ export default function CourseExplorer({
 
       if (!matchesCategory) return false;
 
-      // 2. Filter Chips (case-insensitive badge matching)
+      // 2. Filter Chips (case-insensitive program, level, and badge matching)
       if (selectedFilter !== 'all') {
         const filter = selectedFilter.toLowerCase().trim();
         const badgeLower = course.badge?.toLowerCase() || '';
@@ -91,13 +100,21 @@ export default function CourseExplorer({
         } else if (filter === 'new') {
           matchesFilter = badgeLower.includes('new');
         } else if (filter === 'placement') {
-          matchesFilter = badgeLower.includes('placement') || badgeLower.includes('placed') || badgeLower.includes('high placement');
+          matchesFilter = badgeLower.includes('placement') || badgeLower.includes('placed') || badgeLower.includes('high placement') || course.placementSupport?.toLowerCase().includes('placement');
         } else if (filter === 'skill-india') {
-          matchesFilter = badgeLower.includes('skill india') || badgeLower.includes('nsdc');
+          matchesFilter = badgeLower.includes('skill india') || badgeLower.includes('nsdc') || courseCatLower === 'skill development';
         } else if (filter === 'gov-approved') {
-          matchesFilter = badgeLower.includes('government') || badgeLower.includes('gov') || badgeLower.includes('ncvt') || badgeLower.includes('ugc');
+          matchesFilter = badgeLower.includes('government') || badgeLower.includes('gov') || badgeLower.includes('ncvt') || badgeLower.includes('ugc') || courseCatLower === 'government approved courses';
+        } else if (filter === 'engineering') {
+          matchesFilter = courseCatLower === 'engineering' || courseSubLower.includes('engineering') || (course.level === 'Diploma' && course.name.toLowerCase().includes('engineering'));
+        } else if (filter === 'iti') {
+          matchesFilter = courseCatLower === 'iti trades' || course.level === 'ITI' || courseSubLower.includes('iti trades');
+        } else if (filter === 'mba') {
+          matchesFilter = course.name.toLowerCase().includes('mba') || courseCatLower === 'mba';
+        } else if (filter === 'diploma') {
+          matchesFilter = course.level === 'Diploma' || courseCatLower.includes('diploma') || courseSubLower.includes('diploma courses');
         } else {
-          matchesFilter = badgeLower.includes(filter);
+          matchesFilter = badgeLower.includes(filter) || courseCatLower.includes(filter) || courseSubLower.includes(filter);
         }
 
         if (!matchesFilter) return false;

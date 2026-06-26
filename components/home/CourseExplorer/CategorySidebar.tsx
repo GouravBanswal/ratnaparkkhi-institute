@@ -115,6 +115,78 @@ const GetCategoryIcon = (category: string) => {
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
         </svg>
       );
+    case 'UPES Online':
+      return (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+        </svg>
+      );
+    case 'Post Graduate Certificate':
+      return (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+        </svg>
+      );
+    case 'Pharmacy':
+      return (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+        </svg>
+      );
+    case 'Hotel Management':
+      return (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+      );
+    case 'Fine Arts':
+      return (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+      );
+    case 'Physical Education':
+      return (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      );
+    case 'Agriculture':
+      return (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 7a5 5 0 100 10 5 5 0 000-10z" />
+        </svg>
+      );
+    case 'Education':
+      return (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+      );
+    case 'Research':
+      return (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
+      );
+    case 'Vocational Courses':
+      return (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+        </svg>
+      );
+    case 'Certificate Courses':
+      return (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138z" />
+        </svg>
+      );
+    case 'Executive Programs':
+      return (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      );
     default:
       return (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -163,6 +235,30 @@ const GetCategoryDesc = (category: string) => {
       return 'Learn & Earn (NAPS)';
     case 'Government Approved Courses':
       return 'NSDC / Skill India';
+    case 'UPES Online':
+      return 'UPES Entitled Programs';
+    case 'Post Graduate Certificate':
+      return 'UPES Executive Certificates';
+    case 'Pharmacy':
+      return 'B.Pharma / D.Pharma';
+    case 'Hotel Management':
+      return 'BHMCT / DHMCT';
+    case 'Fine Arts':
+      return 'BFA / MFA';
+    case 'Physical Education':
+      return 'B.P.E.S / M.P.E.S / B.P.Ed';
+    case 'Agriculture':
+      return 'B.Sc / M.Sc Agriculture';
+    case 'Education':
+      return 'B.Ed / MA Education';
+    case 'Research':
+      return 'Ph.D Programs';
+    case 'Vocational Courses':
+      return 'B.Voc / M.Voc / D.Voc';
+    case 'Certificate Courses':
+      return 'Professional Certifications';
+    case 'Executive Programs':
+      return 'Executive MBA & Diplomas';
     default:
       return 'Technical Program';
   }
@@ -207,36 +303,38 @@ export default function CategorySidebar({
       </div>
 
       {/* Desktop view: Compact vertical list matching the brand theme */}
-      <div className="hidden lg:flex flex-col bg-white border border-slate-200 rounded-xl p-2 shadow-sm space-y-1 w-full sticky top-28">
-        <h3 className="text-slate-400 text-[9px] font-bold uppercase tracking-wider px-3 py-1.5 mb-1 border-b border-slate-100">
+      <div className="hidden lg:flex flex-col bg-white border border-slate-200 rounded-xl p-2 shadow-sm w-full sticky top-28 max-h-[calc(100vh-140px)]">
+        <h3 className="text-slate-400 text-[9px] font-bold uppercase tracking-wider px-3 py-1.5 mb-1 border-b border-slate-100 shrink-0">
           Program Options
         </h3>
-        {categories.map((category) => {
-          const isActive = selectedCategory === category;
-          return (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`relative flex items-center gap-2.5 w-full text-left px-3 py-2 rounded-lg text-xs font-bold transition-all duration-250 cursor-pointer overflow-hidden border ${
-                isActive
-                  ? 'bg-[#0B1F3A] border-[#0B1F3A] text-white border-l-4 border-l-[#D4AF37] shadow'
-                  : 'bg-white border-transparent text-[#0B1F3A] hover:bg-slate-50 hover:pl-4.5 hover:text-[#D4AF37] transition-all'
-              }`}
-            >
-              <span className={`shrink-0 transition-colors duration-200 ${isActive ? 'text-[#D4AF37]' : 'text-[#0B1F3A]/70 group-hover:text-[#D4AF37]'}`}>
-                {GetCategoryIcon(category)}
-              </span>
-              <div className="truncate">
-                <span className="block font-extrabold text-[11px] leading-tight transition-colors">
-                  {category}
+        <div className="overflow-y-auto flex-grow space-y-1 pr-1 max-h-[calc(100vh-190px)] scrollbar-thin scrollbar-thumb-slate-200 scrollbar-track-transparent">
+          {categories.map((category) => {
+            const isActive = selectedCategory === category;
+            return (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`relative flex items-center gap-2.5 w-full text-left px-3 py-2 rounded-lg text-xs font-bold transition-all duration-250 cursor-pointer overflow-hidden border shrink-0 ${
+                  isActive
+                    ? 'bg-[#0B1F3A] border-[#0B1F3A] text-white border-l-4 border-l-[#D4AF37] shadow'
+                    : 'bg-white border-transparent text-[#0B1F3A] hover:bg-slate-50 hover:pl-4.5 hover:text-[#D4AF37] transition-all'
+                }`}
+              >
+                <span className={`shrink-0 transition-colors duration-200 ${isActive ? 'text-[#D4AF37]' : 'text-[#0B1F3A]/70 group-hover:text-[#D4AF37]'}`}>
+                  {GetCategoryIcon(category)}
                 </span>
-                <span className={`block text-[8px] mt-0.5 font-medium leading-none ${isActive ? 'text-[#D4AF37]/90' : 'text-slate-400'}`}>
-                  {GetCategoryDesc(category)}
-                </span>
-              </div>
-            </button>
-          );
-        })}
+                <div className="truncate">
+                  <span className="block font-extrabold text-[11px] leading-tight transition-colors">
+                    {category}
+                  </span>
+                  <span className={`block text-[8px] mt-0.5 font-medium leading-none ${isActive ? 'text-[#D4AF37]/90' : 'text-slate-400'}`}>
+                    {GetCategoryDesc(category)}
+                  </span>
+                </div>
+              </button>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

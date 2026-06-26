@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import HeroSection from '@/components/home/Hero/Hero';
 import StatsSection from '@/components/home/Stats/Stats';
 import CourseExplorer from '@/components/home/CourseExplorer/CourseExplorer';
+import PromotionalCourses from '@/components/home/PromotionalCourses/PromotionalCourses';
 import UniversityPartners from '@/components/home/Partners/Partners';
 import AboutSection from '@/components/home/About/About';
 import PlacementSection from '@/components/home/Placement/Placement';
@@ -23,6 +24,20 @@ export default function HomePage() {
 
       {/* SECTION 2: Dedicated Statistics Section */}
       <StatsSection />
+
+      {/* PROMOTIONAL BANNER: MBA Oil & Gas Management */}
+      <div className="bg-[#F8FAFC] pt-10 lg:pt-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <img 
+            src="/images/mba-oil&gas.png" 
+            alt="MBA - Oil & Gas Management" 
+            className="w-full h-auto object-cover rounded-[20px] md:rounded-[24px] shadow-sm"
+          />
+        </div>
+      </div>
+
+      {/* SECTION 2.5: Promotional Featured Course Cards */}
+      <PromotionalCourses />
 
       {/* NEW: Premium Course Explorer */}
       <CourseExplorer 

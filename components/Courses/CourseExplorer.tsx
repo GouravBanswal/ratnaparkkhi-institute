@@ -50,44 +50,31 @@ export default function CourseExplorer() {
       // 2. Top Filter Chips
       let matchesFilter = true;
       if (selectedFilter !== 'all') {
-        const filter = selectedFilter.toLowerCase();
-        if (filter === 'engineering') {
-          matchesFilter = course.category === 'Engineering';
-        } else if (filter === 'iti') {
-          matchesFilter = course.category === 'ITI Trades';
-        } else if (filter === 'mba') {
-          matchesFilter = course.category === 'MBA';
-        } else if (filter === 'diploma') {
-          matchesFilter =
-            course.category === 'Polytechnic' ||
-            course.category === 'Diploma Engineering' ||
-            course.subCategories?.includes('Diploma Engineering') ||
-            course.subCategories?.includes('Polytechnic') ||
-            false;
-        } else if (filter === 'popular') {
-          matchesFilter =
-            course.badge?.toLowerCase().includes('popular') || false;
+        const filter = selectedFilter.toLowerCase().trim();
+        const badgeLower = course.badge?.toLowerCase() || '';
+        const courseCatLower = course.category.toLowerCase().trim();
+        const courseSubLower = course.subCategories?.map(s => s.toLowerCase().trim()) || [];
+
+        if (filter === 'popular') {
+          matchesFilter = badgeLower.includes('popular');
         } else if (filter === 'new') {
-          matchesFilter =
-            course.badge?.toLowerCase().includes('new') || false;
+          matchesFilter = badgeLower.includes('new');
         } else if (filter === 'placement') {
-          matchesFilter =
-            course.subCategories?.includes('Placement Programs') ||
-            course.badge?.toLowerCase().includes('placement') ||
-            false;
+          matchesFilter = badgeLower.includes('placement') || badgeLower.includes('placed') || badgeLower.includes('high placement') || (course.placementSupport?.toLowerCase().includes('placement') || false);
         } else if (filter === 'skill-india') {
-          matchesFilter =
-            course.badge?.toLowerCase().includes('skill india') ||
-            course.category === 'Skill Development' ||
-            course.subCategories?.includes('Apprenticeship') ||
-            false;
+          matchesFilter = badgeLower.includes('skill india') || badgeLower.includes('nsdc') || courseCatLower === 'skill development';
         } else if (filter === 'gov-approved') {
-          matchesFilter =
-            course.badge?.toLowerCase().includes('government') ||
-            course.badge?.toLowerCase().includes('aicte') ||
-            course.subCategories?.includes('Government Approved Courses') ||
-            course.category === 'ITI Trades' ||
-            false;
+          matchesFilter = badgeLower.includes('government') || badgeLower.includes('gov') || badgeLower.includes('ncvt') || badgeLower.includes('ugc') || courseCatLower === 'government approved courses';
+        } else if (filter === 'engineering') {
+          matchesFilter = courseCatLower === 'engineering' || courseSubLower.includes('engineering') || (course.level === 'Diploma' && course.name.toLowerCase().includes('engineering'));
+        } else if (filter === 'iti') {
+          matchesFilter = courseCatLower === 'iti trades' || course.level === 'ITI' || courseSubLower.includes('iti trades');
+        } else if (filter === 'mba') {
+          matchesFilter = course.name.toLowerCase().includes('mba') || courseCatLower === 'mba';
+        } else if (filter === 'diploma') {
+          matchesFilter = course.level === 'Diploma' || courseCatLower.includes('diploma') || courseSubLower.includes('diploma courses');
+        } else {
+          matchesFilter = badgeLower.includes(filter) || courseCatLower.includes(filter) || courseSubLower.includes(filter);
         }
       }
 
