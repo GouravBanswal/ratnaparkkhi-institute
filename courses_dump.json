@@ -1,0 +1,2259 @@
+[
+  {
+    "id": "string;",
+    "name": "string;",
+    "level": "UG | PG | Diploma | ITI | Skill | Apprenticeship | Certificate;",
+    "duration": "string;",
+    "eligibility": "string;"
+  },
+  {
+    "duration": "4 Semesters",
+    "id": "mtech-me",
+    "name": "M.Tech - Mechanical Engineering",
+    "category": "Engineering",
+    "level": "PG",
+    "eligibility": "B.Tech"
+  },
+  {
+    "id": "mtech-ce",
+    "name": "M.Tech - Civil Engineering",
+    "category": "Engineering",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.Tech"
+  },
+  {
+    "id": "mtech-ee",
+    "name": "M.Tech - Electrical Engineering",
+    "category": "Engineering",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.Tech"
+  },
+  {
+    "id": "mtech-ai",
+    "name": "M.Tech - Artificial Intelligence",
+    "category": "Engineering",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.Tech"
+  },
+  {
+    "id": "mtech-cse",
+    "name": "M.Tech - Computer Science Engineering",
+    "category": "Engineering",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.Tech"
+  },
+  {
+    "id": "mtech-it",
+    "name": "M.Tech - Information Technology",
+    "category": "Engineering",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.Tech"
+  },
+  {
+    "id": "mtech-ece",
+    "name": "M.Tech - Electronics & Communication",
+    "category": "Engineering",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.Tech"
+  },
+  {
+    "id": "mtech-aero",
+    "name": "M.Tech - Aeronautical Engineering",
+    "category": "Engineering",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.Tech"
+  },
+  {
+    "id": "mtech-ds",
+    "name": "M.Tech - Data Science",
+    "category": "Engineering",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.Tech"
+  },
+  {
+    "id": "btech-me",
+    "name": "B.Tech - Mechanical Engineering",
+    "category": "Engineering",
+    "level": "UG",
+    "duration": "8 Semesters",
+    "eligibility": "12th PCM"
+  },
+  {
+    "id": "btech-fire",
+    "name": "B.Tech - Fire and Safety",
+    "category": "Engineering",
+    "level": "UG",
+    "duration": "8 Semesters",
+    "eligibility": "12th PCM"
+  },
+  {
+    "id": "btech-ee",
+    "name": "B.Tech - Electrical Engineering",
+    "category": "Engineering",
+    "level": "UG",
+    "duration": "8 Semesters",
+    "eligibility": "12th PCM"
+  },
+  {
+    "id": "btech-ai",
+    "name": "B.Tech - Artificial Intelligence",
+    "category": "Engineering",
+    "level": "UG",
+    "duration": "8 Semesters",
+    "eligibility": "12th PCM"
+  },
+  {
+    "id": "btech-cse",
+    "name": "B.Tech - Computer Science Engineering",
+    "category": "Engineering",
+    "level": "UG",
+    "duration": "8 Semesters",
+    "eligibility": "12th PCM"
+  },
+  {
+    "id": "btech-it",
+    "name": "B.Tech - Information Technology",
+    "category": "Engineering",
+    "level": "UG",
+    "duration": "8 Semesters",
+    "eligibility": "12th PCM"
+  },
+  {
+    "id": "btech-extc",
+    "name": "B.Tech - Electronics & Telecommunication",
+    "category": "Engineering",
+    "level": "UG",
+    "duration": "8 Semesters",
+    "eligibility": "12th PCM"
+  },
+  {
+    "id": "btech-aero",
+    "name": "B.Tech - Aeronautical Engineering",
+    "category": "Engineering",
+    "level": "UG",
+    "duration": "8 Semesters",
+    "eligibility": "12th PCM"
+  },
+  {
+    "id": "btech-ic",
+    "name": "B.Tech - Instrumentation & Control",
+    "category": "Engineering",
+    "level": "UG",
+    "duration": "8 Semesters",
+    "eligibility": "12th PCM"
+  },
+  {
+    "id": "dip-eng-ds",
+    "name": "Polytechnic - Data Science",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "8 Semesters",
+    "eligibility": "10th"
+  },
+  {
+    "id": "dip-eng-civil",
+    "name": "Polytechnic - Civil Engineering (CE)",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "6 Semesters",
+    "eligibility": "10th"
+  },
+  {
+    "id": "dip-eng-mech",
+    "name": "Polytechnic - Mechanical Engineering (ME)",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "6 Semesters",
+    "eligibility": "10th"
+  },
+  {
+    "id": "dip-eng-elec",
+    "name": "Polytechnic - Electrical Engineering (EE)",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "6 Semesters",
+    "eligibility": "10th"
+  },
+  {
+    "id": "dip-eng-ai",
+    "name": "Polytechnic - Artificial Intelligence (AI)",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "6 Semesters",
+    "eligibility": "10th"
+  },
+  {
+    "id": "dip-eng-comp",
+    "name": "Polytechnic - Computer Science Engineering (CSE)",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "6 Semesters",
+    "eligibility": "10th"
+  },
+  {
+    "id": "dip-eng-it",
+    "name": "Polytechnic - Information Technology (IT)",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "6 Semesters",
+    "eligibility": "10th"
+  },
+  {
+    "id": "mca",
+    "name": "MCA - Master of Computer Applications",
+    "category": "Computer & IT",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "BCA/PGDCA"
+  },
+  {
+    "id": "bca",
+    "name": "BCA - Bachelor of Computer Applications",
+    "category": "Computer & IT",
+    "level": "UG",
+    "duration": "6 Semesters",
+    "eligibility": "12th PCM"
+  },
+  {
+    "id": "dca",
+    "name": "DCA - Diploma in Computer Applications",
+    "category": "Computer & IT",
+    "level": "Diploma",
+    "duration": "2 Semesters",
+    "eligibility": "12th PCM"
+  },
+  {
+    "id": "pgdca",
+    "name": "PGDCA - PG Diploma in Computer Applications",
+    "category": "Computer & IT",
+    "level": "PG",
+    "duration": "2 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "msc-fire-safety",
+    "name": "M.Sc - Fire and Safety",
+    "category": "Science",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.Sc. Fire and Safety"
+  },
+  {
+    "id": "bsc-fire-safety",
+    "name": "B.Sc - Fire and Safety",
+    "category": "Science",
+    "level": "UG",
+    "duration": "6/8 semesters",
+    "eligibility": "12th Science"
+  },
+  {
+    "id": "dip-fire-safety",
+    "name": "Diploma - Fire and Safety",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "2 Semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "cert-fire-safety",
+    "name": "Certificate - Fire and Safety",
+    "category": "Certificate Courses",
+    "level": "Certificate",
+    "duration": "1 semesters",
+    "eligibility": "10th"
+  },
+  {
+    "id": "msc-math",
+    "name": "M.Sc - Mathematics",
+    "category": "Science",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.Sc"
+  },
+  {
+    "id": "msc-botany",
+    "name": "M.Sc - Botany",
+    "category": "Science",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.Sc"
+  },
+  {
+    "id": "msc-zoology",
+    "name": "M.Sc - Zoology",
+    "category": "Science",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.Sc"
+  },
+  {
+    "id": "msc-micro",
+    "name": "M.Sc - Microbiology",
+    "category": "Science",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.Sc"
+  },
+  {
+    "id": "msc-biotech",
+    "name": "M.Sc - Biotechnology",
+    "category": "Science",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.Sc"
+  },
+  {
+    "id": "msc-biochem",
+    "name": "M.Sc - Biochemistry",
+    "category": "Science",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.Sc"
+  },
+  {
+    "id": "msc-env-studies",
+    "name": "M.Sc - Environmental Studies",
+    "category": "Science",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.Sc"
+  },
+  {
+    "id": "msc-physics",
+    "name": "M.Sc - Physics",
+    "category": "Science",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.Sc"
+  },
+  {
+    "id": "msc-chemistry",
+    "name": "M.Sc - Chemistry",
+    "category": "Science",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.Sc"
+  },
+  {
+    "id": "msc-embryology",
+    "name": "M.Sc - Clinical Embryology",
+    "category": "Science",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.Sc"
+  },
+  {
+    "id": "bsc-hons-physics",
+    "name": "B.Sc (Honours) - Physics",
+    "category": "Science",
+    "level": "UG",
+    "duration": "6 Semesters",
+    "eligibility": "12th Science"
+  },
+  {
+    "id": "bsc-hons-chemistry",
+    "name": "B.Sc (Honours) - Chemistry",
+    "category": "Science",
+    "level": "UG",
+    "duration": "6 Semesters",
+    "eligibility": "12th Science"
+  },
+  {
+    "id": "bsc-hons-math",
+    "name": "B.Sc (Honours) - Mathematics",
+    "category": "Science",
+    "level": "UG",
+    "duration": "6 Semesters",
+    "eligibility": "12th Science"
+  },
+  {
+    "id": "bsc-hons-botany",
+    "name": "B.Sc (Honours) - Botany",
+    "category": "Science",
+    "level": "UG",
+    "duration": "6 Semesters",
+    "eligibility": "12th Science"
+  },
+  {
+    "id": "bsc-hons-zoology",
+    "name": "B.Sc (Honours) - Zoology",
+    "category": "Science",
+    "level": "UG",
+    "duration": "6 Semesters",
+    "eligibility": "12th Science"
+  },
+  {
+    "id": "bsc-hons-micro",
+    "name": "B.Sc (Honours) - Microbiology",
+    "category": "Science",
+    "level": "UG",
+    "duration": "6 Semesters",
+    "eligibility": "12th Science"
+  },
+  {
+    "id": "bsc-hons-biotech",
+    "name": "B.Sc (Honours) - Biotechnology",
+    "category": "Science",
+    "level": "UG",
+    "duration": "6 Semesters",
+    "eligibility": "12th Science"
+  },
+  {
+    "id": "bsc-hons-biochem",
+    "name": "B.Sc (Honours) - Biochemistry",
+    "category": "Science",
+    "level": "UG",
+    "duration": "6 Semesters",
+    "eligibility": "12th Science"
+  },
+  {
+    "id": "bsc-hons-env-studies",
+    "name": "B.Sc (Honours) - Environmental Studies",
+    "category": "Science",
+    "level": "UG",
+    "duration": "6 Semesters",
+    "eligibility": "12th Science"
+  },
+  {
+    "id": "bsc",
+    "name": "B.Sc - General",
+    "category": "Science",
+    "level": "UG",
+    "duration": "6 Semesters",
+    "eligibility": "12th Science"
+  },
+  {
+    "id": "msc-agri",
+    "name": "M.Sc - Agriculture",
+    "category": "Agriculture",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.sc. Agriculture"
+  },
+  {
+    "id": "bsc-agri-hons",
+    "name": "B.Sc (Honours) - Agriculture",
+    "category": "Agriculture",
+    "level": "UG",
+    "duration": "8 Semesters",
+    "eligibility": "12th PCB/Agri/PCM"
+  },
+  {
+    "id": "dip-agri",
+    "name": "Diploma - Agriculture",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "2 Semesters",
+    "eligibility": "10th & 12th"
+  },
+  {
+    "id": "ma-hindi",
+    "name": "MA - Hindi",
+    "category": "Arts & Humanities",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "ma-english",
+    "name": "MA - English",
+    "category": "Arts & Humanities",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "ma-sanskrit",
+    "name": "MA - Sanskrit",
+    "category": "Arts & Humanities",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "ma-gujarati",
+    "name": "MA - Gujarati",
+    "category": "Arts & Humanities",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "ma-history",
+    "name": "MA - History",
+    "category": "Arts & Humanities",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "ma-political-science",
+    "name": "MA - Political Science",
+    "category": "Arts & Humanities",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "ma-pub-ad",
+    "name": "MA - Public Administration",
+    "category": "Arts & Humanities",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "ma-economics",
+    "name": "MA - Economics",
+    "category": "Arts & Humanities",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "ma-geography",
+    "name": "MA - Geography",
+    "category": "Arts & Humanities",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "ma-sociology",
+    "name": "MA - Sociology",
+    "category": "Arts & Humanities",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "ma-psychology",
+    "name": "MA - Psychology",
+    "category": "Arts & Humanities",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "ma-fine-arts",
+    "name": "MA - Fine Arts",
+    "category": "Fine Arts",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "ma-music",
+    "name": "MA - Music",
+    "category": "Arts & Humanities",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "ma-drawing",
+    "name": "MA - Drawing",
+    "category": "Arts & Humanities",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "msw",
+    "name": "MSW - Master of Social Work",
+    "category": "Arts & Humanities",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "ba",
+    "name": "BA - General",
+    "category": "Arts & Humanities",
+    "level": "UG",
+    "duration": "6 Semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "ba-hons-hindi",
+    "name": "BA (Honours) - Hindi",
+    "category": "Arts & Humanities",
+    "level": "UG",
+    "duration": "6/8 semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "ba-hons-english",
+    "name": "BA (Honours) - English",
+    "category": "Arts & Humanities",
+    "level": "UG",
+    "duration": "6/8 semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "ba-hons-sanskrit",
+    "name": "BA (Honours) - Sanskrit",
+    "category": "Arts & Humanities",
+    "level": "UG",
+    "duration": "6/8 semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "ba-hons-gujarati",
+    "name": "BA (Honours) - Gujarati",
+    "category": "Arts & Humanities",
+    "level": "UG",
+    "duration": "6/8 semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "ba-hons-history",
+    "name": "BA (Honours) - History",
+    "category": "Arts & Humanities",
+    "level": "UG",
+    "duration": "6/8 semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "ba-hons-political-science",
+    "name": "BA (Honours) - Political Science",
+    "category": "Arts & Humanities",
+    "level": "UG",
+    "duration": "6/8 semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "ba-hons-pub-ad",
+    "name": "BA (Honours) - Public Administration",
+    "category": "Arts & Humanities",
+    "level": "UG",
+    "duration": "6/8 semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "ba-hons-economics",
+    "name": "BA (Honours) - Economics",
+    "category": "Arts & Humanities",
+    "level": "UG",
+    "duration": "6/8 semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "ba-hons-geography",
+    "name": "BA (Honours) - Geography",
+    "category": "Arts & Humanities",
+    "level": "UG",
+    "duration": "6/8 semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "ba-hons-sociology",
+    "name": "BA (Honours) - Sociology",
+    "category": "Arts & Humanities",
+    "level": "UG",
+    "duration": "6/8 semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "ba-hons-psychology",
+    "name": "BA (Honours) - Psychology",
+    "category": "Arts & Humanities",
+    "level": "UG",
+    "duration": "6/8 semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "ba-hons-fine-arts",
+    "name": "BA (Honours) - Fine Arts",
+    "category": "Fine Arts",
+    "level": "UG",
+    "duration": "6/8 semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "ba-hons-music",
+    "name": "BA (Honours) - Music",
+    "category": "Arts & Humanities",
+    "level": "UG",
+    "duration": "6/8 semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "ba-hons-drawing",
+    "name": "BA (Honours) - Drawing",
+    "category": "Arts & Humanities",
+    "level": "UG",
+    "duration": "6/8 semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "bsw",
+    "name": "BSW - Bachelor of Social Work",
+    "category": "Arts & Humanities",
+    "level": "UG",
+    "duration": "6 Semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "dip-fine-arts",
+    "name": "Diploma - Fine Arts",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "2 Semesters",
+    "eligibility": "10th & 12th"
+  },
+  {
+    "id": "dip-music",
+    "name": "Diploma - Music",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "2 Semesters",
+    "eligibility": "10th & 12th"
+  },
+  {
+    "id": "dip-drawing",
+    "name": "Diploma - Drawing",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "2 Semesters",
+    "eligibility": "10th & 12th"
+  },
+  {
+    "id": "ma-education",
+    "name": "MA - Education",
+    "category": "Education",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "med",
+    "name": "M.Ed - Master of Education",
+    "category": "Education",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "bpes",
+    "name": "B.P.E.S - Bachelor of Physical Education & Sports",
+    "category": "Physical Education",
+    "level": "UG",
+    "duration": "6 semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "mpes",
+    "name": "M.P.E.S - Master of Physical Education & Sports",
+    "category": "Physical Education",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.P.E.S/ B.P.Ed"
+  },
+  {
+    "id": "bed",
+    "name": "B.Ed - Bachelor of Education",
+    "category": "Education",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "mlib",
+    "name": "M.Lib. & I.Sc. - Master of Library & Information Science",
+    "category": "Library Science",
+    "level": "PG",
+    "duration": "2 Semesters",
+    "eligibility": "B.Lib"
+  },
+  {
+    "id": "blib",
+    "name": "B.Lib. & I.Sc. - Bachelor of Library & Information Science",
+    "category": "Library Science",
+    "level": "UG",
+    "duration": "2 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "dlib",
+    "name": "Diploma - Library Science",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "2 Semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "clib",
+    "name": "Certificate - Library Science",
+    "category": "Certificate Courses",
+    "level": "Certificate",
+    "duration": "1 semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "mjmc",
+    "name": "MJMC - Master of Journalism & Mass Communication",
+    "category": "Journalism & Mass Communication",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "BJMC"
+  },
+  {
+    "id": "bjmc",
+    "name": "BJMC - Bachelor of Journalism & Mass Communication",
+    "category": "Journalism & Mass Communication",
+    "level": "UG",
+    "duration": "6 semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "djmc",
+    "name": "Diploma - Journalism & Mass Communication",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "2 Semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "pg-dip-yoga",
+    "name": "PG Diploma in Yoga & Naturopathy",
+    "category": "Yoga & Naturopathy",
+    "level": "PG",
+    "duration": "2 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "ug-dip-yoga",
+    "name": "Diploma in Yoga & Naturopathy",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "2 Semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "ma-yoga",
+    "name": "MA - Yoga & Naturopathy",
+    "category": "Yoga & Naturopathy",
+    "level": "PG",
+    "duration": "4 semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "ba-yoga",
+    "name": "BA - Yoga & Naturopathy",
+    "category": "Yoga & Naturopathy",
+    "level": "UG",
+    "duration": "6 Semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "md-yoga",
+    "name": "MD - Yoga & Naturopathy",
+    "category": "Yoga & Naturopathy",
+    "level": "PG",
+    "duration": "6 Semesters",
+    "eligibility": "Bachelors degree in Yoga/ Allied Field"
+  },
+  {
+    "id": "mcom-accountancy",
+    "name": "M.Com - Accountancy",
+    "category": "Commerce",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.com"
+  },
+  {
+    "id": "mcom-finance",
+    "name": "M.Com - Finance",
+    "category": "Commerce",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.com"
+  },
+  {
+    "id": "mcom-abst",
+    "name": "M.Com - ABST",
+    "category": "Commerce",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.com"
+  },
+  {
+    "id": "bcom",
+    "name": "B.Com - General",
+    "category": "Commerce",
+    "level": "UG",
+    "duration": "6 Semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "bcom-hons-accountancy",
+    "name": "B.Com (Honours) - Accountancy",
+    "category": "Commerce",
+    "level": "UG",
+    "duration": "6/8 semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "bcom-hons-finance",
+    "name": "B.Com (Honours) - Finance",
+    "category": "Commerce",
+    "level": "UG",
+    "duration": "6/8 semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "bcom-hons-abst",
+    "name": "B.Com (Honours) - ABST",
+    "category": "Commerce",
+    "level": "UG",
+    "duration": "6/8 semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "mba-general",
+    "name": "MBA - General",
+    "category": "Management",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "mba-hr",
+    "name": "MBA - Human Resource",
+    "category": "Management",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "mba-fin",
+    "name": "MBA - Finance",
+    "category": "Management",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "mba-ops",
+    "name": "MBA - Operations",
+    "category": "Management",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "mba-mkt",
+    "name": "MBA - Marketing",
+    "category": "Management",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "mba-ib",
+    "name": "MBA - International Business",
+    "category": "Management",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "mba-criminology",
+    "name": "MBA - Criminology",
+    "category": "Management",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "mba-insurance",
+    "name": "MBA - Insurance Management",
+    "category": "Management",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "mba-banking",
+    "name": "MBA - Banking Management",
+    "category": "Management",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "mba-rm",
+    "name": "MBA - Retail Management",
+    "category": "Management",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "mba-agri",
+    "name": "MBA - Agri Business",
+    "category": "Management",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "mba-fashion",
+    "name": "MBA - Fashion Designing",
+    "category": "Management",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "emba",
+    "name": "EMBA - Executive MBA",
+    "category": "Executive Programs",
+    "level": "PG",
+    "duration": "2 Semesters",
+    "eligibility": "Minimum 2 year of Experience + Graduation"
+  },
+  {
+    "id": "master-valuation",
+    "name": "Master of Valuation - Real Estate",
+    "category": "Management",
+    "level": "PG",
+    "duration": "2 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "bba",
+    "name": "BBA - General",
+    "category": "Management",
+    "level": "UG",
+    "duration": "6 Semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "dip-mgt-og",
+    "name": "Diploma - Oil and Gas Management",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "2 Semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "dip-mgt-lpm",
+    "name": "Diploma - Logistics & Production Management",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "2 Semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "dip-mgt-logistics",
+    "name": "Diploma - Logistics Management",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "2 Semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "mhm",
+    "name": "MHM - Master of Hotel Management",
+    "category": "Hotel Management",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "BHM"
+  },
+  {
+    "id": "bhmct",
+    "name": "BHMCT - Bachelor of Hotel Management & Catering Technology",
+    "category": "Hotel Management",
+    "level": "UG",
+    "duration": "8 Semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "dhmct",
+    "name": "DHMCT - Diploma in Hotel Management & Catering Technology",
+    "category": "Hotel Management",
+    "level": "Diploma",
+    "duration": "2 Semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "ba-hotm",
+    "name": "BA - Hotel Management",
+    "category": "Hotel Management",
+    "level": "UG",
+    "duration": "6 Semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "ma-hotm",
+    "name": "MA - Hotel Management",
+    "category": "Hotel Management",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "BA in HM / BHM"
+  },
+  {
+    "id": "bsc-hotm",
+    "name": "B.Sc - Hotel Management",
+    "category": "Hotel Management",
+    "level": "UG",
+    "duration": "6 Semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "msc-hotm",
+    "name": "M.Sc - Hotel Management",
+    "category": "Hotel Management",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.Sc. HM / BHM"
+  },
+  {
+    "id": "mvoc",
+    "name": "M.Voc - Master of Vocation",
+    "category": "Vocational Courses",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "bvoc",
+    "name": "B.Voc - Bachelor of Vocation",
+    "category": "Vocational Courses",
+    "level": "UG",
+    "duration": "6 Semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "dvoc",
+    "name": "D.Voc - Diploma of Vocation",
+    "category": "Vocational Courses",
+    "level": "Diploma",
+    "duration": "4 Semesters",
+    "eligibility": "12th"
+  },
+  {
+    "id": "llm-2y",
+    "name": "LLM (2 Year) - Master of Laws",
+    "category": "Law",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "LLB"
+  },
+  {
+    "id": "llm-1y",
+    "name": "LLM (1 Year) - Master of Laws",
+    "category": "Law",
+    "level": "PG",
+    "duration": "2 Semesters",
+    "eligibility": "LLB"
+  },
+  {
+    "id": "llb",
+    "name": "LLB - Bachelor of Laws",
+    "category": "Law",
+    "level": "UG",
+    "duration": "6 Semesters",
+    "eligibility": "Graduation with 45%"
+  },
+  {
+    "id": "ba-llb",
+    "name": "BA LLB - Integrated Law Program",
+    "category": "Law",
+    "level": "UG",
+    "duration": "10 Semesters",
+    "eligibility": "12th with 45%"
+  },
+  {
+    "id": "bba-llb",
+    "name": "BBA LLB - Integrated Law Program",
+    "category": "Law",
+    "level": "UG",
+    "duration": "10 Semesters",
+    "eligibility": "10+2"
+  },
+  {
+    "id": "pg-dip-law",
+    "name": "PG Diploma - Law",
+    "category": "Law",
+    "level": "PG",
+    "duration": "2 Semesters",
+    "eligibility": "Graduation"
+  },
+  {
+    "id": "bsc-fashion-design",
+    "name": "B.Sc - Fashion Design",
+    "category": "Fine Arts",
+    "level": "UG",
+    "duration": "6 Semesters",
+    "eligibility": "10th & 12th"
+  },
+  {
+    "id": "b-design",
+    "name": "Bachelor in Design - Fashion Design",
+    "category": "Fine Arts",
+    "level": "UG",
+    "duration": "8 Semesters",
+    "eligibility": "10th & 12th"
+  },
+  {
+    "id": "bsc-pharmacy",
+    "name": "B.Sc - (Pharmaceutical Chemistry)",
+    "category": "Pharmacy",
+    "level": "UG",
+    "duration": "6 Semesters",
+    "eligibility": "10+2 with Science"
+  },
+  {
+    "id": "msc-pharmacy",
+    "name": "M.Sc - (Pharmaceutical Chemistry)",
+    "category": "Pharmacy",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "B.Sc. in relevant discipline"
+  },
+  {
+    "id": "bsc-acupuncture",
+    "name": "B.Sc - Acupuncture",
+    "category": "Health & Allied Science",
+    "level": "UG",
+    "duration": "6 Semesters",
+    "eligibility": "Graduation in any Relevant Discipline"
+  },
+  {
+    "id": "msc-acupuncture",
+    "name": "M.Sc - Acupuncture",
+    "category": "Health & Allied Science",
+    "level": "PG",
+    "duration": "4 Semesters",
+    "eligibility": "Graduation in any Relevant Discipline"
+  },
+  {
+    "id": "dip-acupuncture",
+    "name": "Diploma - Acupuncture",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "2 Semesters",
+    "eligibility": "10+2"
+  },
+  {
+    "id": "cert-acupuncture",
+    "name": "Certificate - Acupuncture",
+    "category": "Certificate Courses",
+    "level": "Certificate",
+    "duration": "6 Month",
+    "eligibility": "10+2"
+  },
+  {
+    "id": "btech-ce",
+    "name": "B.Tech - Civil Engineering",
+    "category": "Engineering",
+    "level": "UG",
+    "duration": "4 Years",
+    "eligibility": "10+2 with PCM 50% marks"
+  },
+  {
+    "id": "btech-le",
+    "name": "B.Tech - Lateral Entry",
+    "category": "Engineering",
+    "level": "UG",
+    "duration": "3 Years",
+    "eligibility": "Diploma in Engineering / B.Sc with PCM"
+  },
+  {
+    "id": "dip-eng-le",
+    "name": "Diploma in Engineering - Lateral Entry",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "2 Years",
+    "eligibility": "ITI Passed in relevant trade"
+  },
+  {
+    "id": "bsc-it",
+    "name": "B.Sc - Information Technology",
+    "category": "Computer & IT",
+    "level": "UG",
+    "duration": "3/4 Years",
+    "eligibility": "10+2 in any stream"
+  },
+  {
+    "id": "bsc-cs",
+    "name": "B.Sc - Computer Science",
+    "category": "Computer & IT",
+    "level": "UG",
+    "duration": "3/4 Years",
+    "eligibility": "10+2 with PCM / PCB"
+  },
+  {
+    "id": "bsc-ds",
+    "name": "B.Sc - Data Science",
+    "category": "Computer & IT",
+    "level": "UG",
+    "duration": "3/4 Years",
+    "eligibility": "10+2 with Math"
+  },
+  {
+    "id": "msc-it",
+    "name": "M.Sc - Information Technology",
+    "category": "Computer & IT",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "B.Sc IT / BCA or equivalent"
+  },
+  {
+    "id": "msc-cs",
+    "name": "M.Sc - Computer Science",
+    "category": "Computer & IT",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "B.Sc CS / BCA or equivalent"
+  },
+  {
+    "id": "msc-ds",
+    "name": "M.Sc - Data Science",
+    "category": "Computer & IT",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "B.Sc / B.Tech with Math/Stats background"
+  },
+  {
+    "id": "pg-dip-aiml",
+    "name": "PG Diploma - AI & Machine Learning",
+    "category": "Computer & IT",
+    "level": "PG",
+    "duration": "1 Year",
+    "eligibility": "Any Graduate with Math background"
+  },
+  {
+    "id": "bcom-bf",
+    "name": "B.Com - Banking & Finance",
+    "category": "Commerce",
+    "level": "UG",
+    "duration": "3 Years",
+    "eligibility": "10+2 in Commerce / any stream"
+  },
+  {
+    "id": "bcom-ca",
+    "name": "B.Com - Computer Application",
+    "category": "Commerce",
+    "level": "UG",
+    "duration": "3/4 Years",
+    "eligibility": "10+2 in any stream"
+  },
+  {
+    "id": "mcom",
+    "name": "M.Com - Master of Commerce",
+    "category": "Commerce",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "B.Com or equivalent graduation"
+  },
+  {
+    "id": "bsc-hons",
+    "name": "B.Sc (Hons) - Bachelor of Science Honors",
+    "category": "Science",
+    "level": "UG",
+    "duration": "3/4 Years",
+    "eligibility": "10+2 with PCM or PCB 55%"
+  },
+  {
+    "id": "msc",
+    "name": "M.Sc - Master of Science",
+    "category": "Science",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "B.Sc in relevant subject 50%"
+  },
+  {
+    "id": "ba-hons",
+    "name": "BA (Hons) - Bachelor of Arts Honors",
+    "category": "Arts & Humanities",
+    "level": "UG",
+    "duration": "3/4 Years",
+    "eligibility": "10+2 in any stream 50%"
+  },
+  {
+    "id": "ma",
+    "name": "MA - Master of Arts",
+    "category": "Arts & Humanities",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "BA or equivalent graduation"
+  },
+  {
+    "id": "mba-ba",
+    "name": "MBA - Business Analytics",
+    "category": "Management",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "Any Graduate"
+  },
+  {
+    "id": "mba-scm",
+    "name": "MBA - Supply Chain & Logistics",
+    "category": "Management",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "Any Graduate"
+  },
+  {
+    "id": "mba-hm",
+    "name": "MBA - Hospital Management",
+    "category": "Management",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "Any Graduate"
+  },
+  {
+    "id": "mba-og",
+    "name": "MBA – Oil & Gas Management",
+    "category": "Management",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "Bachelor"
+  },
+  {
+    "id": "mba-ent",
+    "name": "MBA - Entrepreneurship",
+    "category": "Management",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "Any Graduate"
+  },
+  {
+    "id": "mba-it",
+    "name": "MBA - Information Technology",
+    "category": "Management",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "Any Graduate"
+  },
+  {
+    "id": "pgdba",
+    "name": "PGDBA - PG Diploma in Business Administration",
+    "category": "Management",
+    "level": "PG",
+    "duration": "1 Year",
+    "eligibility": "Any Graduate"
+  },
+  {
+    "id": "dba",
+    "name": "DBA - Doctorate in Business Administration",
+    "category": "Management",
+    "level": "PG",
+    "duration": "3 Years",
+    "eligibility": "MBA / PGDBA with Work Experience"
+  },
+  {
+    "id": "llm",
+    "name": "LLM - Master of Laws",
+    "category": "Law",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "LLB or equivalent law degree"
+  },
+  {
+    "id": "ba-pub-health",
+    "name": "BA (Hons) - Public Health",
+    "category": "Health & Allied Science",
+    "level": "UG",
+    "duration": "3 Years",
+    "eligibility": "10+2 in any stream"
+  },
+  {
+    "id": "bsc-yoga",
+    "name": "B.Sc - Yoga",
+    "category": "Yoga & Naturopathy",
+    "level": "UG",
+    "duration": "3 Years",
+    "eligibility": "10+2 in any stream"
+  },
+  {
+    "id": "dip-yoga",
+    "name": "Diploma in Yoga",
+    "category": "Yoga & Naturopathy",
+    "level": "Diploma",
+    "duration": "1 Year",
+    "eligibility": "10+2 or equivalent"
+  },
+  {
+    "id": "dip-naturopathy",
+    "name": "Diploma in Naturopathy",
+    "category": "Yoga & Naturopathy",
+    "level": "Diploma",
+    "duration": "1 Year",
+    "eligibility": "10+2 in any stream"
+  },
+  {
+    "id": "msc-yoga",
+    "name": "M.Sc - Yoga",
+    "category": "Yoga & Naturopathy",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "B.Sc Yoga or B.Sc in Life Sciences"
+  },
+  {
+    "id": "dip-lib",
+    "name": "Diploma in Library Science",
+    "category": "Library Science",
+    "level": "Diploma",
+    "duration": "6 Months",
+    "eligibility": "10+2 or equivalent"
+  },
+  {
+    "id": "iti-elec",
+    "name": "Electrician (ITI Trade)",
+    "category": "ITI Trades",
+    "level": "ITI",
+    "duration": "2 Years",
+    "eligibility": "10th Passed from any recognized board"
+  },
+  {
+    "id": "iti-fitter",
+    "name": "Fitter (ITI Trade)",
+    "category": "ITI Trades",
+    "level": "ITI",
+    "duration": "2 Years",
+    "eligibility": "10th Passed from any recognized board"
+  },
+  {
+    "id": "iti-welder",
+    "name": "Welder (ITI Trade)",
+    "category": "ITI Trades",
+    "level": "ITI",
+    "duration": "1 Year",
+    "eligibility": "8th / 10th Passed"
+  },
+  {
+    "id": "iti-copa",
+    "name": "COPA (ITI Trade)",
+    "category": "ITI Trades",
+    "level": "ITI",
+    "duration": "1 Year",
+    "eligibility": "10th Passed"
+  },
+  {
+    "id": "iti-turner",
+    "name": "Turner (ITI Trade)",
+    "category": "ITI Trades",
+    "level": "ITI",
+    "duration": "2 Years",
+    "eligibility": "10th Passed"
+  },
+  {
+    "id": "iti-machinist",
+    "name": "Machinist (ITI Trade)",
+    "category": "ITI Trades",
+    "level": "ITI",
+    "duration": "2 Years",
+    "eligibility": "10th Passed"
+  },
+  {
+    "id": "iti-wireman",
+    "name": "Wireman (ITI Trade)",
+    "category": "ITI Trades",
+    "level": "ITI",
+    "duration": "2 Years",
+    "eligibility": "8th / 10th Passed"
+  },
+  {
+    "id": "iti-diesel",
+    "name": "Diesel Mechanic (ITI Trade)",
+    "category": "ITI Trades",
+    "level": "ITI",
+    "duration": "1 Year",
+    "eligibility": "10th Passed"
+  },
+  {
+    "id": "iti-rac",
+    "name": "RAC Technician (ITI Trade)",
+    "category": "ITI Trades",
+    "level": "ITI",
+    "duration": "2 Years",
+    "eligibility": "10th Passed"
+  },
+  {
+    "id": "iti-elec-mech",
+    "name": "Electronics Mechanic (ITI Trade)",
+    "category": "ITI Trades",
+    "level": "ITI",
+    "duration": "2 Years",
+    "eligibility": "10th Passed with Science & Math"
+  },
+  {
+    "id": "iti-plumber",
+    "name": "Plumber (ITI Trade)",
+    "category": "ITI Trades",
+    "level": "ITI",
+    "duration": "1 Year",
+    "eligibility": "8th / 10th Passed"
+  },
+  {
+    "id": "skill-cnc",
+    "name": "CNC Operator Certification",
+    "category": "Skill Development",
+    "level": "Skill",
+    "duration": "6 Months",
+    "eligibility": "10th Passed or Fail"
+  },
+  {
+    "id": "skill-retail",
+    "name": "Retail Management (Skill India)",
+    "category": "Skill Development",
+    "level": "Skill",
+    "duration": "3 Months",
+    "eligibility": "10th / 12th Passed"
+  },
+  {
+    "id": "skill-rural",
+    "name": "Rural Development Program",
+    "category": "Skill Development",
+    "level": "Skill",
+    "duration": "6 Months",
+    "eligibility": "10th Passed"
+  },
+  {
+    "id": "skill-nsdc",
+    "name": "NSDC Certificate Programs",
+    "category": "Skill Development",
+    "level": "Certificate",
+    "duration": "3-6 Months",
+    "eligibility": "8th Passed"
+  },
+  {
+    "id": "app-elec",
+    "name": "Electrician Apprenticeship (NAPS)",
+    "category": "Apprenticeship Programs",
+    "level": "Apprenticeship",
+    "duration": "1-2 Years",
+    "eligibility": "10th Passed or ITI Electrician"
+  },
+  {
+    "id": "app-fitter",
+    "name": "Fitter Apprenticeship (NAPS)",
+    "category": "Apprenticeship Programs",
+    "level": "Apprenticeship",
+    "duration": "1-2 Years",
+    "eligibility": "10th Passed or ITI Fitter"
+  },
+  {
+    "id": "app-nsdc",
+    "name": "NSDC Industry Training",
+    "category": "Apprenticeship Programs",
+    "level": "Apprenticeship",
+    "duration": "6-12 Months",
+    "eligibility": "10th Passed or Skill Certificate"
+  },
+  {
+    "id": "gov-skill-india",
+    "name": "Skill India Programs",
+    "category": "Government Approved Courses",
+    "level": "Skill",
+    "duration": "3-12 Months",
+    "eligibility": "8th Passed onwards"
+  },
+  {
+    "id": "upes-mba-og",
+    "name": "MBA - Oil & Gas Management (UPES Online)",
+    "category": "UPES Online",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "Any Graduate (50% marks)"
+  },
+  {
+    "id": "upes-mba-pm",
+    "name": "MBA - Power Management (UPES Online)",
+    "category": "UPES Online",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "Any Graduate (50% marks)"
+  },
+  {
+    "id": "upes-mba-db",
+    "name": "MBA - Digital Business (UPES Online)",
+    "category": "UPES Online",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "Any Graduate (50% marks)"
+  },
+  {
+    "id": "upes-mba-im",
+    "name": "MBA - Infrastructure Management (UPES Online)",
+    "category": "UPES Online",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "Any Graduate (50% marks)"
+  },
+  {
+    "id": "upes-bba-gm",
+    "name": "BBA - General Management (UPES Online)",
+    "category": "UPES Online",
+    "level": "UG",
+    "duration": "3 Years",
+    "eligibility": "10+2 in any stream (50% marks)"
+  },
+  {
+    "id": "upes-bba-scm",
+    "name": "BBA - Logistics & Supply Chain Management (UPES Online)",
+    "category": "UPES Online",
+    "level": "UG",
+    "duration": "3 Years",
+    "eligibility": "10+2 in any stream (50% marks)"
+  },
+  {
+    "id": "upes-bba-ib",
+    "name": "BBA - International Business (UPES Online)",
+    "category": "UPES Online",
+    "level": "UG",
+    "duration": "3 Years",
+    "eligibility": "10+2 in any stream (50% marks)"
+  },
+  {
+    "id": "upes-bba-db",
+    "name": "BBA - Digital Business (UPES Online)",
+    "category": "UPES Online",
+    "level": "UG",
+    "duration": "3 Years",
+    "eligibility": "10+2 in any stream (50% marks)"
+  },
+  {
+    "id": "upes-bca-da",
+    "name": "BCA - Data Analytics (UPES Online)",
+    "category": "UPES Online",
+    "level": "UG",
+    "duration": "3 Years",
+    "eligibility": "10+2 (SWAYAM bridge course available for non-Math/CS students)"
+  },
+  {
+    "id": "upes-bca-cs",
+    "name": "BCA - Cloud & Security (UPES Online)",
+    "category": "UPES Online",
+    "level": "UG",
+    "duration": "3 Years",
+    "eligibility": "10+2 (SWAYAM bridge course available for non-Math/CS students)"
+  },
+  {
+    "id": "upes-bca-nat",
+    "name": "BCA - New Age Technology (UPES Online)",
+    "category": "UPES Online",
+    "level": "UG",
+    "duration": "3 Years",
+    "eligibility": "10+2 (SWAYAM bridge course available for non-Math/CS students)"
+  },
+  {
+    "id": "upes-mca-aiml",
+    "name": "MCA - Artificial Intelligence & Machine Learning (UPES Online)",
+    "category": "UPES Online",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "BCA / B.Sc IT / B.Sc CS (SWAYAM bridge course available for non-Math/CS)"
+  },
+  {
+    "id": "upes-mca-csf",
+    "name": "MCA - Cyber Security & Forensics (UPES Online)",
+    "category": "UPES Online",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "BCA / B.Sc IT / B.Sc CS (SWAYAM bridge course available for non-Math/CS)"
+  },
+  {
+    "id": "upes-mca-ds",
+    "name": "MCA - Data Science (UPES Online)",
+    "category": "UPES Online",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "BCA / B.Sc IT / B.Sc CS (SWAYAM bridge course available for non-Math/CS)"
+  },
+  {
+    "id": "pgcp-og",
+    "name": "PGCP - Oil & Gas Management (UPES Online)",
+    "category": "Post Graduate Certificate",
+    "level": "Certificate",
+    "duration": "10 Months",
+    "eligibility": "Any Graduate"
+  },
+  {
+    "id": "pgcp-pm",
+    "name": "PGCP - Power Management (UPES Online)",
+    "category": "Post Graduate Certificate",
+    "level": "Certificate",
+    "duration": "10 Months",
+    "eligibility": "Any Graduate"
+  },
+  {
+    "id": "pgcp-re",
+    "name": "PGCP - Renewable Energy (UPES Online)",
+    "category": "Post Graduate Certificate",
+    "level": "Certificate",
+    "duration": "10 Months",
+    "eligibility": "Any Graduate"
+  },
+  {
+    "id": "pgcp-hse",
+    "name": "PGCP - Industrial Safety / HSE (UPES Online)",
+    "category": "Post Graduate Certificate",
+    "level": "Certificate",
+    "duration": "10 Months",
+    "eligibility": "Any Graduate"
+  },
+  {
+    "id": "pgcp-scm",
+    "name": "PGCP - Logistics & Supply Chain Management (UPES Online)",
+    "category": "Post Graduate Certificate",
+    "level": "Certificate",
+    "duration": "10 Months",
+    "eligibility": "Any Graduate"
+  },
+  {
+    "id": "pgcp-abm",
+    "name": "PGCP - Air Business Management (UPES Online)",
+    "category": "Post Graduate Certificate",
+    "level": "Certificate",
+    "duration": "10 Months",
+    "eligibility": "Any Graduate"
+  },
+  {
+    "id": "pgcp-ib",
+    "name": "PGCP - International Business (UPES Online)",
+    "category": "Post Graduate Certificate",
+    "level": "Certificate",
+    "duration": "10 Months",
+    "eligibility": "Any Graduate"
+  },
+  {
+    "id": "pgcp-ba",
+    "name": "PGCP - Business Analytics (UPES Online)",
+    "category": "Post Graduate Certificate",
+    "level": "Certificate",
+    "duration": "10 Months",
+    "eligibility": "Any Graduate"
+  },
+  {
+    "id": "pgcp-fm",
+    "name": "PGCP - Financial Management (UPES Online)",
+    "category": "Post Graduate Certificate",
+    "level": "Certificate",
+    "duration": "10 Months",
+    "eligibility": "Any Graduate"
+  },
+  {
+    "id": "pgcp-mkt",
+    "name": "PGCP - Marketing Management (UPES Online)",
+    "category": "Post Graduate Certificate",
+    "level": "Certificate",
+    "duration": "10 Months",
+    "eligibility": "Any Graduate"
+  },
+  {
+    "id": "pgcp-hr",
+    "name": "PGCP - Human Resource Management (UPES Online)",
+    "category": "Post Graduate Certificate",
+    "level": "Certificate",
+    "duration": "10 Months",
+    "eligibility": "Any Graduate"
+  },
+  {
+    "id": "pgcp-ops",
+    "name": "PGCP - Operations Management (UPES Online)",
+    "category": "Post Graduate Certificate",
+    "level": "Certificate",
+    "duration": "10 Months",
+    "eligibility": "Any Graduate"
+  },
+  {
+    "id": "pgcp-ds-6m",
+    "name": "PGCP - Data Science (UPES Online)",
+    "category": "Post Graduate Certificate",
+    "level": "Certificate",
+    "duration": "10 Months",
+    "eligibility": "Any Graduate"
+  },
+  {
+    "id": "pgcp-aiml-6m",
+    "name": "PGCP - AI & Machine Learning (UPES Online)",
+    "category": "Post Graduate Certificate",
+    "level": "Certificate",
+    "duration": "10 Months",
+    "eligibility": "Any Graduate"
+  },
+  {
+    "id": "pgcp-da-6m",
+    "name": "PGCP - Data Analytics (UPES Online)",
+    "category": "Post Graduate Certificate",
+    "level": "Certificate",
+    "duration": "6 Months",
+    "eligibility": "Any Graduate"
+  },
+  {
+    "id": "dpgu-dip-2y-civil",
+    "name": "Polytechnic Diploma (2 Years) - Civil Engineering",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "2 Years",
+    "eligibility": "10+2 with Science & Math"
+  },
+  {
+    "id": "dpgu-dip-2y-mech",
+    "name": "Polytechnic Diploma (2 Years) - Mechanical Engineering",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "2 Years",
+    "eligibility": "10+2 with Science & Math"
+  },
+    {
+    "id": "dpgu-dip-2y-elec",
+    "name": "Polytechnic Diploma (2 Years) - Electrical Engineering",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "2 Years",
+    "eligibility": "10+2 with Science & Math"
+  },
+  
+  {
+    "id": "dpgu-dip-2y-fire",
+    "name": "Polytechnic Diploma (2 Years) - Fire & Safety",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "2 Years",
+    "eligibility": "10+2 with Science & Math"
+  },
+  {
+    "id": "dip-eng-chem",
+    "name": "Diploma in Engineering - Chemical",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "3 Years",
+    "eligibility": "10th Passed with Science & Math"
+  },
+  {
+    "id": "dip-eng-fire",
+    "name": "Diploma in Engineering - Fire & Safety",
+    "category": "Diploma Courses",
+    "level": "Diploma",
+    "duration": "3 Years",
+    "eligibility": "10th Passed with Science & Math"
+  },
+  {
+    "id": "btech-chem",
+    "name": "B.Tech - Chemical Engineering",
+    "category": "Engineering",
+    "level": "UG",
+    "duration": "4 Years",
+    "eligibility": "10+2 with PCM 50% marks"
+  },
+  {
+    "id": "mtech-struct",
+    "name": "M.Tech - Structural Engineering",
+    "category": "Engineering",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "B.Tech / B.E. in Civil Engineering"
+  },
+  {
+    "id": "mtech-vlsi",
+    "name": "M.Tech - VLSI & Electronics",
+    "category": "Engineering",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "B.Tech / B.E. in Electronics or related"
+  },
+  {
+    "id": "mtech-power",
+    "name": "M.Tech - Power Engineering",
+    "category": "Engineering",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "B.Tech / B.E. in Electrical or related"
+  },
+  {
+    "id": "mtech-thermal",
+    "name": "M.Tech - Thermal Engineering",
+    "category": "Engineering",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "B.Tech / B.E. in Mechanical Engineering"
+  },
+  {
+    "id": "mtech-cyber",
+    "name": "M.Tech - Cyber Security",
+    "category": "Engineering",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "B.Tech / B.E. in CSE / IT or related"
+  },
+  {
+    "id": "mtech-env",
+    "name": "M.Tech - Environmental Engineering",
+    "category": "Engineering",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "B.Tech / B.E. in Civil or Environmental Engineering"
+  },
+  {
+    "id": "mtech-highway",
+    "name": "M.Tech - Highway Technology",
+    "category": "Engineering",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "B.Tech / B.E. in Civil Engineering"
+  },
+  {
+    "id": "mtech-ctm",
+    "name": "M.Tech - Construction Technology & Management",
+    "category": "Engineering",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "B.Tech / B.E. in Civil Engineering"
+  },
+  {
+    "id": "bpharma",
+    "name": "B.Pharma - Bachelor of Pharmacy",
+    "category": "Pharmacy",
+    "level": "UG",
+    "duration": "4 Years",
+    "eligibility": "10+2 with PCB / PCM 50% marks"
+  },
+  {
+    "id": "dpharma",
+    "name": "D.Pharma - Diploma in Pharmacy",
+    "category": "Pharmacy",
+    "level": "Diploma",
+    "duration": "2 Years",
+    "eligibility": "10+2 with PCB / PCM 50% marks"
+  },
+  {
+    "id": "mba-hotm",
+    "name": "MBA - Hotel Management",
+    "category": "Management",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "Any Graduate"
+  },
+  {
+    "id": "mba-ecom",
+    "name": "MBA - E-Commerce",
+    "category": "Management",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "Any Graduate"
+  },
+  {
+    "id": "bcom-hons",
+    "name": "B.Com (Honours)",
+    "category": "Commerce",
+    "level": "UG",
+    "duration": "3/4 Years",
+    "eligibility": "10+2 in Commerce / any stream 55% marks"
+  },
+  {
+    "id": "bfa",
+    "name": "BFA - Bachelor of Fine Arts",
+    "category": "Fine Arts",
+    "level": "UG",
+    "duration": "3 Years",
+    "eligibility": "10+2 in any stream"
+  },
+  {
+    "id": "mfa",
+    "name": "MFA - Master of Fine Arts",
+    "category": "Fine Arts",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "BFA or equivalent degree"
+  },
+  {
+    "id": "bped",
+    "name": "B.P.Ed - Bachelor of Physical Education",
+    "category": "Physical Education",
+    "level": "UG",
+    "duration": "2 Years",
+    "eligibility": "Any Graduate with physical fitness"
+  },
+  {
+    "id": "bsc-biotech",
+    "name": "B.Sc - Biotechnology",
+    "category": "Science",
+    "level": "UG",
+    "duration": "3/4 Years",
+    "eligibility": "10+2 with PCB or PCM 50%"
+  },
+  {
+    "id": "bsc-micro",
+    "name": "B.Sc - Microbiology",
+    "category": "Science",
+    "level": "UG",
+    "duration": "3/4 Years",
+    "eligibility": "10+2 with PCB 50%"
+  },
+  {
+    "id": "bsc-forensic",
+    "name": "B.Sc - Forensic Science",
+    "category": "Science",
+    "level": "UG",
+    "duration": "3/4 Years",
+    "eligibility": "10+2 with PCB or PCM 50%"
+  },
+  {
+    "id": "bsc-home-sci",
+    "name": "B.Sc - Home Science",
+    "category": "Science",
+    "level": "UG",
+    "duration": "3 Years",
+    "eligibility": "10+2 in any stream"
+  },
+  {
+    "id": "msc-forensic",
+    "name": "M.Sc - Forensic Science",
+    "category": "Science",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "B.Sc Forensic Science or Science 50%"
+  },
+  {
+    "id": "msc-home-sci",
+    "name": "M.Sc - Home Science",
+    "category": "Science",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "B.Sc Home Science 50%"
+  },
+  {
+    "id": "bsc-agri",
+    "name": "B.Sc. (Agriculture.) - Bachelor of Science in Agriculture",
+    "category": "Agriculture",
+    "level": "UG",
+    "duration": "4 Years",
+    "eligibility": "10+2 with PCB / PCM or Agriculture 50%"
+  },
+  {
+    "id": "msc-agri-agronomy",
+    "name": "M.Sc Agriculture - Agronomy",
+    "category": "Agriculture",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "B.Sc Agriculture or equivalent"
+  },
+  {
+    "id": "msc-agri-soil",
+    "name": "M.Sc Agriculture - Soil Science",
+    "category": "Agriculture",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "B.Sc Agriculture or equivalent"
+  },
+  {
+    "id": "msc-agri-horti",
+    "name": "M.Sc Agriculture - Horticulture",
+    "category": "Agriculture",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "B.Sc Agriculture / Horticulture or equivalent"
+  },
+  {
+    "id": "msc-agri-gpb",
+    "name": "M.Sc Agriculture - Genetics & Plant Breeding",
+    "category": "Agriculture",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "B.Sc Agriculture or Genetics equivalent"
+  },
+  {
+    "id": "llm-cyber",
+    "name": "LLM - Cyber Law",
+    "category": "Law",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "LLB or equivalent law degree"
+  },
+  {
+    "id": "llm-criminal",
+    "name": "LLM - Criminal Law",
+    "category": "Law",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "LLB or equivalent law degree"
+  },
+  {
+    "id": "llm-constitutional",
+    "name": "LLM - Constitutional Law",
+    "category": "Law",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "LLB or equivalent law degree"
+  },
+  {
+    "id": "phd-tech",
+    "name": "PhD - Technical",
+    "category": "Research",
+    "level": "PG",
+    "duration": "3 Years",
+    "eligibility": "M.Tech / M.E. or equivalent PG degree with research aptitude"
+  },
+  {
+    "id": "phd-non-tech",
+    "name": "PhD - Non-Technical",
+    "category": "Research",
+    "level": "PG",
+    "duration": "3 Years",
+    "eligibility": "Master"
+  },
+  {
+    "id": "upes-mba-lscm",
+    "name": "MBA - Logistics & Supply Chain Management (UPES Online)",
+    "category": "UPES Online",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "Any Graduate (50% marks)"
+  },
+  {
+    "id": "upes-mba-fm",
+    "name": "MBA - Finance Management (UPES Online)",
+    "category": "UPES Online",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "Any Graduate (50% marks)"
+  },
+  {
+    "id": "upes-mba-mkt",
+    "name": "MBA - Marketing Management (UPES Online)",
+    "category": "UPES Online",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "Any Graduate (50% marks)"
+  },
+  
+  {
+    "id": "upes-mba-ops",
+    "name": "MBA - Operations Management (UPES Online)",
+    "category": "UPES Online",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "Any Graduate (50% marks)"
+  },
+  {
+    "id": "upes-mba-ib",
+    "name": "MBA - International Business (UPES Online)",
+    "category": "UPES Online",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "Any Graduate (50% marks)"
+  },
+  {
+    "id": "upes-mba-ba",
+    "name": "MBA - Business Analytics (UPES Online)",
+    "category": "UPES Online",
+    "level": "PG",
+    "duration": "2 Years",
+    "eligibility": "Any Graduate (50% marks)"
+  }
+]

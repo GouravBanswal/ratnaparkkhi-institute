@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import EnquiryForm from '@/components/EnquiryForm';
 import { blogPosts } from '@/components/data/collegeData';
+import { TM } from '@/lib/helpers';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -72,7 +73,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             <div className="bg-slate-50 border border-slate-100 p-6 rounded-xl space-y-4 text-xs mt-10">
               <h4 className="font-bold text-navy-900">Academic Guidance Policy</h4>
               <p className="text-slate-500 leading-relaxed font-medium">
-                Ratnaparkkhi Institute™ of Engineering & Management is dedicated to keeping engineering curricula, ITI trade materials, and skill development programs updated with current industrial developments. We provide all students with comprehensive counseling, hands-on workshop training, and placement cell assistance. Admissions are currently open for Engineering, ITI, and Management/MBA programs.
+                Ratnaparkkhi Institute of Engineering & Management<TM /> is dedicated to keeping engineering curricula, ITI trade materials, and skill development programs updated with current industrial developments. We provide all students with comprehensive counseling, hands-on workshop training, and placement cell assistance. Admissions are currently open for Engineering, ITI, and Management/MBA programs.
               </p>
             </div>
 

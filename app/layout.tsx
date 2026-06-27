@@ -19,12 +19,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://ratnaparkkhisansttha.com"),
 
   title: {
-    default: "Ratnaparkkhi Institute™ of Engineering & Management (RIEM)",
+    default: "Ratnaparkkhi Institute of Engineering & Management™ (RIEM)",
     template: "%s | RIEM",
   },
 
   description:
-    "Ratnaparkkhi Institute™ of Engineering & Management (RIEM) is a premier engineering, ITI, and technical skill development institute offering advanced engineering branches, NCVT-approved ITI trades, NSDC Skill India courses, and MBA programs across India.",
+    "Ratnaparkkhi Institute of Engineering & Management™ (RIEM) is a premier engineering, ITI, and technical skill development institute offering advanced engineering branches, NCVT-approved ITI trades, NSDC Skill India courses, and MBA programs across India.",
 
   keywords: [
     "Ratnaparkkhi Institute",
@@ -51,13 +51,13 @@ export const metadata: Metadata = {
 
   authors: [
     {
-      name: "Ratnaparkkhi Institute™ of Engineering & Management",
+      name: "Ratnaparkkhi Institute of Engineering & Management™",
     },
   ],
 
-  creator: "Ratnaparkkhi Institute™ of Engineering & Management",
+  creator: "Ratnaparkkhi Institute of Engineering & Management™",
 
-  publisher: "Ratnaparkkhi Institute™ of Engineering & Management",
+  publisher: "Ratnaparkkhi Institute of Engineering & Management™",
 
   alternates: {
     canonical: "/",
@@ -73,8 +73,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: "https://ratnaparkkhisansttha.com",
-    siteName: "Ratnaparkkhi Institute™ of Engineering & Management",
-    title: "Ratnaparkkhi Institute™ of Engineering & Management (RIEM)",
+    siteName: "Ratnaparkkhi Institute of Engineering & Management™",
+    title: "Ratnaparkkhi Institute of Engineering & Management™ (RIEM)",
     description:
       "Admissions, Skill Development, ITI Programs, MBA Specializations, Career Guidance, Learn & Earn Programs, Apprenticeships, and Engineering Technical Training across India.",
     images: [
@@ -82,14 +82,14 @@ export const metadata: Metadata = {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Ratnaparkkhi Institute™ of Engineering & Management",
+        alt: "Ratnaparkkhi Institute of Engineering & Management™",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Ratnaparkkhi Institute™ of Engineering & Management (RIEM)",
+    title: "Ratnaparkkhi Institute of Engineering & Management™ (RIEM)",
     description:
       "Admissions, Skill Development, ITI Programs, MBA Specializations, Career Guidance, Learn & Earn Programs, Apprenticeships, and Engineering Technical Training across India.",
     images: ["/logo.png"],

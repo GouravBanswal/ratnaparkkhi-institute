@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { placementStats, successStories } from '@/components/data/collegeData';
 import { universityPartners } from '@/components/data/universityPartners';
+import { TM } from '@/lib/helpers';
 
 export default function PlacementsPage() {
   const steps = [
@@ -75,7 +76,7 @@ export default function PlacementsPage() {
               Placement Desk Message
             </h3>
             <p className="text-sm text-slate-655 leading-relaxed font-medium">
-              &quot;At Ratnaparkkhi Institute™ of Engineering & Management, we believe that education must lead to practical career growth. Our placement cell coordinates Corporate Relations and NAPS apprenticeships. We assist candidates in securing jobs in private enterprises, retail, IT support, and government sectors. We train students under our signature Learn & Earn model, ensuring they gain real-world corporate experience while pursuing their technical education.&quot;
+              &quot;At Ratnaparkkhi Institute of Engineering & Management<TM />, we believe that education must lead to practical career growth. Our placement cell coordinates Corporate Relations and NAPS apprenticeships. We assist candidates in securing jobs in private enterprises, retail, IT support, and government sectors. We train students under our signature Learn & Earn model, ensuring they gain real-world corporate experience while pursuing their technical education.&quot;
             </p>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { facultyHighlights } from '@/components/data/collegeData';
+import { TM } from '@/lib/helpers';
 
 export default function AboutPage() {
   return (
@@ -9,7 +10,7 @@ export default function AboutPage() {
       <section className="bg-slate-50 border-b border-slate-100 py-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#0b2240_1px,transparent_1px),linear-gradient(to_bottom,#0b2240_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
         <div className="relative max-w-7xl mx-auto px-4 text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-black tracking-tight text-navy-900">About Ratnaparkkhi Institute™ of Engineering & Management</h1>
+          <h1 className="text-4xl md:text-5xl font-black tracking-tight text-navy-900">About Ratnaparkkhi Institute of Engineering & Management<TM /></h1>
           <p className="text-sm md:text-base text-slate-600 max-w-2xl mx-auto font-medium">
             Discover our legacy since 2008, our mission for technical and engineering education, and our collaborations with skill councils and training boards.
           </p>
@@ -58,7 +59,7 @@ export default function AboutPage() {
               Message from the Founder's Desk
             </h3>
             <p className="text-sm text-slate-600 leading-relaxed font-medium">
-              &quot;Technical and engineering education is the ultimate gateway to lifelong progress. At Ratnaparkkhi Institute™, our primary focus is providing high-quality Engineering, ITI, and Skill Development programs that prepare students for immediate industrial careers. Our NSDC/Skill India and NAPS apprenticeship collaborations ensure that every candidate gains the practical skills and qualifications necessary to succeed in government and private engineering sectors.&quot;
+              &quot;Technical and engineering education is the ultimate gateway to lifelong progress. At Ratnaparkkhi Institute, our primary focus is providing high-quality Engineering, ITI, and Skill Development programs that prepare students for immediate industrial careers. Our NSDC/Skill India and NAPS apprenticeship collaborations ensure that every candidate gains the practical skills and qualifications necessary to succeed in government and private engineering sectors.&quot;
             </p>
           </div>
         </div>
@@ -116,7 +117,7 @@ export default function AboutPage() {
           <div className="max-w-2xl mx-auto space-y-3">
             <h2 className="text-2xl font-extrabold text-navy-900">Recognition, Boards & Partners</h2>
             <p className="text-xs sm:text-sm text-slate-500 font-medium">
-              Ratnaparkkhi Institute™ is affiliated with leading state skill boards, technical councils, and apprenticeship systems.
+              Ratnaparkkhi Institute is affiliated with leading state skill boards, technical councils, and apprenticeship systems.
             </p>
           </div>
 

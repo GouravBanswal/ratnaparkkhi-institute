@@ -1,0 +1,74 @@
+{
+  "matched": [],
+  "differences": [
+    {
+      "name": "Executive MBA",
+      "diffs": [
+        "Name diff: Brochure \"Executive MBA\" vs Website \"EMBA - Executive MBA\"",
+        "Duration diff for \"Executive MBA\": Brochure \"1 Year\" vs Website \"2 Semesters\"",
+        "Eligibility diff for \"Executive MBA\": Brochure \"Graduation in any Discipline\" vs Website \"Minimum 2 year of Experience + Graduation\""
+      ]
+    },
+    {
+      "name": "Bachelor of Science (M.Sc) (Physics)",
+      "diffs": [
+        "Name diff: Brochure \"Bachelor of Science (M.Sc) (Physics)\" vs Website \"M.Sc - Physics\"",
+        "Duration diff for \"Bachelor of Science (M.Sc) (Physics)\": Brochure \"2 Years\" vs Website \"4 Semesters\"",
+        "Eligibility diff for \"Bachelor of Science (M.Sc) (Physics)\": Brochure \"Graduation in B.Sc. (Math)\" vs Website \"B.Sc\""
+      ]
+    },
+    {
+      "name": "Bachelor of Science (M.Sc) (Chemistry)",
+      "diffs": [
+        "Name diff: Brochure \"Bachelor of Science (M.Sc) (Chemistry)\" vs Website \"M.Sc - Chemistry\"",
+        "Duration diff for \"Bachelor of Science (M.Sc) (Chemistry)\": Brochure \"2 Years\" vs Website \"4 Semesters\"",
+        "Eligibility diff for \"Bachelor of Science (M.Sc) (Chemistry)\": Brochure \"Graduation in B.Sc (Maths) B.Sc (Biology)\" vs Website \"B.Sc\""
+      ]
+    },
+    {
+      "name": "B. Lib.",
+      "diffs": [
+        "Name diff: Brochure \"B. Lib.\" vs Website \"B.Lib. & I.Sc. - Bachelor of Library & Information Science\"",
+        "Duration diff for \"B. Lib.\": Brochure \"1 Year\" vs Website \"2 Semesters\""
+      ]
+    },
+    {
+      "name": "M. Lib.",
+      "diffs": [
+        "Name diff: Brochure \"M. Lib.\" vs Website \"M.Lib. & I.Sc. - Master of Library & Information Science\"",
+        "Duration diff for \"M. Lib.\": Brochure \"1 Year\" vs Website \"2 Semesters\"",
+        "Eligibility diff for \"M. Lib.\": Brochure \"B. Lib+ Graduation\" vs Website \"B.Lib\""
+      ]
+    }
+  ],
+  "missing": [
+    "Missing: Bachelor of Business Administrative (BBA)",
+    "Missing: Master of Business Administration (MBA)",
+    "Missing: Post Graduate Diploma in Business Management (PGDBM)",
+    "Missing: Diploma in Computer Application (DCA)",
+    "Missing: Post Graduate Diploma in Computer Application (PGDCA)",
+    "Missing: Bachelor of Computer Application (BCA)",
+    "Missing: Master of Science in Information Technology (M.Sc.IT)",
+    "Missing: Master of Computer Application (MCA)",
+    "Missing: Bachelor of Science (B.Sc) (Math)",
+    "Missing: Bachelor of Science (B.Sc) (Biology)",
+    "Missing: Master of Science (M.Sc) (Math)",
+    "Missing: Diploma in Mechanical Engg.",
+    "Missing: Diploma in Computer Engg.",
+    "Missing: Diploma in Electrical Engg.",
+    "Missing: Diploma in Electronics Engg.",
+    "Missing: Diploma in Civil Engg.",
+    "Missing: B.Tech. (all stream)",
+    "Missing: Bachelor of Commerce (B.Com)",
+    "Missing: Bachelor of Commerce (M.Com)",
+    "Missing: Bachelor of Arts (B.A.)",
+    "Missing: Master of Art (M.A)",
+    "Missing: Master of Social Work (MSW)",
+    "Missing: B.J.M.S.",
+    "Missing: M.J.M.S."
+  ],
+  "extra": [],
+  "brochureTotal": 29,
+  "websiteTotal": 285,
+  "extraCount": 280
+}

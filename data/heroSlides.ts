@@ -18,7 +18,7 @@ export const heroSlides: HeroSlideData[] = [
     badge: "Admissions Open 2026",
     title: "Build Your Future with",
     subtitle: "Quality Education",
-    description: "Ratnaparkkhi Institute™ provides Engineering Education, ITI Programs, Skill Development, MBA Programs, Technical Education, and Career-Oriented Training.",
+    description: "Ratnaparkkhi Institute provides Engineering Education, ITI Programs, Skill Development, MBA Programs, Technical Education, and Career-Oriented Training.",
     primaryButton: "Apply Now 2026",
     primaryLink: "/online-admission",
     secondaryButton: "Explore Courses",

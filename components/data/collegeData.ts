@@ -1,4 +1,4 @@
-// Configurable College Data for Ratnaparkkhi Institute™ of Engineering & Management
+// Configurable College Data for Ratnaparkkhi Institute of Engineering & Management™
 // Updated with the official institute profile focusing on Engineering and ITI trades
 
 export const tagline = "Learn & Earn";
@@ -379,7 +379,7 @@ export const successStories = [
     designation: "Assistant Manager",
     package: "Learn & Earn Graduate",
     imagePlaceholder: "AS",
-    quote: "Thanks to the industry-aligned Computer Science Engineering program at Ratnaparkkhi Institute™, I gained solid software engineering skills that helped me secure a campus placement as an Assistant Manager."
+    quote: "Thanks to the industry-aligned Computer Science Engineering program at Ratnaparkkhi Institute, I gained solid software engineering skills that helped me secure a campus placement as an Assistant Manager."
   },
   {
     name: "Pooja Patil",
@@ -388,7 +388,7 @@ export const successStories = [
     designation: "Junior Technical Apprentice",
     package: "NAPS Placed",
     imagePlaceholder: "PP",
-    quote: "The practical trades program and NAPS apprenticeship coordinates at Ratnaparkkhi Institute™ prepared me directly for government energy sector placements."
+    quote: "The practical trades program and NAPS apprenticeship coordinates at Ratnaparkkhi Institute prepared me directly for government energy sector placements."
   },
   {
     name: "Rahul Deshpande",
@@ -397,7 +397,7 @@ export const successStories = [
     designation: "Operations Executive",
     package: "Technical Program Graduate",
     imagePlaceholder: "RD",
-    quote: "Completing my MBA with a specialization in Operations Management through Ratnaparkkhi Institute™ gave me the leadership and technical credentials needed to take on management roles."
+    quote: "Completing my MBA with a specialization in Operations Management through Ratnaparkkhi Institute gave me the leadership and technical credentials needed to take on management roles."
   },
   {
     name: "Sneha Nair",
@@ -440,7 +440,7 @@ export const blogPosts = [
     excerpt: "Discover how advanced technical training is enabling working professionals to gain engineering credentials without resigning.",
     date: "June 15, 2026",
     author: "Dr. S. K. Deshmukh (Academic Director)",
-    content: "With rising demands for technical skills in the job market, technical and engineering education provides the ultimate career gateway. Ratnaparkkhi Institute™ provides comprehensive study materials, counseling, and exam support for technical branches, ensuring you achieve academic success without compromise.",
+    content: "With rising demands for technical skills in the job market, technical and engineering education provides the ultimate career gateway. Ratnaparkkhi Institute provides comprehensive study materials, counseling, and exam support for technical branches, ensuring you achieve academic success without compromise.",
     readTime: "4 min read"
   },
   {
@@ -458,7 +458,7 @@ export const blogPosts = [
     excerpt: "A complete guide on securing government and private technical jobs after your vocational training.",
     date: "May 28, 2026",
     author: "Prof. Anjali Kulkarni (Admissions Head)",
-    content: "Completing an ITI trade is one of the fastest routes to a stable technical career. Under the National Apprenticeship Promotion Scheme (NAPS), ITI graduates can directly secure internships at state utilities like Mahadiscom, railways, or private engineering corporations. Ratnaparkkhi Institute™ coordinates NAPS application desk support, helping students secure their placement.",
+    content: "Completing an ITI trade is one of the fastest routes to a stable technical career. Under the National Apprenticeship Promotion Scheme (NAPS), ITI graduates can directly secure internships at state utilities like Mahadiscom, railways, or private engineering corporations. Ratnaparkkhi Institute coordinates NAPS application desk support, helping students secure their placement.",
     readTime: "4 min read"
   }
 ];

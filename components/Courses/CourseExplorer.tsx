@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import { courseList, Course } from './courses';
+import { courseList, Course, sortAndDeduplicateCourses } from './courses';
 import CourseSidebar from './CourseSidebar';
 import CourseFilter from './CourseFilter';
 import CourseSearch from './CourseSearch';
@@ -38,7 +38,8 @@ export default function CourseExplorer() {
 
   // Filter courses dynamically based on all selections
   const filteredCourses = useMemo(() => {
-    return courseList.filter((course) => {
+    const activeCourseList = courseList.filter(c => c.name !== 'DBA - Doctorate in Business Administration');
+    const filtered = activeCourseList.filter((course) => {
       // 1. Sidebar Category Filter
       const matchesCategory =
         course.category === selectedCategory ||
@@ -96,6 +97,8 @@ export default function CourseExplorer() {
 
       return true;
     });
+
+    return sortAndDeduplicateCourses(filtered);
   }, [selectedCategory, selectedFilter, searchQuery]);
 
   const handleDownloadBrochure = (course: Course) => {

@@ -56,3 +56,12 @@ body {
 .animate-fade-in {
   animation: fadeIn 0.5s ease-out forwards;
 }
+
+/* Global trademark symbol styling */
+.tm-symbol {
+  font-size: 0.5em;
+  vertical-align: super;
+  line-height: 1;
+  margin-left: 1px;
+}
+

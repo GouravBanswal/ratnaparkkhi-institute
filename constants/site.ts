@@ -1,5 +1,5 @@
 export const SITE_METADATA = {
-  title: "Ratnaparkkhi Institute™ of Engineering & Management",
+  title: "Ratnaparkkhi Institute of Engineering & Management™",
   tagline: "Quality Education",
   established: "Estd. 2008",
   admissionsOpen: "Admissions Open 2026",

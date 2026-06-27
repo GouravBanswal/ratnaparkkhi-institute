@@ -16,25 +16,51 @@ export interface Course {
   iconName: 'computer' | 'gear' | 'wrench' | 'briefcase' | 'database' | 'cpu' | 'building' | 'chart' | 'network' | 'bolt' | 'flame' | 'sparkles';
 }
 
+export function formatCourseNameForUI(name: string): string {
+  if (name.startsWith('MBA - ')) {
+    return name.replace('MBA - ', '').trim();
+  }
+  
+  // Handle B.Sc / M.Sc (Honours) / (Hons) -> subject (Honours)
+  const honoursMatch = name.match(/^(?:B\.Sc|M\.Sc)\s*\((Honours|Hons)\)\s*-\s*(.+)$/i);
+  if (honoursMatch) {
+    const type = honoursMatch[1];
+    const subject = honoursMatch[2].trim();
+    return `${subject} (${type})`;
+  }
+  
+  // Handle standard B.Sc / M.Sc prefix
+  if (name.startsWith('B.Sc - ')) {
+    return name.replace('B.Sc - ', '').trim();
+  }
+  if (name.startsWith('M.Sc - ')) {
+    return name.replace('M.Sc - ', '').trim();
+  }
+
+  // Handle standard B.Tech / M.Tech prefix
+  if (name.startsWith('B.Tech - ')) {
+    return name.replace('B.Tech - ', '').trim();
+  }
+  if (name.startsWith('M.Tech - ')) {
+    return name.replace('M.Tech - ', '').trim();
+  }
+  
+  return name;
+}
+
 export const courseCategories = [
-  'Undergraduate (UG)',
-  'Postgraduate (PG)',
   'Engineering',
   'Computer & IT',
   'Commerce',
   'Science',
-  'Arts & Humanities',
   'Management',
+  'Arts & Humanities',
   'Law',
   'Health & Allied Science',
   'Yoga & Naturopathy',
   'Journalism & Mass Communication',
   'Library Science',
-  'Diploma Courses',
   'ITI Trades',
-  'Skill Development',
-  'Apprenticeship Programs',
-  'Government Approved Courses',
   'UPES Online',
   'Post Graduate Certificate',
   'Pharmacy',
@@ -48,6 +74,179 @@ export const courseCategories = [
   'Certificate Courses',
   'Executive Programs',
 ];
+
+export const bTechDisplayOrder = [
+  "B.Tech - Computer Science Engineering",
+  "B.Tech - Artificial Intelligence",
+  "B.Tech - Information Technology",
+  "B.Tech - Data Science",
+  "B.Tech - Electronics & Telecommunication",
+  "B.Tech - Electrical Engineering",
+  "B.Tech - Mechanical Engineering",
+  "B.Tech - Civil Engineering",
+  "B.Tech - Chemical Engineering",
+  "B.Tech - Fire & Safety",
+  "B.Tech - Instrumentation & Control",
+  "B.Tech - Aeronautical Engineering",
+];
+
+export const mTechDisplayOrder = [
+  "M.Tech - Computer Science Engineering",
+  "M.Tech - Artificial Intelligence",
+  "M.Tech - Information Technology",
+  "M.Tech - Data Science",
+  "M.Tech - Electronics & Communication",
+  "M.Tech - Electrical Engineering",
+  "M.Tech - Mechanical Engineering",
+  "M.Tech - Civil Engineering",
+  "M.Tech - Structural Engineering",
+  "M.Tech - Thermal Engineering",
+  "M.Tech - VLSI & Electronics",
+  "M.Tech - Power Engineering",
+  "M.Tech - Aeronautical Engineering",
+];
+
+export const diplomaDisplayOrder = [
+  "Diploma - Computer Science Engineering (CSE)",
+  "Diploma - Artificial Intelligence (AI)",
+  "Diploma - Information Technology (IT)",
+  "Diploma - Data Science",
+  "Diploma - Mechanical Engineering (ME)",
+  "Diploma - Civil Engineering (CE)",
+  "Diploma - Electrical Engineering (EE)",
+  "Diploma  - Fire & Safety",
+  "Diploma  - Chemical",
+];
+
+export const pgManagementDisplayOrder = [
+  "MBA - Finance",
+  "MBA - Finance Management (UPES Online)",
+  "MBA - Marketing",
+  "MBA - Marketing Management (UPES Online)",
+  "MBA - Human Resource",
+  "MBA - Business Analytics",
+  "MBA - Business Analytics (UPES Online)",
+  "MBA - International Business",
+  "MBA - International Business (UPES Online)",
+  "MBA - Operations",
+  "MBA - Operations Management (UPES Online)",
+  "MBA - Hospital Management",
+  "MBA - Supply Chain & Logistics",
+  "MBA - Logistics & Supply Chain Management (UPES Online)",
+  "MBA - Information Technology",
+  "MBA - Banking Management",
+  "MBA - Retail Management",
+  "MBA - Entrepreneurship",
+  "MBA - Digital Business (UPES Online)",
+  "MBA - E-Commerce",
+  "MBA - Agri Business",
+  "MBA - Hotel Management",
+  "MBA - Insurance Management",
+  "MBA - Infrastructure Management (UPES Online)",
+  "MBA - Fashion Designing",
+  "MBA - Criminology",
+  "MBA - Oil & Gas Management (UPES Online)",
+  "MBA - Power Management (UPES Online)",
+  "EMBA - Executive MBA",
+  "PGDBA - PG Diploma in Business Administration",
+];
+
+export const bScDisplayOrder = [
+  "B.Sc - Computer Science",
+  "B.Sc - Data Science",
+  "B.Sc - Information Technology",
+  "B.Sc (Honours) - Biotechnology",
+  "B.Sc (Honours) - Microbiology",
+  "B.Sc (Honours) - Biochemistry",
+  "B.Sc (Honours) - Physics",
+  "B.Sc (Honours) - Chemistry",
+  "B.Sc (Honours) - Mathematics",
+  "B.Sc - Biotechnology",
+  "B.Sc - Microbiology",
+  "B.Sc - Forensic Science",
+];
+
+export const mScDisplayOrder = [
+  "M.Sc - Data Science",
+  "M.Sc - Information Technology",
+  "M.Sc - Computer Science",
+  "M.Sc - Biotechnology",
+  "M.Sc - Microbiology",
+  "M.Sc - Biochemistry",
+  "M.Sc - Physics",
+  "M.Sc - Chemistry",
+  "M.Sc - Mathematics",
+  "M.Sc - Forensic Science",
+  "M.Sc - Hotel Management",
+  "M.Sc - Fire & Safety",
+  "M.Sc - Fire and Safety",
+  "M.Sc - Home Science",
+  "M.Sc - Yoga",
+];
+
+export const mcaDisplayOrder = [
+  "MCA - Computer Science",
+  "MCA - Master of Computer Applications",
+  "MCA - Artificial Intelligence & Machine Learning",
+  "MCA - Artificial Intelligence & Machine Learning (UPES Online)",
+  "MCA - Data Science",
+  "MCA - Data Science (UPES Online)",
+  "MCA - Information Technology",
+  "MCA - Cyber Security",
+  "MCA - Cyber Security & Forensics (UPES Online)",
+  "MCA - Cloud Computing",
+  "MCA - Full Stack Development",
+  "MCA - Software Engineering",
+  "MCA - Blockchain Technology",
+  "MCA - Internet of Things (IoT)",
+];
+
+export const qualificationMeta: Record<string, { duration: string; lateralEntry?: string }> = {
+  btech: {
+    duration: '4 Years',
+    lateralEntry: '3 Years'
+  },
+  mtech: {
+    duration: '2 Years'
+  },
+  diploma: {
+    duration: '3 Years',
+    lateralEntry: '2 Years'
+  },
+  iti: {
+    duration: '1–2 Years (Course Dependent)'
+  },
+  certificate: {
+    duration: '1-2 Years (Course Dependent)'
+  },
+  ug: {
+    duration: '3–4 Years (Course Dependent)'
+  },
+  pg: {
+    duration: '2 Years'
+  },
+  other: {
+    duration: 'Course Dependent'
+  }
+};
+
+export function getQualificationMeta(groupName: string, groupCourses?: Course[]) {
+  const g = groupName.toLowerCase();
+  if (g.includes('b.tech') || g.includes('bachelor')) return qualificationMeta.btech;
+  if (g.includes('m.tech') || g.includes('master')) return qualificationMeta.mtech;
+  if (g.includes('diploma')) return qualificationMeta.diploma;
+  if (g.includes('iti')) return qualificationMeta.iti;
+  if (g.includes('certificate')) return qualificationMeta.certificate;
+  if (g.includes('ug') || g.includes('undergrad')) {
+    const isScience = groupCourses?.some(c => c.category === 'Science' || c.name.startsWith('B.Sc'));
+    if (isScience) {
+      return { duration: '3 Years (Course Dependent)' };
+    }
+    return qualificationMeta.ug;
+  }
+  if (g.includes('pg') || g.includes('postgrad')) return qualificationMeta.pg;
+  return qualificationMeta.other;
+}
 
 export const courseList: Course[] = [
   {
@@ -267,28 +466,7 @@ export const courseList: Course[] = [
     placementSupport: 'Direct industrial apprentice linkages with core industries.',
     iconName: 'gear',
   },
-  {
-    id: 'btech-fire',
-    name: 'B.Tech - Fire and Safety',
-    category: 'Engineering',
-    subCategories: ['Undergraduate (UG)'],
-    level: 'UG',
-    duration: '8 Semesters',
-    eligibility: '12th PCM',
-    mode: 'Regular',
-    badge: 'Job Oriented',
-    description: 'B.Tech in fire & safety engineering covering fire dynamics, structural fire analysis, industrial hazard assessment, SCBA systems, HSE management and disaster management.',
-    fees: '₹70,000 per year',
-    seats: 60,
-    careerOpportunities: [
-      'Fire Safety Engineer',
-      'HSE Manager',
-      'Industrial Safety Consultant',
-      'Emergency Planning Officer'
-    ],
-    placementSupport: 'Oil & gas, defense, municipal and industrial safety placement linkages.',
-    iconName: 'flame',
-  },
+ 
   {
     id: 'btech-ee',
     name: 'B.Tech - Electrical Engineering',
@@ -442,14 +620,14 @@ export const courseList: Course[] = [
   },
   {
     id: 'dip-eng-ds',
-    name: 'Polytechnic - Data Science',
+    name: 'Diploma - Data Science',
     category: 'Diploma Courses',
     subCategories: ['Engineering'],
     level: 'Diploma',
     duration: '8 Semesters',
     eligibility: '10th',
     mode: 'Regular',
-    description: 'Polytechnic diploma course in data science, big data fundamentals, database management, and analysis tools.',
+    description: 'Diploma course in data science, big data fundamentals, database management, and analysis tools.',
     fees: '₹22,000 per year',
     seats: 60,
     careerOpportunities: [
@@ -463,7 +641,7 @@ export const courseList: Course[] = [
   },
   {
     id: 'dip-eng-civil',
-    name: 'Polytechnic - Civil Engineering (CE)',
+    name: 'Diploma - Civil Engineering (CE)',
     category: 'Diploma Courses',
     subCategories: ['Engineering'],
     level: 'Diploma',
@@ -485,7 +663,7 @@ export const courseList: Course[] = [
   },
   {
     id: 'dip-eng-mech',
-    name: 'Polytechnic - Mechanical Engineering (ME)',
+    name: 'Diploma - Mechanical Engineering (ME)',
     category: 'Diploma Courses',
     subCategories: ['Engineering'],
     level: 'Diploma',
@@ -507,7 +685,7 @@ export const courseList: Course[] = [
   },
   {
     id: 'dip-eng-elec',
-    name: 'Polytechnic - Electrical Engineering (EE)',
+    name: 'Diploma - Electrical Engineering (EE)',
     category: 'Diploma Courses',
     subCategories: ['Engineering'],
     level: 'Diploma',
@@ -529,7 +707,7 @@ export const courseList: Course[] = [
   },
   {
     id: 'dip-eng-ai',
-    name: 'Polytechnic - Artificial Intelligence (AI)',
+    name: 'Diploma - Artificial Intelligence (AI)',
     category: 'Diploma Courses',
     subCategories: ['Engineering', 'Computer & IT'],
     level: 'Diploma',
@@ -550,7 +728,7 @@ export const courseList: Course[] = [
   },
   {
     id: 'dip-eng-comp',
-    name: 'Polytechnic - Computer Science Engineering (CSE)',
+    name: 'Diploma - Computer Science Engineering (CSE)',
     category: 'Diploma Courses',
     subCategories: ['Engineering', 'Computer & IT'],
     level: 'Diploma',
@@ -572,14 +750,14 @@ export const courseList: Course[] = [
   },
   {
     id: 'dip-eng-it',
-    name: 'Polytechnic - Information Technology (IT)',
+    name: 'Diploma - Information Technology (IT)',
     category: 'Diploma Courses',
     subCategories: ['Engineering', 'Computer & IT'],
     level: 'Diploma',
     duration: '6 Semesters',
     eligibility: '10th',
     mode: 'Regular',
-    description: 'Polytechnic diploma in Information Technology covering computer networks, web databases, systems, and software.',
+    description: 'Diploma in Information Technology covering computer networks, web databases, systems, and software.',
     fees: '₹22,000 per year',
     seats: 60,
     careerOpportunities: [
@@ -590,27 +768,6 @@ export const courseList: Course[] = [
     ],
     placementSupport: 'Direct industrial placement cell alignment.',
     iconName: 'database',
-  },
-  {
-    id: 'dip-eng-aero',
-    name: 'Polytechnic - Aeronautical Engineering',
-    category: 'Diploma Courses',
-    subCategories: ['Engineering'],
-    level: 'Diploma',
-    duration: '6 Semesters',
-    eligibility: '10th',
-    mode: 'Regular',
-    description: 'Polytechnic diploma course in aeronautics, basic aerodynamics, aircraft components, repair, and maintenance.',
-    fees: '₹22,000 per year',
-    seats: 60,
-    careerOpportunities: [
-      'Professional Practice',
-      'Research Specialist',
-      'Technical Officer',
-      'Industry Advisor'
-    ],
-    placementSupport: 'Direct industrial placement cell alignment.',
-    iconName: 'gear',
   },
   {
     id: 'mca',
@@ -721,27 +878,7 @@ export const courseList: Course[] = [
     placementSupport: 'Direct industrial placement cell alignment.',
     iconName: 'flame',
   },
-  {
-    id: 'bsc-fire-safety',
-    name: 'B.Sc - Fire and Safety',
-    category: 'Science',
-    subCategories: ['Undergraduate (UG)'],
-    level: 'UG',
-    duration: '6/8 semesters',
-    eligibility: '12th Science',
-    mode: 'Regular',
-    description: 'Undergraduate science course covering fire safety layouts, hazardous material management, safety equipment, and industrial emergency operations.',
-    fees: '₹40,000 per year',
-    seats: 60,
-    careerOpportunities: [
-      'Professional Practice',
-      'Research Specialist',
-      'Technical Officer',
-      'Industry Advisor'
-    ],
-    placementSupport: 'Direct industrial placement cell alignment.',
-    iconName: 'flame',
-  },
+ 
   {
     id: 'dip-fire-safety',
     name: 'Diploma - Fire and Safety',
@@ -1188,28 +1325,6 @@ export const courseList: Course[] = [
       'Industry Advisor'
     ],
     placementSupport: 'Direct industrial placement cell alignment.',
-    iconName: 'sparkles',
-  },
-  {
-    id: 'bsc',
-    name: 'B.Sc - General',
-    category: 'Science',
-    subCategories: ['Undergraduate (UG)'],
-    level: 'UG',
-    duration: '6 Semesters',
-    eligibility: '12th Science',
-    mode: 'Regular',
-    badge: 'Classic Program',
-    description: 'General science degree in Physics, Chemistry, Mathematics or Biology with lab-based practical learning.',
-    fees: '₹25,000 per year',
-    seats: 120,
-    careerOpportunities: [
-      'Lab Technician',
-      'Research Assistant',
-      'Science Teacher',
-      'Quality Analyst'
-    ],
-    placementSupport: 'Science and research institution linkages.',
     iconName: 'sparkles',
   },
   {
@@ -3016,48 +3131,8 @@ export const courseList: Course[] = [
     placementSupport: 'Direct industrial placement cell alignment.',
     iconName: 'building',
   },
-  {
-    id: 'bsc-hotm',
-    name: 'B.Sc - Hotel Management',
-    category: 'Hotel Management',
-    subCategories: ['Undergraduate (UG)', 'Science'],
-    level: 'UG',
-    duration: '6 Semesters',
-    eligibility: '12th',
-    mode: 'Regular',
-    description: 'Undergraduate science course covering food chemistry, guest desk networks, catering layouts, and room services.',
-    fees: '₹25,000 per year',
-    seats: 60,
-    careerOpportunities: [
-      'Professional Practice',
-      'Research Specialist',
-      'Technical Officer',
-      'Industry Advisor'
-    ],
-    placementSupport: 'Direct industrial placement cell alignment.',
-    iconName: 'building',
-  },
-  {
-    id: 'msc-hotm',
-    name: 'M.Sc - Hotel Management',
-    category: 'Hotel Management',
-    subCategories: ['Postgraduate (PG)', 'Science'],
-    level: 'PG',
-    duration: '4 Semesters',
-    eligibility: 'B.Sc. HM / BHM',
-    mode: 'Regular',
-    description: 'Advanced study of hospitality systems, food quality controls, resort financial strategies, and clinical catering.',
-    fees: '₹30,000 per year',
-    seats: 60,
-    careerOpportunities: [
-      'Professional Practice',
-      'Research Specialist',
-      'Technical Officer',
-      'Industry Advisor'
-    ],
-    placementSupport: 'Direct industrial placement cell alignment.',
-    iconName: 'building',
-  },
+ 
+  
   {
     id: 'mvoc',
     name: 'M.Voc - Master of Vocation',
@@ -3251,27 +3326,7 @@ export const courseList: Course[] = [
     placementSupport: 'Direct industrial placement cell alignment.',
     iconName: 'briefcase',
   },
-  {
-    id: 'bsc-fashion-design',
-    name: 'B.Sc - Fashion Design',
-    category: 'Fine Arts',
-    subCategories: ['Undergraduate (UG)', 'Science'],
-    level: 'UG',
-    duration: '6 Semesters',
-    eligibility: '10th & 12th',
-    mode: 'Regular',
-    description: 'Undergraduate design program covering textile patterns, garment sewing methods, fashion history, and CAD tools.',
-    fees: '₹60,000 per year',
-    seats: 60,
-    careerOpportunities: [
-      'Professional Practice',
-      'Research Specialist',
-      'Technical Officer',
-      'Industry Advisor'
-    ],
-    placementSupport: 'Direct industrial placement cell alignment.',
-    iconName: 'sparkles',
-  },
+ 
   {
     id: 'b-design',
     name: 'Bachelor in Design - Fashion Design',
@@ -3441,50 +3496,8 @@ export const courseList: Course[] = [
     placementSupport: 'Guidance for state and central government infrastructure hiring.',
     iconName: 'building',
   },
-  {
-    id: 'btech-le',
-    name: 'B.Tech - Lateral Entry',
-    category: 'Engineering',
-    subCategories: ['Undergraduate (UG)'],
-    level: 'UG',
-    duration: '3 Years',
-    eligibility: 'Diploma in Engineering / B.Sc with PCM',
-    mode: 'Regular',
-    badge: 'Lateral Entry',
-    description: 'Direct 2nd year B.Tech admission for diploma holders and B.Sc graduates. Available branches: Civil, Computer Science, Mechanical, Electronics & Communication, Electrical, Information Technology, Chemical, Fire & Safety.',
-    fees: '₹30,000 per year',
-    seats: 30,
-    careerOpportunities: [
-      'Engineer',
-      'Technical Consultant',
-      'Production Supervisor',
-      'Site Engineer'
-    ],
-    placementSupport: 'Same placement support as regular B.Tech batch.',
-    iconName: 'gear',
-  },
-  {
-    id: 'dip-eng-le',
-    name: 'Diploma Engineering - Lateral Entry',
-    category: 'Diploma Courses',
-    subCategories: ['Engineering'],
-    level: 'Diploma',
-    duration: '2 Years',
-    eligibility: 'ITI Passed in relevant trade',
-    mode: 'Regular',
-    badge: 'Lateral Entry',
-    description: 'Lateral admission into 2nd year of diploma engineering for ITI trade pass-outs.',
-    fees: 'Contact Admissions Desk',
-    seats: 30,
-    careerOpportunities: [
-      'Diploma Technician',
-      'Workshop Supervisor',
-      'Junior Engineer',
-      'Site Technician'
-    ],
-    placementSupport: 'Same support as regular diploma batch with ITI background advantage.',
-    iconName: 'gear',
-  },
+ 
+  
   {
     id: 'bsc-it',
     name: 'B.Sc - Information Technology',
@@ -3727,28 +3740,7 @@ export const courseList: Course[] = [
     placementSupport: 'Research lab and industry linkages.',
     iconName: 'sparkles',
   },
-  {
-    id: 'msc',
-    name: 'M.Sc - Master of Science',
-    category: 'Science',
-    subCategories: ['Postgraduate (PG)'],
-    level: 'PG',
-    duration: '2 Years',
-    eligibility: 'B.Sc in relevant subject, 50%',
-    mode: 'Regular',
-    badge: 'PG Program',
-    description: 'Advanced postgraduate science degree with research projects, lab work and specialization in physics, chemistry or math.',
-    fees: '₹16,000 per year',
-    seats: 60,
-    careerOpportunities: [
-      'Senior Scientist',
-      'Research Fellow',
-      'Lab Head',
-      'Science Consultant'
-    ],
-    placementSupport: 'Research institutions and science industry linkages.',
-    iconName: 'sparkles',
-  },
+  
   {
     id: 'ba-hons',
     name: 'BA (Hons) - Bachelor of Arts Honors',
@@ -4017,29 +4009,7 @@ export const courseList: Course[] = [
     placementSupport: 'Government health departments and NGO health sector placements.',
     iconName: 'sparkles',
   },
-  {
-    id: 'bsc-yoga',
-    name: 'B.Sc - Yoga',
-    category: 'Yoga & Naturopathy',
-    subCategories: ['Undergraduate (UG)', 'Science'],
-    level: 'UG',
-    duration: '3 Years',
-    eligibility: '10+2 in any stream',
-    mode: 'Regular',
-    badge: 'Wellness Program',
-    description: 'Scientific study of yoga anatomy, physiology, asanas, pranayama, therapeutic yoga and yogic philosophy.',
-    fees: 'Contact Admissions Desk',
-    seats: 40,
-    careerOpportunities: [
-      'Yoga Instructor',
-      'Wellness Coach',
-      'Yoga Therapist',
-      'Fitness Trainer'
-    ],
-    placementSupport: 'Wellness centers, schools and corporate yoga program placements.',
-    iconName: 'sparkles',
-  },
-  {
+   {
     id: 'dip-yoga',
     name: 'Diploma in Yoga',
     category: 'Yoga & Naturopathy',
@@ -4081,28 +4051,7 @@ export const courseList: Course[] = [
     placementSupport: 'Naturopathy clinics and wellness centers.',
     iconName: 'sparkles',
   },
-  {
-    id: 'msc-yoga',
-    name: 'M.Sc - Yoga',
-    category: 'Yoga & Naturopathy',
-    subCategories: ['Postgraduate (PG)', 'Science'],
-    level: 'PG',
-    duration: '2 Years',
-    eligibility: 'B.Sc Yoga or B.Sc in Life Sciences',
-    mode: 'Regular',
-    badge: 'PG Program',
-    description: 'Scientific postgraduate program in yoga therapy, sports yoga, clinical research and advanced physiology.',
-    fees: 'Contact Admissions Desk',
-    seats: 20,
-    careerOpportunities: [
-      'Clinical Yoga Therapist',
-      'Sports Yoga Coach',
-      'Research Analyst',
-      'Yoga Educator'
-    ],
-    placementSupport: 'Hospitals, research centers and sports organizations.',
-    iconName: 'sparkles',
-  },
+ 
   {
     id: 'dip-lib',
     name: 'Diploma in Library Science',
@@ -4125,75 +4074,9 @@ export const courseList: Course[] = [
     placementSupport: 'School and local government library placements.',
     iconName: 'database',
   },
-  {
-    id: 'iti-elec',
-    name: 'Electrician (ITI Trade)',
-    category: 'ITI Trades',
-    subCategories: ['Apprenticeship Programs', 'Government Approved Courses'],
-    level: 'ITI',
-    duration: '2 Years',
-    eligibility: '10th Passed from any recognized board',
-    mode: 'Regular',
-    badge: 'NCVT Approved',
-    description: 'DGT-approved practical trade covering domestic wiring, motor winding, generators, electrical panels and solar installations.',
-    fees: 'Contact Admissions Desk',
-    seats: 40,
-    careerOpportunities: [
-      'Licensed Contractor',
-      'Railway Technician',
-      'Grid Supervisor',
-      'Maintenance Operator'
-    ],
-    placementSupport: 'NAPS apprenticeship support. Placed at Mahadiscom and railways.',
-    iconName: 'bolt',
-  },
-  {
-    id: 'iti-fitter',
-    name: 'Fitter (ITI Trade)',
-    category: 'ITI Trades',
-    subCategories: ['Apprenticeship Programs', 'Government Approved Courses'],
-    level: 'ITI',
-    duration: '2 Years',
-    eligibility: '10th Passed from any recognized board',
-    mode: 'Regular',
-    badge: 'Most Popular',
-    description: 'Structural fitting, machinery piping, steel sheet fabrication, welding joints and component assembly workshop training.',
-    fees: 'Contact Admissions Desk',
-    seats: 40,
-    careerOpportunities: [
-      'Industrial Fitter',
-      'Assembly Technician',
-      'Maintenance Helper',
-      'Apprentice Fitter'
-    ],
-    placementSupport: 'NAPS apprenticeship placement in manufacturing and auto plants.',
-    iconName: 'wrench',
-  },
-  {
-    id: 'iti-welder',
-    name: 'Welder (ITI Trade)',
-    category: 'ITI Trades',
-    subCategories: ['Apprenticeship Programs', 'Government Approved Courses'],
-    level: 'ITI',
-    duration: '1 Year',
-    eligibility: '8th / 10th Passed',
-    mode: 'Regular',
-    badge: 'Job Oriented',
-    description: 'Gas welding, SMAW, TIG & MIG welding, plasma cutting and structural metal fabrication practical certification.',
-    fees: 'Contact Admissions Desk',
-    seats: 30,
-    careerOpportunities: [
-      'Structural Welder',
-      'Pipe Welder',
-      'Fabricator',
-      'Welding Inspector'
-    ],
-    placementSupport: 'Direct linkages with heavy engineering workshops and automotive chassis makers.',
-    iconName: 'flame',
-  },
-  {
+     {
     id: 'iti-copa',
-    name: 'COPA (ITI Trade)',
+    name: 'Diploma in Electrician',
     category: 'ITI Trades',
     subCategories: ['Government Approved Courses', 'Computer & IT'],
     level: 'ITI',
@@ -4213,31 +4096,10 @@ export const courseList: Course[] = [
     placementSupport: 'Skill India certified job linkages with offices and institutions.',
     iconName: 'computer',
   },
-  {
-    id: 'iti-turner',
-    name: 'Turner (ITI Trade)',
-    category: 'ITI Trades',
-    subCategories: ['Apprenticeship Programs', 'Government Approved Courses'],
-    level: 'ITI',
-    duration: '2 Years',
-    eligibility: '10th Passed',
-    mode: 'Regular',
-    badge: 'Industry Ready',
-    description: 'Precision lathe training: turning, taper turning, boring, thread cutting, screw configuration and milling adjustments.',
-    fees: 'Contact Admissions Desk',
-    seats: 20,
-    careerOpportunities: [
-      'Lathe Turner',
-      'Toolroom Technician',
-      'Machinery Fitter',
-      'CNC Operator Trainee'
-    ],
-    placementSupport: 'NAPS placements in precision manufacturing and metal workshops.',
-    iconName: 'wrench',
-  },
+  
   {
     id: 'iti-machinist',
-    name: 'Machinist (ITI Trade)',
+    name: 'Diploma in  Machinist ',
     category: 'ITI Trades',
     subCategories: ['Apprenticeship Programs', 'Government Approved Courses'],
     level: 'ITI',
@@ -4259,7 +4121,7 @@ export const courseList: Course[] = [
   },
   {
     id: 'iti-wireman',
-    name: 'Wireman (ITI Trade)',
+    name: 'Diploma in Wireman ',
     category: 'ITI Trades',
     subCategories: ['Apprenticeship Programs', 'Government Approved Courses'],
     level: 'ITI',
@@ -4279,31 +4141,10 @@ export const courseList: Course[] = [
     placementSupport: 'Electrical infrastructure contractors and solar installers.',
     iconName: 'bolt',
   },
-  {
-    id: 'iti-diesel',
-    name: 'Diesel Mechanic (ITI Trade)',
-    category: 'ITI Trades',
-    subCategories: ['Apprenticeship Programs', 'Government Approved Courses'],
-    level: 'ITI',
-    duration: '1 Year',
-    eligibility: '10th Passed',
-    mode: 'Regular',
-    badge: 'Job Oriented',
-    description: 'Diesel engine diagnostics, cooling and fuel injection systems, heavy machinery servicing and engine testing procedures.',
-    fees: 'Contact Admissions Desk',
-    seats: 30,
-    careerOpportunities: [
-      'Engine Service Technician',
-      'Fleet Mechanic',
-      'Locomotive Engine Apprentice',
-      'Auto Plant Operator'
-    ],
-    placementSupport: 'Commercial garages and tractor plant apprenticeships.',
-    iconName: 'gear',
-  },
+ 
   {
     id: 'iti-rac',
-    name: 'RAC Technician (ITI Trade)',
+    name: 'Diploma in Fitter',
     category: 'ITI Trades',
     subCategories: ['Apprenticeship Programs', 'Government Approved Courses'],
     level: 'ITI',
@@ -4325,7 +4166,7 @@ export const courseList: Course[] = [
   },
   {
     id: 'iti-elec-mech',
-    name: 'Electronics Mechanic (ITI Trade)',
+    name: 'Diploma in Turner',
     category: 'ITI Trades',
     subCategories: ['Government Approved Courses'],
     level: 'ITI',
@@ -4347,7 +4188,7 @@ export const courseList: Course[] = [
   },
   {
     id: 'iti-plumber',
-    name: 'Plumber (ITI Trade)',
+    name: 'Diploma in Welder',
     category: 'ITI Trades',
     subCategories: ['Government Approved Courses'],
     level: 'ITI',
@@ -4454,50 +4295,7 @@ export const courseList: Course[] = [
     placementSupport: 'NSDC job portal linkages and placement fairs.',
     iconName: 'sparkles',
   },
-  {
-    id: 'app-elec',
-    name: 'Electrician Apprenticeship (NAPS)',
-    category: 'Apprenticeship Programs',
-    subCategories: ['ITI Trades', 'Government Approved Courses'],
-    level: 'Apprenticeship',
-    duration: '1-2 Years',
-    eligibility: '10th Passed or ITI Electrician',
-    mode: 'Regular',
-    badge: 'NAPS Placed',
-    description: 'Learn electrical circuits, panels and wire configurations on factory shop floors. Earn monthly NAPS stipends while training.',
-    fees: 'Stipend Provided to Trainees',
-    seats: 40,
-    careerOpportunities: [
-      'Licensed Contractor',
-      'Railway Technician',
-      'Grid Supervisor',
-      'Maintenance Operator'
-    ],
-    placementSupport: 'Apprentice placements at industrial units and power utilities.',
-    iconName: 'bolt',
-  },
-  {
-    id: 'app-fitter',
-    name: 'Fitter Apprenticeship (NAPS)',
-    category: 'Apprenticeship Programs',
-    subCategories: ['ITI Trades', 'Government Approved Courses'],
-    level: 'Apprenticeship',
-    duration: '1-2 Years',
-    eligibility: '10th Passed or ITI Fitter',
-    mode: 'Regular',
-    badge: 'NAPS Placed',
-    description: 'Engineering fitter training centered on heavy assembly lines. Earn monthly stipends under National Apprenticeship guidelines.',
-    fees: 'Stipend Provided to Trainees',
-    seats: 40,
-    careerOpportunities: [
-      'Industrial Fitter',
-      'Assembly Technician',
-      'Maintenance Helper',
-      'Apprentice Fitter'
-    ],
-    placementSupport: 'Apprentice placements at automotive factories and heavy plants.',
-    iconName: 'wrench',
-  },
+ 
   {
     id: 'app-nsdc',
     name: 'NSDC Industry Training',
@@ -4630,31 +4428,10 @@ export const courseList: Course[] = [
     placementSupport: 'UPES placement network with infrastructure firms, government bodies and PSUs.',
     iconName: 'building',
   },
-  {
-    id: 'upes-bba-gm',
-    name: 'BBA - General Management (UPES Online)',
-    category: 'UPES Online',
-    subCategories: ['Undergraduate (UG)', 'Management'],
-    level: 'UG',
-    duration: '3 Years',
-    eligibility: '10+2 in any stream (50% marks)',
-    mode: 'Online',
-    badge: 'UPES Online',
-    description: 'UGC-entitled online BBA with specialization choices in HR, Marketing, Finance, and Operations. AI-enhanced curriculum with UPES industry-integrated projects and virtual internships.',
-    fees: '₹1,50,000 (₹25,000 per semester)',
-    seats: 200,
-    careerOpportunities: [
-      'Business Executive',
-      'HR Coordinator',
-      'Marketing Executive',
-      'Operations Analyst'
-    ],
-    placementSupport: 'UPES placement cell with corporate sector linkages and virtual placement drives.',
-    iconName: 'briefcase',
-  },
+  
   {
     id: 'upes-bba-scm',
-    name: 'BBA - Logistics & Supply Chain Management (UPES Online)',
+    name: 'BBA - Logistics & Supply Chain Management',
     category: 'UPES Online',
     subCategories: ['Undergraduate (UG)', 'Management'],
     level: 'UG',
@@ -4676,7 +4453,7 @@ export const courseList: Course[] = [
   },
   {
     id: 'upes-bba-ib',
-    name: 'BBA - International Business (UPES Online)',
+    name: 'BBA - International Business',
     category: 'UPES Online',
     subCategories: ['Undergraduate (UG)', 'Management'],
     level: 'UG',
@@ -4698,7 +4475,7 @@ export const courseList: Course[] = [
   },
   {
     id: 'upes-bba-db',
-    name: 'BBA - Digital Business (UPES Online)',
+    name: 'BBA - Digital Business',
     category: 'UPES Online',
     subCategories: ['Undergraduate (UG)', 'Management'],
     level: 'UG',
@@ -5181,140 +4958,8 @@ export const courseList: Course[] = [
     iconName: 'chart',
   },
   {
-    id: 'dpgu-dip-2y-civil',
-    name: 'Polytechnic Diploma (2 Years) - Civil Engineering',
-    category: 'Diploma Courses',
-    subCategories: ['Engineering'],
-    level: 'Diploma',
-    duration: '2 Years',
-    eligibility: '10+2 with Science & Math',
-    mode: 'Regular',
-    badge: 'Government Approved',
-    description: '2-year polytechnic diploma in civil engineering covering structural drawing, surveying, construction materials, building estimation and site supervision fundamentals.',
-    fees: '₹22,000 per year',
-    seats: 40,
-    careerOpportunities: [
-      'Civil Technician',
-      'Site Supervisor',
-      'Draftsman',
-      'Construction Estimator'
-    ],
-    placementSupport: 'Infrastructure and construction sector placement support.',
-    iconName: 'building',
-  },
-  {
-    id: 'dpgu-dip-2y-mech',
-    name: 'Polytechnic Diploma (2 Years) - Mechanical Engineering',
-    category: 'Diploma Courses',
-    subCategories: ['Engineering'],
-    level: 'Diploma',
-    duration: '2 Years',
-    eligibility: '10+2 with Science & Math',
-    mode: 'Regular',
-    badge: 'Government Approved',
-    description: '2-year polytechnic diploma covering machine design, workshop technology, manufacturing processes, thermodynamics fundamentals and CAD basics.',
-    fees: '₹22,000 per year',
-    seats: 40,
-    careerOpportunities: [
-      'Mechanical Technician',
-      'Workshop Supervisor',
-      'CNC Operator',
-      'Production Assistant'
-    ],
-    placementSupport: 'Manufacturing and automotive sector placement linkages.',
-    iconName: 'gear',
-  },
-  {
-    id: 'dpgu-dip-2y-comp',
-    name: 'Polytechnic Diploma (2 Years) - Computer Science',
-    category: 'Diploma Courses',
-    subCategories: ['Engineering', 'Computer & IT'],
-    level: 'Diploma',
-    duration: '2 Years',
-    eligibility: '10+2 with Science & Math',
-    mode: 'Regular',
-    badge: 'Government Approved',
-    description: '2-year computer science diploma covering programming fundamentals, operating systems, networking basics, database management and software development essentials.',
-    fees: '₹22,000 per year',
-    seats: 40,
-    careerOpportunities: [
-      'Junior Programmer',
-      'IT Support Assistant',
-      'Computer Lab Technician',
-      'Network Helper'
-    ],
-    placementSupport: 'IT services and software firm placement support.',
-    iconName: 'computer',
-  },
-  {
-    id: 'dpgu-dip-2y-elec',
-    name: 'Polytechnic Diploma (2 Years) - Electrical Engineering',
-    category: 'Diploma Courses',
-    subCategories: ['Engineering'],
-    level: 'Diploma',
-    duration: '2 Years',
-    eligibility: '10+2 with Science & Math',
-    mode: 'Regular',
-    badge: 'Government Approved',
-    description: '2-year electrical engineering diploma covering circuit theory, electrical machines, power systems basics, wiring installations and measurement instruments.',
-    fees: '₹22,000 per year',
-    seats: 40,
-    careerOpportunities: [
-      'Electrical Technician',
-      'Wiring Inspector',
-      'Substation Operator',
-      'Maintenance Helper'
-    ],
-    placementSupport: 'Energy sector and industrial maintenance placement support.',
-    iconName: 'bolt',
-  },
-  {
-    id: 'dpgu-dip-2y-chem',
-    name: 'Polytechnic Diploma (2 Years) - Chemical Engineering',
-    category: 'Diploma Courses',
-    subCategories: ['Engineering'],
-    level: 'Diploma',
-    duration: '2 Years',
-    eligibility: '10+2 with Science & Math',
-    mode: 'Regular',
-    badge: 'Government Approved',
-    description: '2-year chemical engineering diploma covering process chemistry, unit operations, industrial chemicals handling, lab analysis and chemical plant safety protocols.',
-    fees: '₹22,000 per year',
-    seats: 40,
-    careerOpportunities: [
-      'Chemical Plant Operator',
-      'Lab Analyst Assistant',
-      'Process Technician',
-      'Quality Control Helper'
-    ],
-    placementSupport: 'Chemical and pharmaceutical industry placement assistance.',
-    iconName: 'flame',
-  },
-  {
-    id: 'dpgu-dip-2y-fire',
-    name: 'Polytechnic Diploma (2 Years) - Fire & Safety',
-    category: 'Diploma Courses',
-    subCategories: ['Engineering'],
-    level: 'Diploma',
-    duration: '2 Years',
-    eligibility: '10+2 with Science & Math',
-    mode: 'Regular',
-    badge: 'Government Approved',
-    description: '2-year fire & safety diploma covering fire dynamics, prevention systems, industrial safety standards, emergency response, hazard identification and rescue operations.',
-    fees: '₹22,000 per year',
-    seats: 40,
-    careerOpportunities: [
-      'Fire Safety Officer',
-      'HSE Technician',
-      'Industrial Safety Inspector',
-      'Emergency Response Operator'
-    ],
-    placementSupport: 'Industrial safety and oil & gas sector placement linkages.',
-    iconName: 'flame',
-  },
-  {
     id: 'dip-eng-chem',
-    name: 'Diploma Engineering - Chemical',
+    name: 'Diploma in Engineering - Chemical',
     category: 'Diploma Courses',
     subCategories: ['Engineering'],
     level: 'Diploma',
@@ -5336,7 +4981,7 @@ export const courseList: Course[] = [
   },
   {
     id: 'dip-eng-fire',
-    name: 'Diploma Engineering - Fire & Safety',
+    name: 'Diploma in Engineering - Fire & Safety',
     category: 'Diploma Courses',
     subCategories: ['Engineering'],
     level: 'Diploma',
@@ -5510,29 +5155,7 @@ export const courseList: Course[] = [
     placementSupport: 'Environmental consulting and government regulatory body placements.',
     iconName: 'sparkles',
   },
-  {
-    id: 'mtech-highway',
-    name: 'M.Tech - Highway Technology',
-    category: 'Engineering',
-    subCategories: ['Postgraduate (PG)'],
-    level: 'PG',
-    duration: '2 Years',
-    eligibility: 'B.Tech / B.E. in Civil Engineering',
-    mode: 'Regular',
-    badge: 'PG Program',
-    description: 'Specialized highway technology M.Tech covering pavement design, traffic engineering, highway planning, road materials, bridge loading analysis and transportation safety.',
-    fees: '₹37,000 per year',
-    seats: 20,
-    careerOpportunities: [
-      'Highway Engineer',
-      'Traffic Analyst',
-      'Pavement Design Specialist',
-      'Road Safety Consultant'
-    ],
-    placementSupport: 'NHAI, PWD and infrastructure firm placement linkages.',
-    iconName: 'building',
-  },
-  {
+    {
     id: 'mtech-ctm',
     name: 'M.Tech - Construction Technology & Management',
     category: 'Engineering',
@@ -5798,28 +5421,6 @@ export const courseList: Course[] = [
     iconName: 'sparkles',
   },
   {
-    id: 'bsc-home-sci',
-    name: 'B.Sc - Home Science',
-    category: 'Science',
-    subCategories: ['Undergraduate (UG)'],
-    level: 'UG',
-    duration: '3 Years',
-    eligibility: '10+2 in any stream',
-    mode: 'Regular',
-    badge: 'Classic Program',
-    description: 'Home science degree covering food & nutrition, textiles, child development, family resource management, consumer studies and home economics research methodology.',
-    fees: '₹15,000 per year',
-    seats: 40,
-    careerOpportunities: [
-      'Dietitian',
-      'Child Development Specialist',
-      'Home Economist',
-      'Textile Designer'
-    ],
-    placementSupport: 'Healthcare, FMCG and educational sector placement linkages.',
-    iconName: 'sparkles',
-  },
-  {
     id: 'msc-forensic',
     name: 'M.Sc - Forensic Science',
     category: 'Science',
@@ -6043,7 +5644,7 @@ export const courseList: Course[] = [
     id: 'phd-tech',
     name: 'PhD - Technical',
     category: 'Research',
-    subCategories: ['Postgraduate (PG)', 'Engineering'],
+    subCategories: ['Postgraduate (PG)'],
     level: 'PG',
     duration: '3 Years',
     eligibility: 'M.Tech / M.E. or equivalent PG degree with research aptitude',
@@ -6149,28 +5750,7 @@ export const courseList: Course[] = [
     placementSupport: 'UPES industry placements with FMCG, retail and digital marketing agencies.',
     iconName: 'chart',
   },
-  {
-    id: 'upes-mba-hr',
-    name: 'MBA - Human Resource Management (UPES Online)',
-    category: 'UPES Online',
-    subCategories: ['Postgraduate (PG)', 'Management'],
-    level: 'PG',
-    duration: '2 Years',
-    eligibility: 'Any Graduate (50% marks)',
-    mode: 'Online',
-    badge: 'UPES Online',
-    description: 'Specialized online MBA in Human Resource Management covering talent acquisition, employee relations, organizational design, HR compliance and labor laws.',
-    fees: '₹1,75,000 (₹43,750 per semester)',
-    seats: 200,
-    careerOpportunities: [
-      'HR Manager',
-      'Talent Acquisition Head',
-      'L&D Director',
-      'HR Business Partner'
-    ],
-    placementSupport: 'UPES HR placement channels with major corporate and service sector firms.',
-    iconName: 'network',
-  },
+
   {
     id: 'upes-mba-ops',
     name: 'MBA - Operations Management (UPES Online)',
@@ -6238,3 +5818,99 @@ export const courseList: Course[] = [
     iconName: 'chart',
   }
 ];
+
+export function getCoursePriorityAndGroup(course: Course): { priority: number; group: string } {
+  const name = course.name;
+  const nameLower = name.toLowerCase();
+  const level = course.level;
+
+  // 1. M.Tech / PG
+  if (nameLower.includes('m.tech') || name.startsWith('M.Tech')) {
+    return { priority: 2, group: 'M.Tech' };
+  }
+
+  // 3. B.Tech / UG
+  if (nameLower.includes('b.tech') || name.startsWith('B.Tech')) {
+    return { priority: 1, group: 'B.Tech' };
+  }
+
+  // 3. Diploma Engineering
+  if (
+    nameLower.includes('diploma engineering') ||
+    nameLower.includes('diploma in engineering') ||
+    nameLower.includes('polytechnic')
+  ) {
+    return { priority: 3, group: 'Diploma In Engineering' };
+  }
+
+  // 6. Certificate / Skill / ITI / Apprenticeship / Vocational
+  if (
+    level === 'Certificate' ||
+    level === 'Skill' ||
+    level === 'ITI' ||
+    level === 'Apprenticeship' ||
+    nameLower.includes('certificate') ||
+    course.category.toLowerCase().includes('certificate')
+  ) {
+    return { priority: 6, group: 'Certificate Courses' };
+  }
+
+  // For other categories, general UG / PG / Diploma logic
+  if (level === 'UG' || name.startsWith('B.') || name.startsWith('B.Sc') || name.startsWith('BCA') || name.startsWith('BBA') || name.startsWith('B.Com')) {
+    return { priority: 1, group: 'Undergraduate (UG)' };
+  }
+
+  if (level === 'PG' || name.startsWith('M.') || name.startsWith('M.Sc') || name.startsWith('MCA') || name.startsWith('MBA') || name.startsWith('M.Com') || name.startsWith('PhD')) {
+    return { priority: 2, group: 'Postgraduate (PG)' };
+  }
+
+  if (level === 'Diploma') {
+    return { priority: 3, group: 'Diploma' };
+  }
+
+  return { priority: 7, group: 'Other' };
+}
+
+export function getSpecialization(name: string): string {
+  let spec = name
+    .replace(/^(B\.Tech|M\.Tech|Polytechnic Diploma \(2 Years\)|Diploma in Engineering|Diploma|Certificate|B\.Sc|M\.Sc|PhD|MBA|MCA|BCA|DCA|PGDCA|Polytechnic Diploma)\s*[-–—:]\s*/i, '')
+    .trim();
+  
+  spec = spec.replace(/\s*\([A-Z0-9\s&+-]+\)\s*$/gi, '').trim();
+
+  if (spec.toLowerCase() === 'fire and safety') {
+    spec = 'Fire & Safety';
+  }
+  if (spec.toLowerCase() === 'electronics & telecommunication') {
+    spec = 'Electronics & Communication';
+  }
+
+  return spec;
+}
+
+export function sortAndDeduplicateCourses(courses: Course[]): Course[] {
+  // Deduplicate by course ID
+  const uniqueCourses: Course[] = [];
+  const seenIds = new Set<string>();
+  for (const course of courses) {
+    if (!seenIds.has(course.id)) {
+      seenIds.add(course.id);
+      uniqueCourses.push(course);
+    }
+  }
+
+  // Sort dynamically
+  return uniqueCourses.sort((a, b) => {
+    const infoA = getCoursePriorityAndGroup(a);
+    const infoB = getCoursePriorityAndGroup(b);
+
+    if (infoA.priority !== infoB.priority) {
+      return infoA.priority - infoB.priority;
+    }
+
+    const specA = getSpecialization(a.name).toLowerCase();
+    const specB = getSpecialization(b.name).toLowerCase();
+    return specA.localeCompare(specB);
+  });
+}
+

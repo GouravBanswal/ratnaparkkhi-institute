@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import HeroSection from '@/components/home/Hero/Hero';
+import ThoughtOfTheDay from '@/components/home/ThoughtOfTheDay';
 import StatsSection from '@/components/home/Stats/Stats';
 import CourseExplorer from '@/components/home/CourseExplorer/CourseExplorer';
 import PromotionalCourses from '@/components/home/PromotionalCourses/PromotionalCourses';
@@ -52,6 +53,9 @@ export default function HomePage() {
 
       {/* SECTION 4: Why Parents & Working Professionals Trust Us */}
       <AboutSection />
+
+      {/* SECTION 4.5: Thought of the Day */}
+      <ThoughtOfTheDay />
 
       {/* SECTION 5: News & Video playlist player */}
       <PlacementSection />

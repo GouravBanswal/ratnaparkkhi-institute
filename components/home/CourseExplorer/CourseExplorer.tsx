@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import { courseList, Course } from '@/components/Courses/courses';
+import { courseList, Course, sortAndDeduplicateCourses } from '@/components/Courses/courses';
 import CategorySidebar from './CategorySidebar';
 import CourseFilters from './CourseFilters';
 import CourseSearch from './CourseSearch';
@@ -14,32 +14,25 @@ import Link from 'next/link';
 
 
 const categories = [
-  'Undergraduate (UG)',
-  'Postgraduate (PG)',
   'Engineering',
-  'Computer & IT',
-  'Commerce',
-  'Science',
-  'Arts & Humanities',
   'Management',
+  'Computer & IT',
+  'Science',
+  'Commerce',
+  'Arts & Humanities',
+  'Library Science',
   'Law',
+  'Journalism & Mass Communication',
+  'ITI Trades',
   'Health & Allied Science',
   'Yoga & Naturopathy',
-  'Journalism & Mass Communication',
-  'Library Science',
-  'Diploma Courses',
-  'ITI Trades',
-  'Skill Development',
-  'Apprenticeship Programs',
-  'Government Approved Courses',
-  'UPES Online',
   'Post Graduate Certificate',
   'Pharmacy',
   'Hotel Management',
   'Fine Arts',
   'Physical Education',
   'Agriculture',
-  'Education',
+  'School of Education',
   'Research',
 ];
 
@@ -77,7 +70,8 @@ export default function CourseExplorer({
 
   // Filter courses based on active selections
   const filteredCourses = useMemo(() => {
-    return courseList.filter((course) => {
+    const activeCourseList = courseList.filter(c => c.name !== 'DBA - Doctorate in Business Administration');
+    const filtered = activeCourseList.filter((course) => {
       // 1. Left Sidebar Filter — match by course.category or any of course.subCategories
       const selLower = selectedCategory.toLowerCase().trim();
       const courseCatLower = course.category.toLowerCase().trim();
@@ -136,6 +130,8 @@ export default function CourseExplorer({
 
       return true;
     });
+
+    return sortAndDeduplicateCourses(filtered);
   }, [selectedCategory, selectedFilter, searchQuery]);
 
   const handleDownloadBrochure = (course: Course) => {

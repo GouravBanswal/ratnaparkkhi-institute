@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { officialPhone, officialEmail, tagline } from './data/collegeData';
+import { TM } from '@/lib/helpers';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -184,7 +185,7 @@ const Navbar = () => {
           />
           <div>
             <span className="block font-black text-[10px] sm:text-xs tracking-wide text-navy-900 group-hover:text-gold-600 transition-colors uppercase leading-tight max-w-[190px] sm:max-w-[210px] md:max-w-[260px]">
-              Ratnaparkkhi Institute™ of Engineering & Management
+              Ratnaparkkhi Institute of Engineering & Management<TM />
             </span>
           
           </div>
@@ -425,7 +426,7 @@ const Navbar = () => {
             <img src="/logo.png" alt="Logo" className="w-8 h-8 object-contain" />
             <div>
               <span className="block font-black text-[10px] text-navy-900 leading-tight uppercase max-w-[200px]">
-                Ratnaparkkhi Institute™ of Engineering & Management
+                Ratnaparkkhi Institute of Engineering & Management<TM />
               </span>
               <span className="block text-[8px] text-slate-555 font-bold uppercase mt-0.5">{tagline}</span>
             </div>

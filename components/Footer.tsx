@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { officialPhone, officialEmail, tagline } from './data/collegeData';
+import { TM } from '@/lib/helpers';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -19,12 +20,12 @@ const Footer = () => {
               />
               <div>
                 <span className="block font-black text-white text-xs tracking-wide uppercase leading-tight max-w-[180px]">
-                  Ratnaparkkhi Institute™ of Engineering & Management
+                  Ratnaparkkhi Institute of Engineering & Management<TM />
                 </span>
               </div>
             </div>
             <p className="text-xs leading-relaxed text-slate-400">
-              Ratnaparkkhi Institute™ of Engineering & Management is a premier educational center dedicated to producing skilled professionals and industry leaders through holistic mentoring and advanced technological labs.
+              Ratnaparkkhi Institute of Engineering & Management<TM /> is a premier educational center dedicated to producing skilled professionals and industry leaders through holistic mentoring and advanced technological labs.
             </p>
             <div className="pt-2 space-y-2">
               <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">Affiliations & Registrations</span>
@@ -139,7 +140,7 @@ const Footer = () => {
         {/* Bottom Socials & Copy bar (Official Social Media handles) */}
         <div className="mt-16 pt-8 border-t border-navy-900 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
           <div>
-            &copy; {currentYear} Ratnaparkkhi Institute™ of Engineering & Management. All rights reserved. Estd 2008.
+            &copy; {currentYear} Ratnaparkkhi Institute of Engineering & Management<TM />. All rights reserved. Estd 2008.
           </div>
           <div className="flex gap-6 font-semibold">
             <a 
