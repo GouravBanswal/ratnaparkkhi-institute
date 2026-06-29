@@ -231,11 +231,12 @@ export const qualificationMeta: Record<string, { duration: string; lateralEntry?
 export function getQualificationMeta(groupName: string, groupCourses?: Course[]) {
   const g = groupName.toLowerCase();
 
+  if (g === 'post graduate diploma') {
+    return { duration: '1 Year' };
+  }
+
   const isComputerAndIT = groupCourses?.some(c => c.category === 'Computer & IT');
   if (isComputerAndIT) {
-    if (g === 'post graduate diploma') {
-      return { duration: '1 Year' };
-    }
     if (g === 'diploma') {
       return { duration: '1 Year' };
     }
@@ -570,6 +571,132 @@ export const courseList: Course[] = [
     iconName: 'database',
   },
   {
+    id: 'btech-civil-it',
+    name: 'B.Tech - Civil Engineering',
+    category: 'Computer & IT',
+    subCategories: ['Undergraduate (UG)'],
+    level: 'UG',
+    duration: '8 Semesters',
+    eligibility: '12th PCM',
+    mode: 'Regular',
+    description: 'Study structural engineering, geotechnics, construction management, environmental engineering and survey techniques.',
+    fees: '₹70,000 per year',
+    seats: 60,
+    careerOpportunities: [
+      'Site Engineer',
+      'Structural Designer',
+      'Project Estimator',
+      'Urban Planner'
+    ],
+    placementSupport: 'Guidance for state and central government infrastructure hiring.',
+    iconName: 'building',
+  },
+  {
+    id: 'btech-mech-it',
+    name: 'B.Tech - Mechanical Engineering',
+    category: 'Computer & IT',
+    subCategories: ['Undergraduate (UG)'],
+    level: 'UG',
+    duration: '8 Semesters',
+    eligibility: '12th PCM',
+    mode: 'Regular',
+    description: 'Comprehensive program covering thermodynamics, fluid mechanics, manufacturing processes, and machine design.',
+    fees: '₹70,000 per year',
+    seats: 60,
+    careerOpportunities: [
+      'Mechanical Engineer',
+      'Production Manager',
+      'Quality Analyst',
+      'Design Engineer'
+    ],
+    placementSupport: 'Placement assistance in manufacturing and automotive sectors.',
+    iconName: 'gear',
+  },
+  {
+    id: 'btech-eee-it',
+    name: 'B.Tech - Electronics & Electrical Engineering',
+    category: 'Computer & IT',
+    subCategories: ['Undergraduate (UG)'],
+    level: 'UG',
+    duration: '8 Semesters',
+    eligibility: '12th PCM',
+    mode: 'Regular',
+    description: 'Study of electrical circuits, power systems, control systems, and electronic devices.',
+    fees: '₹70,000 per year',
+    seats: 60,
+    careerOpportunities: [
+      'Electrical Engineer',
+      'Power Systems Engineer',
+      'Control Systems Engineer',
+      'Electronics Engineer'
+    ],
+    placementSupport: 'Placement assistance in power grids and electronics manufacturing.',
+    iconName: 'bolt',
+  },
+  {
+    id: 'btech-mining-it',
+    name: 'B.Tech - Mining Engineering',
+    category: 'Computer & IT',
+    subCategories: ['Undergraduate (UG)'],
+    level: 'UG',
+    duration: '8 Semesters',
+    eligibility: '12th PCM',
+    mode: 'Regular',
+    description: 'Learn about mineral extraction, mine planning, surveying, and rock mechanics.',
+    fees: '₹70,000 per year',
+    seats: 60,
+    careerOpportunities: [
+      'Mining Engineer',
+      'Mine Planner',
+      'Safety Officer',
+      'Mineral Processing Engineer'
+    ],
+    placementSupport: 'Placement opportunities in mining corporations and mineral extraction sites.',
+    iconName: 'wrench',
+  },
+  {
+    id: 'btech-chem-it',
+    name: 'B.Tech - Chemical Engineering',
+    category: 'Computer & IT',
+    subCategories: ['Undergraduate (UG)'],
+    level: 'UG',
+    duration: '8 Semesters',
+    eligibility: '12th PCM',
+    mode: 'Regular',
+    description: 'Study of chemical processes, thermodynamics, transport phenomena, and reactor design.',
+    fees: '₹70,000 per year',
+    seats: 60,
+    careerOpportunities: [
+      'Chemical Engineer',
+      'Process Engineer',
+      'Plant Manager',
+      'Quality Control Analyst'
+    ],
+    placementSupport: 'Placement assistance in chemical manufacturing and processing industries.',
+    iconName: 'flame',
+  },
+  {
+    id: 'btech-ece-it',
+    name: 'B.Tech - Electronics & Communication Engineering (ECE)',
+    category: 'Computer & IT',
+    subCategories: ['Undergraduate (UG)'],
+    level: 'UG',
+    duration: '8 Semesters',
+    eligibility: '12th PCM',
+    mode: 'Regular',
+    description: 'In-depth study of communication systems, microprocessors, digital electronics, and signal processing.',
+    fees: '₹70,000 per year',
+    seats: 60,
+    careerOpportunities: [
+      'Communication Engineer',
+      'Network Designer',
+      'Embedded Systems Engineer',
+      'Signal Processing Engineer'
+    ],
+    placementSupport: 'Placement opportunities in telecom companies and electronics firms.',
+    iconName: 'network',
+  },
+  {
     id: 'btech-extc',
     name: 'B.Tech - Electronics & Telecommunication',
     category: 'Engineering',
@@ -633,27 +760,7 @@ export const courseList: Course[] = [
     placementSupport: 'Direct industrial placement cell alignment.',
     iconName: 'gear',
   },
-  {
-    id: 'dip-eng-ds',
-    name: 'Diploma - Data Science',
-    category: 'Diploma Courses',
-    subCategories: ['Engineering'],
-    level: 'Diploma',
-    duration: '8 Semesters',
-    eligibility: '10th',
-    mode: 'Regular',
-    description: 'Diploma course in data science, big data fundamentals, database management, and analysis tools.',
-    fees: '₹22,000 per year',
-    seats: 60,
-    careerOpportunities: [
-      'Professional Practice',
-      'Research Specialist',
-      'Technical Officer',
-      'Industry Advisor'
-    ],
-    placementSupport: 'Direct industrial placement cell alignment.',
-    iconName: 'chart',
-  },
+
   {
     id: 'dip-eng-civil',
     name: 'Diploma - Civil Engineering (CE)',
@@ -720,27 +827,7 @@ export const courseList: Course[] = [
     placementSupport: 'Linkages with energy contractors and state utilities.',
     iconName: 'bolt',
   },
-  {
-    id: 'dip-eng-ai',
-    name: 'Diploma - Artificial Intelligence (AI)',
-    category: 'Diploma Courses',
-    subCategories: ['Engineering', 'Computer & IT'],
-    level: 'Diploma',
-    duration: '6 Semesters',
-    eligibility: '10th',
-    mode: 'Regular',
-    description: 'Polytechnic diploma course introducing artificial intelligence principles, Python programming, and smart systems.',
-    fees: '₹22,000 per year',
-    seats: 60,
-    careerOpportunities: [
-      'Professional Practice',
-      'Research Specialist',
-      'Technical Officer',
-      'Industry Advisor'
-    ],
-    placementSupport: 'Direct industrial placement cell alignment.',
-    iconName: 'cpu',
-  },
+
   {
     id: 'dip-eng-comp',
     name: 'Diploma - Computer Science Engineering (CSE)',
@@ -763,27 +850,7 @@ export const courseList: Course[] = [
     placementSupport: 'Direct placements at IT services firms and system integrators.',
     iconName: 'computer',
   },
-  {
-    id: 'dip-eng-it',
-    name: 'Diploma - Information Technology (IT)',
-    category: 'Diploma Courses',
-    subCategories: ['Engineering', 'Computer & IT'],
-    level: 'Diploma',
-    duration: '6 Semesters',
-    eligibility: '10th',
-    mode: 'Regular',
-    description: 'Diploma in Information Technology covering computer networks, web databases, systems, and software.',
-    fees: '₹22,000 per year',
-    seats: 60,
-    careerOpportunities: [
-      'Professional Practice',
-      'Research Specialist',
-      'Technical Officer',
-      'Industry Advisor'
-    ],
-    placementSupport: 'Direct industrial placement cell alignment.',
-    iconName: 'database',
-  },
+
   {
     id: 'mca',
     name: 'MCA - Master of Computer Applications',
@@ -2504,69 +2571,7 @@ export const courseList: Course[] = [
     placementSupport: 'Direct industrial placement cell alignment.',
     iconName: 'sparkles',
   },
-  {
-    id: 'mcom-accountancy',
-    name: 'M.Com - Accountancy',
-    category: 'Commerce',
-    subCategories: ['Postgraduate (PG)'],
-    level: 'PG',
-    duration: '4 Semesters',
-    eligibility: 'B.com',
-    mode: 'Regular',
-    description: 'Advanced financial auditing, corporate accounts, tax systems, cost management modeling, and analysis practices.',
-    fees: '₹24,000 per year',
-    seats: 60,
-    careerOpportunities: [
-      'Professional Practice',
-      'Research Specialist',
-      'Technical Officer',
-      'Industry Advisor'
-    ],
-    placementSupport: 'Direct industrial placement cell alignment.',
-    iconName: 'chart',
-  },
-  {
-    id: 'mcom-finance',
-    name: 'M.Com - Finance',
-    category: 'Commerce',
-    subCategories: ['Postgraduate (PG)'],
-    level: 'PG',
-    duration: '4 Semesters',
-    eligibility: 'B.com',
-    mode: 'Regular',
-    description: 'Advanced study of banking structures, capital investments, stock markets, micro-finance models, and risk analysis.',
-    fees: '₹24,000 per year',
-    seats: 60,
-    careerOpportunities: [
-      'Professional Practice',
-      'Research Specialist',
-      'Technical Officer',
-      'Industry Advisor'
-    ],
-    placementSupport: 'Direct industrial placement cell alignment.',
-    iconName: 'chart',
-  },
-  {
-    id: 'mcom-abst',
-    name: 'M.Com - ABST',
-    category: 'Commerce',
-    subCategories: ['Postgraduate (PG)'],
-    level: 'PG',
-    duration: '4 Semesters',
-    eligibility: 'B.com',
-    mode: 'Regular',
-    description: 'Advanced study in business statistics, quantitative models, accounting systems, and audit processes.',
-    fees: '₹24,000 per year',
-    seats: 60,
-    careerOpportunities: [
-      'Professional Practice',
-      'Research Specialist',
-      'Technical Officer',
-      'Industry Advisor'
-    ],
-    placementSupport: 'Direct industrial placement cell alignment.',
-    iconName: 'chart',
-  },
+
   {
     id: 'bcom',
     name: 'B.Com - General',
@@ -2589,69 +2594,9 @@ export const courseList: Course[] = [
     placementSupport: 'Commerce placement cell with corporate and banking linkages.',
     iconName: 'chart',
   },
-  {
-    id: 'bcom-hons-accountancy',
-    name: 'B.Com (Honours) - Accountancy',
-    category: 'Commerce',
-    subCategories: ['Undergraduate (UG)'],
-    level: 'UG',
-    duration: '6/8 semesters',
-    eligibility: '12th',
-    mode: 'Regular',
-    description: 'Undergraduate honours program focusing on corporate auditing, tax management, cost accounts, and financial accounting.',
-    fees: '₹30,000 per year',
-    seats: 60,
-    careerOpportunities: [
-      'Professional Practice',
-      'Research Specialist',
-      'Technical Officer',
-      'Industry Advisor'
-    ],
-    placementSupport: 'Direct industrial placement cell alignment.',
-    iconName: 'chart',
-  },
-  {
-    id: 'bcom-hons-finance',
-    name: 'B.Com (Honours) - Finance',
-    category: 'Commerce',
-    subCategories: ['Undergraduate (UG)'],
-    level: 'UG',
-    duration: '6/8 semesters',
-    eligibility: '12th',
-    mode: 'Regular',
-    description: 'Undergraduate honours program covering banking systems, investment portfolios, money market indexes, and corporate finance.',
-    fees: '₹30,000 per year',
-    seats: 60,
-    careerOpportunities: [
-      'Professional Practice',
-      'Research Specialist',
-      'Technical Officer',
-      'Industry Advisor'
-    ],
-    placementSupport: 'Direct industrial placement cell alignment.',
-    iconName: 'chart',
-  },
-  {
-    id: 'bcom-hons-abst',
-    name: 'B.Com (Honours) - ABST',
-    category: 'Commerce',
-    subCategories: ['Undergraduate (UG)'],
-    level: 'UG',
-    duration: '6/8 semesters',
-    eligibility: '12th',
-    mode: 'Regular',
-    description: 'Undergraduate honours covering business statistics, cost audit structures, quantitative analysis, and corporate taxation.',
-    fees: '₹30,000 per year',
-    seats: 60,
-    careerOpportunities: [
-      'Professional Practice',
-      'Research Specialist',
-      'Technical Officer',
-      'Industry Advisor'
-    ],
-    placementSupport: 'Direct industrial placement cell alignment.',
-    iconName: 'chart',
-  },
+  
+
+  
  
   {
     id: 'mba-hr',
@@ -3674,6 +3619,27 @@ export const courseList: Course[] = [
     iconName: 'briefcase',
   },
   {
+    id: 'pg-diploma-retail',
+    name: 'Post Graduate Diploma in Retail Management',
+    category: 'Commerce',
+    subCategories: ['Postgraduate (PG)'],
+    level: 'Diploma',
+    duration: '1 Year',
+    eligibility: 'Graduation in any stream',
+    mode: 'Regular',
+    description: 'Specialized diploma program focusing on retail operations, supply chain, merchandising, and store management.',
+    fees: '₹18,000 per year',
+    seats: 40,
+    careerOpportunities: [
+      'Retail Store Manager',
+      'Merchandiser',
+      'Supply Chain Coordinator',
+      'Operations Head'
+    ],
+    placementSupport: 'Placement assistance in leading retail chains and FMCG brands.',
+    iconName: 'building',
+  },
+  {
     id: 'bsc-hons',
     name: 'B.Sc (Hons) - Bachelor of Science Honors',
     category: 'Science',
@@ -4451,72 +4417,6 @@ export const courseList: Course[] = [
     iconName: 'chart',
   },
   {
-    id: 'upes-bca-da',
-    name: 'BCA - Data Analytics (UPES Online)',
-    category: 'UPES Online',
-    subCategories: ['Undergraduate (UG)', 'Computer & IT'],
-    level: 'UG',
-    duration: '3 Years',
-    eligibility: '10+2 (SWAYAM bridge course available for non-Math/CS students)',
-    mode: 'Online',
-    badge: 'UPES Online',
-    description: 'Data-focused online BCA covering Python, data visualization, statistical analytics, business intelligence tools and machine learning foundations with live industry projects.',
-    fees: '₹1,50,000 (₹25,000 per semester)',
-    seats: 200,
-    careerOpportunities: [
-      'Data Analyst',
-      'BI Developer',
-      'Analytics Coordinator',
-      'Data Visualization Specialist'
-    ],
-    placementSupport: 'UPES placement network with analytics, consulting and IT firms.',
-    iconName: 'chart',
-  },
-  {
-    id: 'upes-bca-cs',
-    name: 'BCA - Cloud & Security (UPES Online)',
-    category: 'UPES Online',
-    subCategories: ['Undergraduate (UG)', 'Computer & IT'],
-    level: 'UG',
-    duration: '3 Years',
-    eligibility: '10+2 (SWAYAM bridge course available for non-Math/CS students)',
-    mode: 'Online',
-    badge: 'UPES Online',
-    description: 'Cloud computing and cybersecurity BCA covering AWS, Azure, cloud infrastructure, network security, ethical hacking and data protection compliance frameworks.',
-    fees: '₹1,50,000 (₹25,000 per semester)',
-    seats: 200,
-    careerOpportunities: [
-      'Cloud Engineer',
-      'Cybersecurity Analyst',
-      'Cloud Security Specialist',
-      'Network Administrator'
-    ],
-    placementSupport: 'UPES IT placement cell with cloud and security company partnerships.',
-    iconName: 'database',
-  },
-  {
-    id: 'upes-bca-nat',
-    name: 'BCA - New Age Technology (UPES Online)',
-    category: 'UPES Online',
-    subCategories: ['Undergraduate (UG)', 'Computer & IT'],
-    level: 'UG',
-    duration: '3 Years',
-    eligibility: '10+2 (SWAYAM bridge course available for non-Math/CS students)',
-    mode: 'Online',
-    badge: 'UPES Online',
-    description: 'Emerging technology BCA covering AI, blockchain, IoT, augmented reality, robotics programming and next-generation computing paradigms for industry 4.0.',
-    fees: '₹1,50,000 (₹25,000 per semester)',
-    seats: 200,
-    careerOpportunities: [
-      'AI Application Developer',
-      'Blockchain Developer',
-      'IoT Engineer',
-      'Emerging Tech Specialist'
-    ],
-    placementSupport: 'UPES partnerships with emerging tech startups, innovation labs and product companies.',
-    iconName: 'cpu',
-  },
-  {
     id: 'upes-mca-aiml',
     name: 'MCA - Artificial Intelligence & Machine Learning (UPES Online)',
     category: 'UPES Online',
@@ -4934,28 +4834,7 @@ export const courseList: Course[] = [
     placementSupport: 'Chemical and petrochemical industry placement linkages.',
     iconName: 'flame',
   },
-  {
-    id: 'dip-eng-fire',
-    name: 'Diploma in Engineering - Fire & Safety',
-    category: 'Diploma Courses',
-    subCategories: ['Engineering'],
-    level: 'Diploma',
-    duration: '3 Years',
-    eligibility: '10th Passed with Science & Math',
-    mode: 'Regular',
-    badge: 'Job Oriented',
-    description: 'Fire & safety engineering diploma covering fire protection systems, occupational health, industrial accident prevention, HAZOP studies and safety audit procedures.',
-    fees: '₹20,000 per year',
-    seats: 60,
-    careerOpportunities: [
-      'Safety Supervisor',
-      'Fire Officer',
-      'Industrial Safety Technician',
-      'EHS Coordinator'
-    ],
-    placementSupport: 'Oil & gas, mining and industrial sector safety placement network.',
-    iconName: 'flame',
-  },
+
   {
     id: 'btech-chem',
     name: 'B.Tech - Chemical Engineering',
@@ -5067,27 +4946,48 @@ export const courseList: Course[] = [
     iconName: 'flame',
   },
   {
-    id: 'mtech-cyber',
-    name: 'M.Tech - Cyber Security',
-    category: 'Engineering',
-    subCategories: ['Postgraduate (PG)', 'Computer & IT'],
-    level: 'PG',
-    duration: '2 Years',
-    eligibility: 'B.Tech / B.E. in CSE / IT or related',
+    id: 'dip-eng-mining',
+    name: 'Diploma in Mining Engineering',
+    category: 'Diploma Courses',
+    subCategories: ['Engineering'],
+    level: 'Diploma',
+    duration: '3 Years',
+    eligibility: '10th Passed with Science & Math',
     mode: 'Regular',
-    badge: 'Trending',
-    description: 'Advanced cybersecurity M.Tech covering cryptography, network security protocols, malware analysis, digital forensics, penetration testing and enterprise security architecture.',
-    fees: '₹37,000 per year',
-    seats: 20,
+    description: 'Specialized diploma in mining engineering covering mineral extraction, surveying, and mine safety.',
+    fees: '₹25,000 per year',
+    seats: 40,
     careerOpportunities: [
-      'Senior Security Architect',
-      'Penetration Tester',
-      'Forensic Analyst',
-      'Cyber Threat Intelligence Lead'
+      'Mining Supervisor',
+      'Mine Surveyor',
+      'Safety Assistant',
+      'Junior Engineer'
     ],
-    placementSupport: 'Cybersecurity firm and government agency placement linkages.',
-    iconName: 'cpu',
+    placementSupport: 'Placement assistance in mining corporations and mineral extraction sites.',
+    iconName: 'wrench',
   },
+  {
+    id: 'dip-eng-ece',
+    name: 'Diploma in Electronics & Communication Engineering (ECE)',
+    category: 'Diploma Courses',
+    subCategories: ['Engineering'],
+    level: 'Diploma',
+    duration: '3 Years',
+    eligibility: '10th Passed with Science & Math',
+    mode: 'Regular',
+    description: 'Comprehensive diploma covering electronic circuits, communication systems, and microprocessors.',
+    fees: '₹22,000 per year',
+    seats: 60,
+    careerOpportunities: [
+      'Electronics Technician',
+      'Network Assistant',
+      'Telecomm Technician',
+      'Junior Test Engineer'
+    ],
+    placementSupport: 'Placement opportunities in telecom companies and electronics firms.',
+    iconName: 'network',
+  },
+
   {
     id: 'mtech-env',
     name: 'M.Tech - Environmental Engineering',
@@ -5199,28 +5099,7 @@ export const courseList: Course[] = [
     iconName: 'building',
   },
  
-  {
-    id: 'bcom-hons',
-    name: 'B.Com (Honours)',
-    category: 'Commerce',
-    subCategories: ['Undergraduate (UG)'],
-    level: 'UG',
-    duration: '3/4 Years',
-    eligibility: '10+2 in Commerce / any stream, 55% marks',
-    mode: 'Regular',
-    badge: 'Honours Degree',
-    description: 'Honours-level commerce program with intensive coverage of advanced accounting, auditing, business analytics, corporate governance, financial markets and research methodology.',
-    fees: '₹15,000 per year',
-    seats: 60,
-    careerOpportunities: [
-      'Senior Accountant',
-      'Auditor',
-      'Corporate Finance Analyst',
-      'CA / CS Foundation Prep'
-    ],
-    placementSupport: 'Banking, audit firms and corporate finance placement network.',
-    iconName: 'briefcase',
-  },
+
   {
     id: 'bfa',
     name: 'BFA - Bachelor of Fine Arts',
@@ -5799,7 +5678,7 @@ export function getCoursePriorityAndGroup(course: Course): { priority: number; g
     }
   }
 
-  if (course.id === 'pgdca') {
+  if (course.id === 'pgdca' || course.name === 'Post Graduate Diploma in Retail Management') {
     return { priority: 2.5, group: 'Post Graduate Diploma' };
   }
   if (course.id === 'dca') {
