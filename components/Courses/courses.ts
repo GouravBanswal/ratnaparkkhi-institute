@@ -119,6 +119,7 @@ export const diplomaDisplayOrder = [
 ];
 
 export const pgManagementDisplayOrder = [
+  "MBA - Oil & Gas Management (UPES Online)",
   "MBA - Finance",
   "MBA - Finance Management (UPES Online)",
   "MBA - Marketing",
@@ -138,14 +139,11 @@ export const pgManagementDisplayOrder = [
   "MBA - Retail Management",
   "MBA - Entrepreneurship",
   "MBA - Digital Business (UPES Online)",
-  "MBA - E-Commerce",
   "MBA - Agri Business",
   "MBA - Hotel Management",
   "MBA - Insurance Management",
   "MBA - Infrastructure Management (UPES Online)",
   "MBA - Fashion Designing",
-  "MBA - Criminology",
-  "MBA - Oil & Gas Management (UPES Online)",
   "MBA - Power Management (UPES Online)",
   "EMBA - Executive MBA",
   "PGDBA - PG Diploma in Business Administration",
@@ -220,7 +218,7 @@ export const qualificationMeta: Record<string, { duration: string; lateralEntry?
     duration: '1-2 Years (Course Dependent)'
   },
   ug: {
-    duration: '3–4 Years (Course Dependent)'
+    duration: '3 Years (Course Dependent)'
   },
   pg: {
     duration: '2 Years'
@@ -232,6 +230,23 @@ export const qualificationMeta: Record<string, { duration: string; lateralEntry?
 
 export function getQualificationMeta(groupName: string, groupCourses?: Course[]) {
   const g = groupName.toLowerCase();
+
+  const isComputerAndIT = groupCourses?.some(c => c.category === 'Computer & IT');
+  if (isComputerAndIT) {
+    if (g === 'post graduate diploma') {
+      return { duration: '1 Year' };
+    }
+    if (g === 'diploma') {
+      return { duration: '1 Year' };
+    }
+    if (g === 'mca') {
+      return { duration: '2 Years' };
+    }
+    if (g === 'bca' || g === 'b.com') {
+      return { duration: '3 Years' };
+    }
+  }
+
   if (g.includes('b.tech') || g.includes('bachelor')) return qualificationMeta.btech;
   if (g.includes('m.tech') || g.includes('master')) return qualificationMeta.mtech;
   if (g.includes('diploma')) return qualificationMeta.diploma;
@@ -2637,27 +2652,7 @@ export const courseList: Course[] = [
     placementSupport: 'Direct industrial placement cell alignment.',
     iconName: 'chart',
   },
-  {
-    id: 'mba-general',
-    name: 'MBA - General',
-    category: 'Management',
-    subCategories: ['Postgraduate (PG)'],
-    level: 'PG',
-    duration: '4 Semesters',
-    eligibility: 'Graduation',
-    mode: 'Regular',
-    description: 'Master of Business Administration general program covering company strategies, corporate leadership, and office operations.',
-    fees: '₹60,000 per year',
-    seats: 60,
-    careerOpportunities: [
-      'Professional Practice',
-      'Research Specialist',
-      'Technical Officer',
-      'Industry Advisor'
-    ],
-    placementSupport: 'Direct industrial placement cell alignment.',
-    iconName: 'briefcase',
-  },
+ 
   {
     id: 'mba-hr',
     name: 'MBA - Human Resource',
@@ -2768,27 +2763,7 @@ export const courseList: Course[] = [
     placementSupport: 'Trade corporations and global freight organizations.',
     iconName: 'network',
   },
-  {
-    id: 'mba-criminology',
-    name: 'MBA - Criminology',
-    category: 'Management',
-    subCategories: ['Postgraduate (PG)'],
-    level: 'PG',
-    duration: '4 Semesters',
-    eligibility: 'Graduation',
-    mode: 'Regular',
-    description: 'Specialized MBA program studying corporate crime detection, forensic audits, security guidelines, and legal compliance.',
-    fees: '₹70,000 per year',
-    seats: 60,
-    careerOpportunities: [
-      'Professional Practice',
-      'Research Specialist',
-      'Technical Officer',
-      'Industry Advisor'
-    ],
-    placementSupport: 'Direct industrial placement cell alignment.',
-    iconName: 'briefcase',
-  },
+ 
   {
     id: 'mba-insurance',
     name: 'MBA - Insurance Management',
@@ -2874,27 +2849,7 @@ export const courseList: Course[] = [
     placementSupport: 'Direct industrial placement cell alignment.',
     iconName: 'briefcase',
   },
-  {
-    id: 'mba-fashion',
-    name: 'MBA - Fashion Designing',
-    category: 'Management',
-    subCategories: ['Postgraduate (PG)'],
-    level: 'PG',
-    duration: '4 Semesters',
-    eligibility: 'Graduation',
-    mode: 'Regular',
-    description: 'Specialized program covering fashion brand marketing, apparel production administration, and design showroom operations.',
-    fees: '₹80,000 per year',
-    seats: 60,
-    careerOpportunities: [
-      'Professional Practice',
-      'Research Specialist',
-      'Technical Officer',
-      'Industry Advisor'
-    ],
-    placementSupport: 'Direct industrial placement cell alignment.',
-    iconName: 'briefcase',
-  },
+
   {
     id: 'emba',
     name: 'EMBA - Executive MBA',
@@ -5243,28 +5198,7 @@ export const courseList: Course[] = [
     placementSupport: 'Star hotel chains, resort chains and hospitality group placements.',
     iconName: 'building',
   },
-  {
-    id: 'mba-ecom',
-    name: 'MBA - E-Commerce',
-    category: 'Management',
-    subCategories: ['Postgraduate (PG)'],
-    level: 'PG',
-    duration: '2 Years',
-    eligibility: 'Any Graduate',
-    mode: 'Hybrid',
-    badge: 'Trending',
-    description: 'E-commerce focused MBA covering online marketplace management, digital logistics, consumer analytics, platform strategy, payment systems and online business operations.',
-    fees: '₹28,000 per year',
-    seats: 20,
-    careerOpportunities: [
-      'E-Commerce Manager',
-      'Online Business Strategist',
-      'Marketplace Operations Lead',
-      'Digital Commerce Analyst'
-    ],
-    placementSupport: 'E-commerce platforms and digital retail company placement linkages.',
-    iconName: 'chart',
-  },
+ 
   {
     id: 'bcom-hons',
     name: 'B.Com (Honours)',
@@ -5824,7 +5758,12 @@ export function getCoursePriorityAndGroup(course: Course): { priority: number; g
   const nameLower = name.toLowerCase();
   const level = course.level;
 
-  // 1. M.Tech / PG
+  // 1. Lateral Entry (priority 5)
+  if (nameLower.includes('lateral entry') || (course.badge && course.badge.toLowerCase().includes('lateral entry'))) {
+    return { priority: 5, group: 'Lateral Entry' };
+  }
+
+  // 2. M.Tech / PG
   if (nameLower.includes('m.tech') || name.startsWith('M.Tech')) {
     return { priority: 2, group: 'M.Tech' };
   }
@@ -5834,16 +5773,40 @@ export function getCoursePriorityAndGroup(course: Course): { priority: number; g
     return { priority: 1, group: 'B.Tech' };
   }
 
-  // 3. Diploma Engineering
+  // --- UPDATED LOGIC STARTS HERE ---
+
+  // 4. Unified Diploma in Engineering
+  // This catches ALL diplomas that are related to Engineering and groups them together
   if (
-    nameLower.includes('diploma engineering') ||
-    nameLower.includes('diploma in engineering') ||
-    nameLower.includes('polytechnic')
+    level === 'Diploma' && 
+    (course.category === 'Engineering' || course.subCategories?.includes('Engineering'))
   ) {
-    return { priority: 3, group: 'Diploma In Engineering' };
+    return { priority: 3, group: 'Diploma in Engineering' };
   }
 
-  // 6. Certificate / Skill / ITI / Apprenticeship / Vocational
+  // --- UPDATED LOGIC ENDS HERE ---
+
+  // Computer & IT specific groupings
+  if (course.category === 'Computer & IT' || course.subCategories?.includes('Computer & IT')) {
+    if (course.name.startsWith('MCA')) {
+      return { priority: 2.1, group: 'MCA' };
+    }
+    if (course.name.startsWith('BCA')) {
+      return { priority: 1.1, group: 'BCA' };
+    }
+    if (course.name.startsWith('B.Com')) {
+      return { priority: 1.2, group: 'B.Com' };
+    }
+  }
+
+  if (course.id === 'pgdca') {
+    return { priority: 2.5, group: 'Post Graduate Diploma' };
+  }
+  if (course.id === 'dca') {
+    return { priority: 2.6, group: 'Diploma' };
+  }
+
+  // 5. Certificate / Skill / ITI / Apprenticeship / Vocational
   if (
     level === 'Certificate' ||
     level === 'Skill' ||
@@ -5864,13 +5827,13 @@ export function getCoursePriorityAndGroup(course: Course): { priority: number; g
     return { priority: 2, group: 'Postgraduate (PG)' };
   }
 
+  // Fallback for Non-Engineering Diplomas (e.g., Diploma in Yoga, Fine Arts)
   if (level === 'Diploma') {
     return { priority: 3, group: 'Diploma' };
   }
 
   return { priority: 7, group: 'Other' };
 }
-
 export function getSpecialization(name: string): string {
   let spec = name
     .replace(/^(B\.Tech|M\.Tech|Polytechnic Diploma \(2 Years\)|Diploma in Engineering|Diploma|Certificate|B\.Sc|M\.Sc|PhD|MBA|MCA|BCA|DCA|PGDCA|Polytechnic Diploma)\s*[-–—:]\s*/i, '')

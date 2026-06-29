@@ -66,6 +66,15 @@ export default function CourseGrid({ courses, onViewDetails, resetFilters }: Cou
             return indexA - indexB;
           });
         }
+      } else if (groupName === 'MCA') {
+        groupCourses.sort((a, b) => {
+          const indexA = mcaDisplayOrder.indexOf(a.name);
+          const indexB = mcaDisplayOrder.indexOf(b.name);
+          if (indexA === -1 && indexB === -1) return 0;
+          if (indexA === -1) return 1;
+          if (indexB === -1) return -1;
+          return indexA - indexB;
+        });
       } else if (groupName === 'Postgraduate (PG)') {
         const hasMca = groupCourses.some(c => c.name.startsWith('MCA -'));
         const hasMsc = groupCourses.some(c => c.name.startsWith('M.Sc -'));
@@ -135,6 +144,9 @@ export default function CourseGrid({ courses, onViewDetails, resetFilters }: Cou
     switch (group) {
       case 'B.Tech': return 'Bachelor of Technology (B.Tech)';
       case 'M.Tech': return 'Master of Technology (M.Tech)';
+      case 'MCA': return 'Master of Computer Applications (MCA)';
+      case 'BCA': return 'Bachelor of Computer Applications (BCA)';
+      case 'B.Com': return 'Bachelor of Commerce (B.Com)';
       case 'Polytechnic': return 'Polytechnic';
       case 'Diploma Engineering': return 'Diploma In Engineering';
       case 'Undergraduate (UG)': return isScience ? 'Bachelor of Science (B.Sc)' : 'Undergraduate (UG)';
