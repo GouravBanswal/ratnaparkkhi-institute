@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react';
 import Image from 'next/image';
-import { motion, useAnimation, useMotionValue, animate } from 'framer-motion';
+import { motion, useMotionValue, animate } from 'framer-motion';
 import { universityPartners } from '@/components/data/universityPartners';
 
 const governmentPartners = [

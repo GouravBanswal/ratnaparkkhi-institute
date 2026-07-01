@@ -47,5 +47,12 @@ export const universityPartners = [
     state: "Rajasthan",
     logo: "/images/Vivekananda Global University.png",
     logoClass: ""
+  },
+  {
+    name: "ISBM University Chhattisgarh",
+    city: "Raipur",
+    state: "Chhattisgarh",
+    logo: "/images/isbm-university.webp",
+    logoClass: ""
   }
 ];

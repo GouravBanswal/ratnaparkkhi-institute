@@ -3397,7 +3397,6 @@ export const courseList: Course[] = [
     iconName: 'building',
   },
  
-  
   {
     id: 'bsc-it',
     name: 'B.Sc - Information Technology',
@@ -3578,7 +3577,7 @@ export const courseList: Course[] = [
     id: 'bcom-ca',
     name: 'B.Com - Computer Application',
     category: 'Commerce',
-    subCategories: ['Undergraduate (UG)', 'Computer & IT'],
+    subCategories: ['Undergraduate (UG)'],
     level: 'UG',
     duration: '3/4 Years',
     eligibility: '10+2 in any stream',
@@ -4834,7 +4833,6 @@ export const courseList: Course[] = [
     placementSupport: 'Chemical and petrochemical industry placement linkages.',
     iconName: 'flame',
   },
-
   {
     id: 'btech-chem',
     name: 'B.Tech - Chemical Engineering',
@@ -4945,6 +4943,7 @@ export const courseList: Course[] = [
     placementSupport: 'Automotive, aerospace and energy industry placement linkages.',
     iconName: 'flame',
   },
+
   {
     id: 'dip-eng-mining',
     name: 'Diploma in Mining Engineering',
