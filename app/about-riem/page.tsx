@@ -38,6 +38,58 @@ const educationalPillars = [
   }
 ];
 
+// Leadership Team data
+const leadershipTeam = [
+  {
+    designation: "Chairman & Founder",
+    names: [],
+    initials: "CF",
+    description: "Provides visionary leadership and strategic direction for Ratnaparkhi Institute of Engineering & Management while promoting academic excellence, innovation, ethical values, and long-term institutional growth.",
+  },
+  {
+    designation: "Director (Operations & Administration)",
+    names: ["Atul Ratnaparkhi"],
+    initials: "AR",
+    description: "Leads institutional operations, administration, infrastructure management, policy implementation, and organizational development while ensuring efficient coordination across all departments.",
+  },
+  {
+    designation: "Academic Director / Principal",
+    names: [],
+    initials: "AD",
+    description: "Provides academic leadership, curriculum planning, faculty development, quality assurance, and student-centered education while maintaining high academic standards.",
+  },
+  {
+    designation: "Registrar",
+    names: ["Sau. Pallavi Ratnaparkhi"],
+    initials: "PR",
+    description: "Responsible for academic administration, examinations, student records, regulatory compliance, institutional documentation, and administrative coordination.",
+  },
+  {
+    designation: "Finance & Accounts Director",
+    names: ["Navneesh Dubey"],
+    initials: "ND",
+    description: "Oversees budgeting, accounting, financial planning, compliance, institutional finance management, and transparent financial operations.",
+  },
+  {
+    designation: "Administrative Officer",
+    names: [],
+    initials: "AO",
+    description: "Coordinates day-to-day administration, office operations, institutional documentation, facilities management, and administrative support services.",
+  },
+  {
+    designation: "Training & Admission Head",
+    names: ["Sau. Purnima Holiye"],
+    initials: "PH",
+    description: "Leads admissions, student counseling, training initiatives, career guidance, and student support services while helping learners choose the right academic pathway.",
+  },
+  {
+    designation: "Marketing & Placement Head",
+    names: ["Yogesh Deole", "Gourav Banswal"],
+    initials: "YG",
+    description: "Leads institutional branding, digital marketing, admissions campaigns, industry partnerships, placement coordination, employer engagement, and student outreach initiatives.",
+  },
+];
+
 const leadershipMessages = [
   {
     role: "Proprietor & Founder",
@@ -110,6 +162,60 @@ export default function AboutPage() {
           <p>
             We believe that every student possesses unique potential. Our role is to nurture that potential through structured learning, academic guidance, skill enhancement, and career-focused development. Whether a learner is beginning a new academic journey, upgrading professional qualifications, or seeking industry-relevant knowledge, RIEM aims to provide the support, resources, and opportunities necessary for growth and success.
           </p>
+        </div>
+      </section>
+
+      {/* Leadership Team */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
+          <h2 className="text-3xl font-extrabold text-navy-900">Leadership Team</h2>
+          <p className="text-sm text-slate-500 font-medium">
+            Meet the experienced leadership guiding Ratnaparkhi Institute of Engineering &amp; Management with a commitment to academic excellence, innovation, student success, and institutional growth.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {leadershipTeam.map((member, idx) => (
+            <div
+              key={idx}
+              className="group relative bg-white border border-slate-100 rounded-xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col items-center text-center"
+            >
+              {/* Top gold accent bar */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gold-500 rounded-t-xl" />
+
+              {/* Avatar */}
+              <div className="mt-4 w-16 h-16 rounded-full bg-navy-50 border-2 border-gold-500 flex items-center justify-center font-bold text-navy-900 text-xl mb-4 group-hover:scale-105 transition-transform duration-300">
+                {member.initials}
+              </div>
+
+              {/* Designation */}
+              <h3 className="text-base font-bold text-navy-900 leading-snug">
+                {member.designation}
+              </h3>
+
+              {/* Name(s) */}
+              {member.names.length > 0 && (
+                <div className="mt-1 space-y-0.5">
+                  {member.names.map((name, nIdx) => (
+                    <p key={nIdx} className="text-sm text-gold-600 font-semibold">
+                      {name}
+                    </p>
+                  ))}
+                </div>
+              )}
+
+              {/* Divider */}
+              <div className="w-8 h-px bg-slate-200 my-3" />
+
+              {/* Description */}
+              <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                {member.description}
+              </p>
+
+              {/* Subtle hover glow */}
+              <div className="pointer-events-none absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[radial-gradient(ellipse_at_top,rgba(212,175,55,0.06),transparent_65%)]" />
+            </div>
+          ))}
         </div>
       </section>
 
